@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Matrix on Piecewise</title>
+    <link>https://doc.piecewise.im/matrix/</link>
+    <description>Recent content in Matrix on Piecewise</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://doc.piecewise.im/matrix/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title> (action) user (user) from room (room) with reason (reason)</title>
+      <link>https://doc.piecewise.im/matrix/ban/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/matrix/ban/</guid>
+      <description>In Matrix → Moderation
+Jump to block
+ Perform moderation actions on a user in a particular Matrix room.
+Parameters    Parameter name Parameter type Required? Description     action any ✓ The action to perform.   user user ✓ The user to take action on.   room room ✓ The target room to take action on.   reason String  The reason for taking the target action.</description>
+    </item>
+    
+    <item>
+      <title> (property) of room (room)</title>
+      <link>https://doc.piecewise.im/matrix/room_property/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/matrix/room_property/</guid>
+      <description>In Matrix → Rooms
+Jump to block
+ Find a property of a room. Avatar URLs only work on rooms that are not accessed through Pantalaimon. If the item requested does not exist, returns an empty string.
+Parameters    Parameter name Parameter type Required? Description     property any ✓ The property to get.   room room ✓ The room to get the property of.    Output String</description>
+    </item>
+    
+    <item>
+      <title> (property) of sticker (sticker)</title>
+      <link>https://doc.piecewise.im/matrix/sticker_property/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/matrix/sticker_property/</guid>
+      <description>In Matrix → Messages
+Jump to block
+ Get a property of a Matrix sticker.
+Parameters    Parameter name Parameter type Required? Description     property any ✓ The property to get.   sticker sticker ✓ The sticker to get a property of.    Output String
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;</description>
+    </item>
+    
+    <item>
+      <title> (property) of user (user)</title>
+      <link>https://doc.piecewise.im/matrix/get_user_property/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/matrix/get_user_property/</guid>
+      <description>In Matrix → Users
+Jump to block
+ Find a property of a user. Avatar URLs only work on rooms that are not accessed through Pantalaimon.
+Parameters    Parameter name Parameter type Required? Description     property any ✓ The property to get.   user user ✓ The user to get the property of.    Output String
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title> attachment at location (location)</title>
+      <link>https://doc.piecewise.im/matrix/attachment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/matrix/attachment/</guid>
+      <description>In Matrix → Messages
+Jump to block
+ Attach a file that is available at the specified location. Can be a path to a local file, or a HTTP(S) URL.
+Parameters    Parameter name Parameter type Required? Description     location String ✓ The location of the attachment.    Output attachment
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.</description>
+    </item>
+    
+    <item>
+      <title> attachment of message (message)</title>
+      <link>https://doc.piecewise.im/matrix/event_message_attachment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/matrix/event_message_attachment/</guid>
+      <description>In Matrix → Messages
+Jump to block
+ A URL to the attachment in the message, or empty string if there are no attachments.
+Parameters    Parameter name Parameter type Required? Description     message message ✓ The message to fetch the attachment from.    Output String
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;</description>
+    </item>
+    
+    <item>
+      <title> body of message (message) as (type)</title>
+      <link>https://doc.piecewise.im/matrix/message_body/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/matrix/message_body/</guid>
+      <description>In Matrix → Messages
+Jump to block
+ Get the body of a Matrix message.
+Parameters    Parameter name Parameter type Required? Description     message message ✓ The message to get the body of.   type any ✓ The type of body to get.    Output String
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;</description>
+    </item>
+    
+    <item>
+      <title> create (visibility) room with name (name) with topic (topic) with alias (alias) invite (invite)</title>
+      <link>https://doc.piecewise.im/matrix/room_create/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/matrix/room_create/</guid>
+      <description>In Matrix → Rooms
+Jump to block
+ Create a new Matrix room.
+Requires the following blocks to be present in the project: matrix login
+Parameters    Parameter name Parameter type Required? Description     visibility any ✓ The visibility of the room.   name String ✓ The user-friendly name of the room, i.e. &amp;ldquo;My Cool Room&amp;rdquo;.   topic String  The topic of the room, i.</description>
+    </item>
+    
+    <item>
+      <title> find room (room)</title>
+      <link>https://doc.piecewise.im/matrix/find_room/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/matrix/find_room/</guid>
+      <description>In Matrix → Rooms
+Jump to block
+ Find a Matrix by its ID or alias. You can find a channel&amp;rsquo;s alias in its settings panel.
+Parameters    Parameter name Parameter type Required? Description     room String ✓ The room to find - either a room ID or a room alias.    Output room
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.</description>
+    </item>
+    
+    <item>
+      <title> find user by ID (user_id)</title>
+      <link>https://doc.piecewise.im/matrix/user_find/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/matrix/user_find/</guid>
+      <description>In Matrix → Users
+Jump to block
+ Find a user by ID.
+Parameters    Parameter name Parameter type Required? Description     user_id String ✓ The ID of the user to find.    Output user
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;type&#34;:&#34;matrix_user_find&#34;,&#34;message0&#34;:&#34;%1 find user by ID %2&#34;,&#34;args0&#34;:[{&#34;type&#34;:&#34;field_image&#34;,&#34;src&#34;:&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAHBJREFUSEtjZGBg+M/AwLCegYEhiIE6YB0DA0MgI9RgEE1N8H/UYFhwDqOgACVBEIBFLsyLIP4lBgYGXaQkhC1F4QwKmMHEJkF0wwkajKwB2RfwSELyGbIjRg2Gh8YwCgpikxkudcMoS4/goKB6ZQoAqEREAb1OW0IAAAAASUVORK5CYII=&#34;,&#34;width&#34;:15,&#34;height&#34;:15,&#34;alt&#34;:&#34;Matrix&#34;,&#34;flipRtl&#34;:false},{&#34;type&#34;:&#34;input_value&#34;,&#34;name&#34;:&#34;user_id&#34;,&#34;check&#34;:&#34;String&#34;,&#34;required&#34;:true,&#34;doc_description&#34;:&#34;The ID of the user to find.</description>
+    </item>
+    
+    <item>
+      <title> invite user (user) to room (room)</title>
+      <link>https://doc.piecewise.im/matrix/room_invite/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/matrix/room_invite/</guid>
+      <description>In Matrix → Users; Matrix → Rooms
+Jump to block
+ Invite a user to a room.
+Requires the following blocks to be present in the project: matrix login
+Parameters    Parameter name Parameter type Required? Description     user user ✓ The user to invite.   room room ✓ The room to invite the user to.    Output void - This is a statement with no outputs</description>
+    </item>
+    
+    <item>
+      <title> join room (room)</title>
+      <link>https://doc.piecewise.im/matrix/room_join/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/matrix/room_join/</guid>
+      <description>In Matrix → Rooms
+Jump to block
+ Join a Matrix room
+Parameters    Parameter name Parameter type Required? Description     room room ✓ The room to join. You can look up a room by its alias by using the &amp;lsquo;find room with ID/alias&amp;rsquo; block.    Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title> leave room (room)</title>
+      <link>https://doc.piecewise.im/matrix/room_leave/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/matrix/room_leave/</guid>
+      <description>In Matrix → Rooms
+Jump to block
+ Leave a Matrix room.
+Parameters    Parameter name Parameter type Required? Description     room room ✓ The room to leave.    Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;type&#34;:&#34;matrix_room_leave&#34;,&#34;message0&#34;:&#34;%1 leave room %2&#34;</description>
+    </item>
+    
+    <item>
+      <title> log in (user_id) and (logon_type) (token)  (ignore_me) ignore my own actions  (ignore_verification) ignore encryption verification warnings</title>
+      <link>https://doc.piecewise.im/matrix/login/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/matrix/login/</guid>
+      <description>In Matrix → Configuration
+Jump to block
+ Log on to Matrix with the specified homeserver. For more info about tokens, see https://t2bot.io/docs/access_tokens/. For more info about enabling end-to-end encryption for your bot, visit https://doc.piecewise.im/tutorials/matrix_encryption/.
+Parameters    Parameter name Parameter type Required? Description     user_id any ?    logon_type any ✓ The authentication method to use.   token any ?    ignore_me any ✓ Whether to ignore events sent by the bot user in event listeners.</description>
+    </item>
+    
+    <item>
+      <title> me</title>
+      <link>https://doc.piecewise.im/matrix/me/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/matrix/me/</guid>
+      <description>In Matrix → Users
+Jump to block
+ Returns the user the bot is running as.
+Output user
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;type&#34;:&#34;matrix_me&#34;,&#34;message0&#34;:&#34;%1 me&#34;,&#34;args0&#34;:[{&#34;type&#34;:&#34;field_image&#34;,&#34;src&#34;:&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAHBJREFUSEtjZGBg+M/AwLCegYEhiIE6YB0DA0MgI9RgEE1N8H/UYFhwDqOgACVBEIBFLsyLIP4lBgYGXaQkhC1F4QwKmMHEJkF0wwkajKwB2RfwSELyGbIjRg2Gh8YwCgpikxkudcMoS4/goKB6ZQoAqEREAb1OW0IAAAAASUVORK5CYII=&#34;,&#34;width&#34;:15,&#34;height&#34;:15,&#34;alt&#34;:&#34;Matrix&#34;,&#34;flipRtl&#34;:false}],&#34;output&#34;:[&#34;matrix_user&#34;],&#34;colour&#34;:165,&#34;tooltip&#34;:&#34;Returns the user the bot is running as.&#34;,&#34;category&#34;:&#34;Matrix/Users&#34;}); Blockly.Blocks[block.type] = { init: function () { this.jsonInit(block) } } Blockly.inject(document.querySelector(&#34;#blockly&#34;), { readOnly: true }); if( block.blockXml ){ Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(&#34;&#34; + block.blockXml + &#34;</description>
+    </item>
+    
+    <item>
+      <title> members of room (room)</title>
+      <link>https://doc.piecewise.im/matrix/room_members/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/matrix/room_members/</guid>
+      <description>In Matrix → Rooms
+Jump to block
+ Get the members of a Matrix room.
+Parameters    Parameter name Parameter type Required? Description     room room ✓ The room to get members for.    Output Array - The members of the specified Matrix room.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;</description>
+    </item>
+    
+    <item>
+      <title> power level of user (user) in room (room)</title>
+      <link>https://doc.piecewise.im/matrix/user_power_level/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/matrix/user_power_level/</guid>
+      <description>In Matrix → Moderation
+Jump to block
+ Get the power level of a user in a particular Matrix room.
+Parameters    Parameter name Parameter type Required? Description     user user ✓ The user to get the power level of.   room room ✓ The room to get the user&amp;rsquo;s power level in.    Output Number - The user&amp;rsquo;s power level, or 0.</description>
+    </item>
+    
+    <item>
+      <title> redact message (item)</title>
+      <link>https://doc.piecewise.im/matrix/redact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/matrix/redact/</guid>
+      <description>In Matrix → Messages; Matrix → Moderation
+Jump to block
+ Redact a Matrix message or sticker.
+Parameters    Parameter name Parameter type Required? Description     item sticker OR message ✓ The item to redact.    Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;</description>
+    </item>
+    
+    <item>
+      <title> send message to room (room) with content (content)</title>
+      <link>https://doc.piecewise.im/matrix/send/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/matrix/send/</guid>
+      <description>In Matrix → Messages
+Jump to block
+ Send a message to a Matrix room.
+Parameters    Parameter name Parameter type Required? Description     room room ✓ The room to send the message to.   content String OR attachment OR sticker ✓ The content of the message.    Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title> set power level of user (user) in room (room) to (power_level)</title>
+      <link>https://doc.piecewise.im/matrix/user_power_level_set/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/matrix/user_power_level_set/</guid>
+      <description>In Matrix → Moderation
+Jump to block
+ Set the power level of a user in a particular Matrix room.
+Parameters    Parameter name Parameter type Required? Description     user user ✓ The user to set the power level of.   room room ✓ The room to set the user&amp;rsquo;s power level in.   power_level Number ✓ The power level to set the user to.</description>
+    </item>
+    
+    <item>
+      <title> sticker with image location (url) with description (body)</title>
+      <link>https://doc.piecewise.im/matrix/sticker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/matrix/sticker/</guid>
+      <description>In Matrix → Messages
+Jump to block
+ Create a Matrix sticker.
+Parameters    Parameter name Parameter type Required? Description     url String ✓ The URL or filename of the image to use for the sticker.   body String ✓ The description of the sticker.    Output sticker
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;</description>
+    </item>
+    
+    <item>
+      <title> user (user1) is (user2)</title>
+      <link>https://doc.piecewise.im/matrix/user_is/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/matrix/user_is/</guid>
+      <description>In Matrix → Users
+Jump to block
+ Determines whether a user is another, by comparing their IDs.
+Parameters    Parameter name Parameter type Required? Description     user1 user ✓ The user to check.   user2 user ✓ The user to check against.    Output Boolean
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;</description>
+    </item>
+    
+    <item>
+      <title> 🔔 initiator</title>
+      <link>https://doc.piecewise.im/matrix/event_initiator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/matrix/event_initiator/</guid>
+      <description>In Matrix → Events
+Jump to block
+ The user who initiated this event. For example, when a user is invited to a room, this is the user who sent the invitation, as opposed to the user that received it; and for message events, this is always the user that sent the message.
+Output user
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;</description>
+    </item>
+    
+    <item>
+      <title> 🔔 message</title>
+      <link>https://doc.piecewise.im/matrix/event_message/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/matrix/event_message/</guid>
+      <description>In Matrix → Events
+Jump to block
+ The message that is the target of this event.
+Output message
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;type&#34;:&#34;matrix_event_message&#34;,&#34;message0&#34;:&#34;%1 🔔 message&#34;,&#34;args0&#34;:[{&#34;type&#34;:&#34;field_image&#34;,&#34;src&#34;:&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAHBJREFUSEtjZGBg+M/AwLCegYEhiIE6YB0DA0MgI9RgEE1N8H/UYFhwDqOgACVBEIBFLsyLIP4lBgYGXaQkhC1F4QwKmMHEJkF0wwkajKwB2RfwSELyGbIjRg2Gh8YwCgpikxkudcMoS4/goKB6ZQoAqEREAb1OW0IAAAAASUVORK5CYII=&#34;,&#34;width&#34;:15,&#34;height&#34;:15,&#34;alt&#34;:&#34;Matrix&#34;,&#34;flipRtl&#34;:false}],&#34;output&#34;:[&#34;matrix_message&#34;],&#34;colour&#34;:165,&#34;tooltip&#34;:&#34;The message that is the target of this event.&#34;,&#34;category&#34;:&#34;Matrix/Events&#34;}); Blockly.Blocks[block.type] = { init: function () { this.jsonInit(block) } } Blockly.inject(document.querySelector(&#34;#blockly&#34;), { readOnly: true }); if( block.blockXml ){ Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(&#34;&#34; + block.</description>
+    </item>
+    
+    <item>
+      <title> 🔔 room</title>
+      <link>https://doc.piecewise.im/matrix/event_message_room/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/matrix/event_message_room/</guid>
+      <description>In Matrix → Events
+Jump to block
+ Message room, i.e. the room that the message was sent to. Only valid within message events, otherwise throws an error.
+Output room
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;type&#34;:&#34;matrix_event_message_room&#34;,&#34;message0&#34;:&#34;%1 🔔 room&#34;,&#34;args0&#34;:[{&#34;type&#34;:&#34;field_image&#34;,&#34;src&#34;:&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAHBJREFUSEtjZGBg+M/AwLCegYEhiIE6YB0DA0MgI9RgEE1N8H/UYFhwDqOgACVBEIBFLsyLIP4lBgYGXaQkhC1F4QwKmMHEJkF0wwkajKwB2RfwSELyGbIjRg2Gh8YwCgpikxkudcMoS4/goKB6ZQoAqEREAb1OW0IAAAAASUVORK5CYII=&#34;,&#34;width&#34;:15,&#34;height&#34;:15,&#34;alt&#34;:&#34;Matrix&#34;,&#34;flipRtl&#34;:false}],&#34;output&#34;:[&#34;matrix_room&#34;],&#34;colour&#34;:165,&#34;tooltip&#34;:&#34;Message room, i.e. the room that the message was sent to. Only valid within message events, otherwise throws an error.</description>
+    </item>
+    
+    <item>
+      <title> 🔔 sticker</title>
+      <link>https://doc.piecewise.im/matrix/event_sticker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/matrix/event_sticker/</guid>
+      <description>In Matrix → Events
+Jump to block
+ The sticker sent as part of this event. Only valid within sticker events, otherwise throws an error.
+Output sticker
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;type&#34;:&#34;matrix_event_sticker&#34;,&#34;message0&#34;:&#34;%1 🔔 sticker&#34;,&#34;args0&#34;:[{&#34;type&#34;:&#34;field_image&#34;,&#34;src&#34;:&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAHBJREFUSEtjZGBg+M/AwLCegYEhiIE6YB0DA0MgI9RgEE1N8H/UYFhwDqOgACVBEIBFLsyLIP4lBgYGXaQkhC1F4QwKmMHEJkF0wwkajKwB2RfwSELyGbIjRg2Gh8YwCgpikxkudcMoS4/goKB6ZQoAqEREAb1OW0IAAAAASUVORK5CYII=&#34;,&#34;width&#34;:15,&#34;height&#34;:15,&#34;alt&#34;:&#34;Matrix&#34;,&#34;flipRtl&#34;:false}],&#34;output&#34;:[&#34;matrix_sticker&#34;],&#34;colour&#34;:165,&#34;tooltip&#34;:&#34;The sticker sent as part of this event. Only valid within sticker events, otherwise throws an error.&#34;,&#34;category&#34;:&#34;Matrix/Events&#34;}); Blockly.Blocks[block.type] = { init: function () { this.</description>
+    </item>
+    
+    <item>
+      <title> 🔔 user</title>
+      <link>https://doc.piecewise.im/matrix/event_user/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/matrix/event_user/</guid>
+      <description>In Matrix → Events
+Jump to block
+ The target of this event. For example, for message events, the user that typed and sent the message; for invitation events, this is the user that was invited.
+Output user
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;type&#34;:&#34;matrix_event_user&#34;,&#34;message0&#34;:&#34;%1 🔔 user&#34;,&#34;args0&#34;:[{&#34;type&#34;:&#34;field_image&#34;,&#34;src&#34;:&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAHBJREFUSEtjZGBg+M/AwLCegYEhiIE6YB0DA0MgI9RgEE1N8H/UYFhwDqOgACVBEIBFLsyLIP4lBgYGXaQkhC1F4QwKmMHEJkF0wwkajKwB2RfwSELyGbIjRg2Gh8YwCgpikxkudcMoS4/goKB6ZQoAqEREAb1OW0IAAAAASUVORK5CYII=&#34;,&#34;width&#34;:15,&#34;height&#34;:15,&#34;alt&#34;:&#34;Matrix&#34;,&#34;flipRtl&#34;:false}],&#34;output&#34;:[&#34;matrix_user&#34;],&#34;colour&#34;:165,&#34;tooltip&#34;:&#34;The target of this event. For example, for message events, the user that typed and sent the message; for invitation events, this is the user that was invited.</description>
+    </item>
+    
+    <item>
+      <title>🔔  when (event)  do (statement)</title>
+      <link>https://doc.piecewise.im/matrix/when/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/matrix/when/</guid>
+      <description>In Matrix → Events
+Jump to block
+ Run code when an event occurs, such as the bot starting.
+Parameters    Parameter name Parameter type Required? Description     event any ✓ The event to listen to.   statement statements&amp;hellip; ✓ The statements to execute when the event is triggered.    Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+  </channel>
+</rss>

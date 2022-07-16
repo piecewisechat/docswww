@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title> set my status to (activity) - Piecewise</title>
+<meta name="description" content="Build chat bots with blocks">
+<meta name="generator" content="Hugo 0.86.0" />
+<link href="https://doc.piecewise.im/index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://doc.piecewise.im/discord/user_set_status/">
+<link rel="stylesheet" href="https://doc.piecewise.im/css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="https://doc.piecewise.im/css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script src="https://doc.piecewise.im/js/bundle.js"></script><style>
+:root {}
+</style>
+<meta property="og:title" content=" set my status to (activity)" />
+<meta property="og:description" content="In Discord → Users
+Jump to block
+ Set the bot&rsquo;s Discord status.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     activity any ✓ The status to set the user to.    Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://doc.piecewise.im/discord/user_set_status/" /><meta property="article:section" content="discord" />
+
+<meta property="og:site_name" content="Piecewise" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=" set my status to (activity)"/>
+<meta name="twitter:description" content="In Discord → Users
+Jump to block
+ Set the bot&rsquo;s Discord status.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     activity any ✓ The status to set the user to.    Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document."/>
+<meta itemprop="name" content=" set my status to (activity)">
+<meta itemprop="description" content="In Discord → Users
+Jump to block
+ Set the bot&rsquo;s Discord status.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     activity any ✓ The status to set the user to.    Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.">
+
+<meta itemprop="wordCount" content="121">
+<meta itemprop="keywords" content="" /></head>
+<body><div class="container"><header>
+<h1>Piecewise</h1>
+<p class="description">Build chat bots with blocks</p>
+
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="/">Home</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main><h1> set my status to (activity)</h1>
+<p><em>In <a href="piecewise:jump/Discord%2FUsers">Discord → Users</a></em></p>
+<p><a href="piecewise:jump/discord_user_set_status">Jump to block</a></p>
+<div id="blockly" style="width: 100%; height: 4.9em"></div>
+<p>Set the bot&rsquo;s Discord status.</p>
+<p><strong>Requires the following blocks to be present in the project:</strong> <a href="/discord/login">discord login</a></p>
+<h2 id="parameters">Parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Parameter name</th>
+<th>Parameter type</th>
+<th>Required?</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span id="param-activity">activity</a></td>
+<td>any</td>
+<td>✓</td>
+<td>The status to set the user to.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="output">Output</h2>
+<p>void - This is a statement with no outputs</p>
+<script>
+window.addEventListener("load", () => {
+    let script = document.createElement("script");
+    script.src = "https://unpkg.com/blockly/blockly.min.js";
+
+    document.body.appendChild(script);
+
+    script.onload = () => {
+        const block = ({"type":"discord_user_set_status","message0":"%1 set my status to %2","args0":[{"type":"field_image","src":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAABYZfFYZPFXZfFXZPFXZPFYZfFYZfJYZfJYZPFXZfFXZfFYZPJXZfFYZPFXZfFYZPFXZfFXZPFXZfFXZPFXZPFYZPFYZfFYZPFYZPFXZfFYZfJYZfFbaPKMlfaiqfdwe/NXZPHDyPr+/v5zfvSutPjr7P2mrfj4+P6ttPjQ1Pu7wPna3fzc3/z6+v7V2Pursvj9/f7m6P27wfnT1vtxfPSjqvdxfPNYZPH///83eggMAAAAGnRSTlMAMpja+tqYMgqcmgrCwpqcMjKYmJoKwsL62kJGyTMAAAABYktHRDnXAJVAAAAAB3RJTUUH5QcLEDIO+ZKhhgAAAK1JREFUGNNNj1kSgkAQQxscXHAbFdyCCjQKAgq43/9kzqClvK9OqtKVECkMsyWE1e7Qh25vjRrP7td6gB9D7YzQYEwkPWCz3fn+brsBgglNlR9yTajOKVlAxF8iwCIB7PkQJ0l84CMgtJFyhjxHxqk2VOTE54K5OPNJR9TTsrpcb7frpSqBGckAuD90h8dTlTWInGYxWzV153+9qMe4zusjA8f97pWmJZYrU+r7DUshGA/6eLOuAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIxLTA3LTExVDE2OjUwOjEyKzAwOjAwb8xQ9QAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMS0wNy0xMVQxNjo1MDoxMiswMDowMB6R6EkAAAAASUVORK5CYII=","width":15,"height":15,"alt":"Discord","flipRtl":false},{"type":"field_dropdown","name":"activity","options":[["online","online"],["idle","idle"],["do not disturb","dnd"],["invisible","invisible"]],"required":true,"doc_description":"The status to set the user to."}],"previousStatement":null,"nextStatement":null,"colour":230,"tooltip":"Set the bot's Discord status.","category":"Discord/Users","require":["discord_login"]});
+
+        Blockly.Blocks[block.type] = {
+            init: function () { this.jsonInit(block) }
+        }
+    
+        Blockly.inject(document.querySelector("#blockly"), {
+            readOnly: true
+        });
+    
+        if( block.blockXml ){
+            Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom("<xml>" + block.blockXml + "</xml>"), Blockly.getMainWorkspace());
+        } else {
+            Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom("<xml><block type='" + block.type + "'></block></xml>"), Blockly.getMainWorkspace());
+        }
+    };
+});
+</script>
+<div class="edit-meta">
+
+<br></div><nav class="pagination"><a class="nav nav-prev" href="https://doc.piecewise.im/discord/set_activity/" title=" set activity to (activity) (name)"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev -  set activity to (activity) (name)</a>
+<a class="nav nav-next" href="https://doc.piecewise.im/discord/user_nickname/" title=" set nickname of user (user) in server (server) to (nickname)">Next -  set nickname of user (user) in server (server) to (nickname) <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="slide-menu">
+<ul>
+<li class=""><a href="https://doc.piecewise.im">Home</a></li>
+
+<li class=" has-sub-menu"><a href="https://doc.piecewise.im/tutorials/">Tutorials<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://doc.piecewise.im/tutorials/backpacks/">Backpacks</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/adding-custom-blocks/">Creating Custom Blocks (Legacy)</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/adding-custom-styles/">Creating Custom Themes</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/faq/">Frequently Asked Questions</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/paginators/">Paginators</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/persistent-data/">Persistent data</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/plugins/">Plugins</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/sharing-blocks/">Sharing Blocks</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/steam-deck/">Steam Deck</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/workshop/">Steam Workshop</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/matrix_encryption/">Using Matrix Encryption</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/aimer/">Using the aimer branch</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/your-first-bot/">Your First Bot</a></li>
+</ul>
+  
+</li>
+
+<li class="parent has-sub-menu"><a href="https://doc.piecewise.im/discord/">Discord<span class="mark opened">-</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://doc.piecewise.im/discord/role_permissions/"> (action) permission (permission) to/from role (role)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/message_mentions/"> (item) mentioned in message (message)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/is/"> (obj1) is (obj2)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/message_operations/"> (operation) message (message)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/role_give/"> (operation) role (role) to/from user (user)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/thread_membership/"> (operation) thread (channel)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/thread_archive/"> (operation) thread (thread)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/voice_moderation/"> (operation) user (user) in server (guild)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/thread_membership_other/"> (operation) user (user) to/from thread (thread)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/permission/"> (permission)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/get_channel_property/"> (property) of channel (channel)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/get_emoji_property/"> (property) of emoji (emoji)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/get_role_property/"> (property) of role (role)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/schevent_property/"> (property) of scheduled event (schevent)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/get_guild_property/"> (property) of server (guild)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/sticker_property/"> (property) of sticker (sticker)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/get_user_property/"> (property) of user (user)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/schevent_times/"> (property) time of scheduled event (schevent)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/invite_uses/"> (property) uses of invite (invite)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/chat_command_argument/"> (type) argument # (argNum)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/event_type/"> (type) event</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/channels_in_guild/"> all channels in server (guild)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/guild_invites/"> all invites for server (guild)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/guild_member_count/"> approximate number of members in server (guild)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/chat_command_arguments/"> arguments</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/attachment/"> attachment with location (attachment)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/message_attachments/"> attachments of message (message)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/message_author/"> author of message (message)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/author/"> author with name (name) with image (image) with URL (url)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/ban/"> ban user (user) from server (guild) with reason (reason)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/channel_is_type/"> channel (channel) is (type)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/activity_clear/"> clear activity</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/message_content/"> content of message (message)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/event_create/"> create (privacy) event of type (type) in server (guild) with name (name) with description (description) starting at (start) ending at (end) in voice channel (channel) at location (location)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/channel_create/"> create (type) channel with name (name) in server/category (parent)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/channel_create_return/"> create (type) channel with name (name) in server/category (parent)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/emoji_create/"> create emoji with name (name) in server (guild) with file (location_resolvable)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/channel_create_invite/"> create invite to channel (channel) probationary? (temporary) re-use similar existing invite? (not_unique) time until expiry (max_age) maximum # of uses (max_uses)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/role_create_return/"> create role in server (server) with name (name) with color (color) position (position) hoisted? (hoisted) mentionable? (mentionable)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/guild_create/"> create server with name (name) with icon (image)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/guild_create_return/"> create server with name (name) with icon (image)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/sticker_create/"> create sticker in server (guild) with name (name) with image (image) represented by emoji (emoji)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/sticker_create_return/"> create sticker in server (guild) with name (name) with image (image) represented by emoji (emoji)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/thread_create/"> create thread with name (name) in channel (channel) archive after (archivetime)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/thread_create_return/"> create thread with name (name) in channel (channel) archive after (archivetime)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/interaction_id/"> custom ID of interaction (interaction)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/channel_delete/"> delete channel (channel)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/emoji_delete/"> delete emoji (emoji)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/role_delete/"> delete role (role)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/schevent_delete/"> delete scheduled event (schevent)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/guild_delete/"> delete server (guild)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/sticker_delete/"> delete sticker (sticker)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/role_create/"> edit role (role) with name (name) with color (color) with position (position) hoisted? (hoisted) mentionable? (mentionable)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/schevent_in_guild/"> events scheduled in server (guild)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/message_reference/"> fetch message (message) references</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/message_fetch/"> fetch message with ID (id) in channel (channel)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/find_channel_with_name/"> find channel in server (guild) with name (name)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/find_channel_by_id/"> find channel with ID (channel)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/find_emoji_with_name/"> find emoji in server (guild) with name (name)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/find_emoji_by_id/"> find emoji with ID (id)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/find_emoji_by_unicode/"> find emoji with Unicode character (unicode)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/find_role_by_id/"> find role in server (guild) with ID (id)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/find_role_with_name/"> find role in server (guild) with name (name)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/find_guild_with_id/"> find server with ID (id)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/find_guild_with_name/"> find server with name (name)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/sticker_by_id/"> find sticker with ID (id)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/find_user_by_id/"> find user with ID (userid)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/message_id/"> ID of message (message)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/invite_is_temporary/"> invite (invite) is temporary</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/kick/"> kick user (user) from server (guild) with reason (reason)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/guild_leave/"> leave server (guild)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/login/"> log on (token)  (ignore_me) ignore my own actions  (ignore_bots) ignore other bots  (ignore_system) ignore system messages  (request_presence_intent) request presence intent  (request_members_intent) request members intent</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/me/"> me</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/message_can/"> message (message) (property)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/has_reaction_with_emoji/"> message (message) has reaction with emoji (emoji)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/message_mentions_target/"> message (message) mentions (target)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/message_mentions_everyone/"> message (message) mentions @everyone</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/guild_premium_count/"> number of Nitro boosters in server (guild)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/user_reaction_count/"> number of reactions on message (message) with emoji (emoji)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/chat_command/"> on chat command named (name) with minimum # of parameters (count) do (statements) (dms) also in DMs </a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/message_channel/"> origin channel of message (message)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/message_guild/"> origin server of message (message)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/user_owner/"> owner of bot</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/guild_owner/"> owner of server (guild)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/channel_parent/"> parent channel of (channel)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/channel_guild/"> parent server of channel (channel)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/channel_pinned_messages/"> pinned messages in channel (channel)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/voice_play_sound/"> play audio at location (sound) in channel (channel)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/react/"> react to message (message) with emoji (emoji)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/reaction_remove/"> remove all reactions on message (message)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/reactions_remove_from_user/"> remove all reactions on message (message) from user (user)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/user_timeout_remove/"> remove time out from user (user) in server (guild) with reason (reason)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/invite_resolve/"> resolve invite from URL/code (invite)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/embed/"> rich embed with title (title) with description (description) with URL (url) with author (author) with image URL (image_url) with thumbnail URL (thumbnail_url) with color (color) with footer (footer) with footer logo (footer_logo) with timestamp (timestamp)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/guild_roles/"> roles in server (server)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/user_roles/"> roles user (user) has in server (guild)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/embed_paginator/"> send embed paginator to channel (target) with content (content) with pages (pages) with next emoji (next) with previous emoji (previous) with timeout (timeout)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/send/"> send message to (to) with content (content) with components (interaction) as (as) (suppress_embeds) suppress embeds</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/send_return/"> send message to (to) with content (content) with components (interaction) as (as) (suppress_embeds) suppress embeds</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/guild_available/"> server (guild) is available</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/sticker_guild/"> server that owns sticker (sticker)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/user_my_servers/"> servers I am in</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/set_activity/"> set activity to (activity) (name)</a></li>
+<li class="active"><a href="https://doc.piecewise.im/discord/user_set_status/"> set my status to (activity)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/user_nickname/"> set nickname of user (user) in server (server) to (nickname)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/channel_ratelimit/"> set slow mode on channel (channel) to time (time) with reason (reason)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/user_start_typing/"> start typing in channel (channel)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/voice_stop_sound/"> stop sound</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/invite_channel/"> target channel of invite (invite)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/invite_guild/"> target server of invite (invite)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/message_created_at/"> time message (message) sent</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/user_timeout/"> time out user (user) for length (time) in server (guild) with reason (reason)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/user_timeout_ends/"> timeout end time for user (user) in server (guild)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/unban/"> unban user (user) from server (guild) with reason (reason)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/invite_url/"> URL of invite (invite)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/message_url/"> URL of message (message)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/user_has_role/"> user (user) has role (role)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/voice_is/"> user (user) is (property) in server (guild)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/user_presence/"> user (user) is (status) in server (guild)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/user_banned_from_guild/"> user (user) is banned from server (guild)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/user_is_bot/"> user (user) is bot</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/user_is_bot_owner/"> user (user) is bot owner</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/user_in_guild/"> user (user) is in server (guild)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/user_is_timed_out/"> user (user) is timed out in server (guild)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/user_can/"> user or role (userOrRole) can (permission) in (target)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/guild_bans/"> users banned from server (guild)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/voice_channel_members/"> users in voice channel (channel)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/reaction_users/"> users that reacted to message (message) with emoji (emoji)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/message_await/"> wait for message in channel (channel) from user (user) time out after (timeout)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/guild_members_paginator/"> 📄 for each member of server (guild) as (VAR)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/message_paginator/"> 📄 for each message in channel (channel) as (VAR)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/event_channel/"> 🔔 channel</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/event_emoji/"> 🔔 emoji</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/event_interaction/"> 🔔 interaction</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/event_message_message/"> 🔔 message</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/event_message_old/"> 🔔 message before edit</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/event_guild/"> 🔔 server</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/event_user/"> 🔔 user</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/interaction_reply/"> 🗣️ (operation) interaction with content (content) with component (interaction) ephemeral (ephemeral)  suppress embeds (suppress_embeds) </a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/command_arg/"> 🗣️ (required) required (type) option with name (name) description (description)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/interaction_modal_input/"> 🗣️ (type) input with label (label) with ID (id) with placeholder (placeholder) with minimum length (min) with maximum length (max) with initial value (initial) (required) required?</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/interaction_button/"> 🗣️ create interactible button with label (label) color (type)  emoji (emoji) enabled? (enabled) do (statements)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/interaction_button_id/"> 🗣️ create interactible button with label (label) color (type)  emoji (emoji) enabled? (enabled) with custom ID (id)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/interaction_dropdown/"> 🗣️ create interactible dropdown with items (values) maximum selection count (maxValues) minimum selection count (minValues) placeholder (placeholder) enabled? (enabled) do (statements)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/interaction_dropdown_id/"> 🗣️ create interactible dropdown with items (values) maximum selection count (maxValues) minimum selection count (minValues) placeholder (placeholder) enabled? (enabled) with custom ID (id)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/interaction_defer/"> 🗣️ defer interaction response</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/command_get_arg/"> 🗣️ get (type) option with name (argument)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/interaction_reply_modal/"> 🗣️ reply to interaction with modal titled (title) with fields (fields) do (do)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/interaction_dropdown_values/"> 🗣️ selected dropdown values</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/interaction_modal_value/"> 🗣️ value of modal field with ID (id)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/command_create/"> 🗣️ when (type) with name (name) description (description) in server (guild) with options (args) do (do)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/reaction_count/">[deprecated]  # reactors on (reaction)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/get_reaction_with_emoji/">[deprecated]  get reaction on message (message) with emoji (emoji)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/reaction_reactors/">[deprecated]  reactors to reaction (reaction)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/user_has_permission/">[deprecated]  user (user) can (permission) in (target)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/event_reaction_reaction/">[deprecated]  🔔 reaction</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/when/">🔔  when (event)  do (statement)</a></li>
+<li class=""><a href="https://doc.piecewise.im/discord/interaction_dropdown_arg/">🗣️  (default) default option with name (name) value (value) description (description) emoji (emoji)</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="https://doc.piecewise.im/internet/">Internet<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://doc.piecewise.im/internet/custom_request/"> (method) URL (url) send (datatype) data (data) with headers (headers) parse response as (response)</a></li>
+<li class=""><a href="https://doc.piecewise.im/internet/json_to_table/"> fetch URL (url) as (type) table</a></li>
+<li class=""><a href="https://doc.piecewise.im/internet/parse_string/"> parse text (string) as (type)</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="https://doc.piecewise.im/lazurite/">Lazurite<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://doc.piecewise.im/lazurite/config/"> configure  (ignore_errors) ignore errors</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/control_stop/"> stop</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/array_random/">[deprecated] pick random from list (array)</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/date_add/">add (time) to date (date)</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/array_push/">add (value) to (property) of (array)</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/parse_int/">convert text (text) to number</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/table_create/">create empty table</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/table_create_pairs/">create table with pairs  (pairs)</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/table_delete/">delete key (key) from table (table)</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/string_interp/">format text (text) with (values)</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/table_get/">get key (key) from table (table)</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/table_keys/">keys of table (table)</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/array_contains/">list (array) contains (value)</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/array_load/">load list from file (file)</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/table_load/">load table from file (file)</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/new_line/">new line</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/date_parse/">parse date from text (text)</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/print/">print (print)</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/string_replace/">replace (needle) with (replacement) in (haystack)</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/array_reverse/">reverse list (array)</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/array_save/">save list (array) to file (file)</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/table_save/">save table (table) to file (file)</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/variable_local/">set (VAR) to (value) in this block set only</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/table_set/">set key (key) to (value) in table (table)</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/table_contains_key/">table (table) contains key (key)</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/table_pair/">table pair with key (key) value (value)</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/string_contains/">text (haystack) contains (needle)</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/string_prefix_suffix/">text (text) (starts_or_ends) with (prefix_or_suffix)</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/try/">try  (statements) 🔥 catch error as (error)  (catch)</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/timer_time/">⏰ (count) (unit)</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/date_property/">⏰ (property) of date (date)</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/timer_after/">⏰ after (time) do (statements)</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/date/">⏰ create date in (timezone) with  year (year) month (month) day (day) hours (hours) minutes (minutes) seconds (seconds)</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/timer_every/">⏰ every (when) do (statement)</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/date_now/">⏰ now</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/timer_stop/">⏰ stop</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/date_elapsed/">⏰ time elapsed between (time1) and (time2)</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/timer_wait/">⏰ wait (time)</a></li>
+<li class=""><a href="https://doc.piecewise.im/lazurite/when/">🔔  when (event)  do (statement)</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="https://doc.piecewise.im/mastodon/">Mastodon<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://doc.piecewise.im/mastodon/status_interact/"> (interaction) status (status)</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/user_interact/"> (interaction) user (user)</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/user_countable_property/"> (property) count of user (user)</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/user_property/"> (property) of user (user)</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/scope/"> (scope) scope</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/status_content/"> (type) content of status (status)</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/attachment/"> attachment with location (attachment)</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/status_attachments/"> attachments in status (status)</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/status_author/"> author of status (status)</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/status_delete/"> delete status (status)</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/pleroma_react_emoji/"> emoji of reaction (reaction)</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/pleroma_reacts/"> emoji reactions on status (status)</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/status_lookup_id/"> get status with ID (localid)</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/user_handle/"> handle of user (user)</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/user_relationship/"> I (state) user (user)</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/poll_voted/"> I voted on poll (poll)</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/status_id/"> ID of status (status)</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/notification_actor/"> initiator of notification (notification)</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/pleroma_react_account/"> initiator of reaction (reaction)</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/instance_chars/"> instance maximum status length</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/poll_votes/"> items I voted for on poll (poll)</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/login/"> log on (token) (instance)  (ignore_my_statuses) ignore my statuses in feeds  (include_mentions) include mentions when replying</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/status_lookup/"> look up status with URL (apid)</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/user_lookup/"> look up user by handle (handle)</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/user_me/"> me</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/notification_type/"> notification (notification) is (type)</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/poll_stats/"> number of votes for poll option (option) in poll (poll)</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/status_original_author/"> original author of status (status)</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/status_poll/"> poll in status (status)</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/poll_options/"> poll options in status (poll)</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/poll/"> poll with options (options) expires in (expires) allow multiple choices? (multiple)</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/status_scope/"> scope of status (status)</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/send/"> send status with content (content) spoiler/subject (spoiler) with scope (scope) in reply to (post) sensitive? (sensitive)  as (format) </a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/send_return/"> send status with content (content) spoiler/subject (spoiler) with scope (scope) in reply to (post) sensitive? (sensitive)  as (format) </a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/profile_edit/"> set my (field) to (name)</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/status_is/"> status (status) is (property)</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/poll_ends/"> time poll (poll) ends</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/status_user_stats/"> users that (stat) status (status)</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/poll_vote/"> vote for poll option (option) in poll (poll)</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/poll_winner/"> winning item(s) in poll (poll)</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/user_post_foreach/"> 📄 for each status from user (user) as (VAR)</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/event_notification/"> 🔔 notification</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/event_status/"> 🔔 status</a></li>
+<li class=""><a href="https://doc.piecewise.im/mastodon/when/">🔔  when (event)  do (statement)</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="https://doc.piecewise.im/matrix/">Matrix<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://doc.piecewise.im/matrix/ban/"> (action) user (user) from room (room) with reason (reason)</a></li>
+<li class=""><a href="https://doc.piecewise.im/matrix/room_property/"> (property) of room (room)</a></li>
+<li class=""><a href="https://doc.piecewise.im/matrix/sticker_property/"> (property) of sticker (sticker)</a></li>
+<li class=""><a href="https://doc.piecewise.im/matrix/get_user_property/"> (property) of user (user)</a></li>
+<li class=""><a href="https://doc.piecewise.im/matrix/attachment/"> attachment at location (location)</a></li>
+<li class=""><a href="https://doc.piecewise.im/matrix/event_message_attachment/"> attachment of message (message)</a></li>
+<li class=""><a href="https://doc.piecewise.im/matrix/message_body/"> body of message (message) as (type)</a></li>
+<li class=""><a href="https://doc.piecewise.im/matrix/room_create/"> create (visibility) room with name (name) with topic (topic) with alias (alias) invite (invite)</a></li>
+<li class=""><a href="https://doc.piecewise.im/matrix/find_room/"> find room (room)</a></li>
+<li class=""><a href="https://doc.piecewise.im/matrix/user_find/"> find user by ID (user_id)</a></li>
+<li class=""><a href="https://doc.piecewise.im/matrix/room_invite/"> invite user (user) to room (room)</a></li>
+<li class=""><a href="https://doc.piecewise.im/matrix/room_join/"> join room (room)</a></li>
+<li class=""><a href="https://doc.piecewise.im/matrix/room_leave/"> leave room (room)</a></li>
+<li class=""><a href="https://doc.piecewise.im/matrix/login/"> log in (user_id) and (logon_type) (token)  (ignore_me) ignore my own actions  (ignore_verification) ignore encryption verification warnings</a></li>
+<li class=""><a href="https://doc.piecewise.im/matrix/me/"> me</a></li>
+<li class=""><a href="https://doc.piecewise.im/matrix/room_members/"> members of room (room)</a></li>
+<li class=""><a href="https://doc.piecewise.im/matrix/user_power_level/"> power level of user (user) in room (room)</a></li>
+<li class=""><a href="https://doc.piecewise.im/matrix/redact/"> redact message (item)</a></li>
+<li class=""><a href="https://doc.piecewise.im/matrix/send/"> send message to room (room) with content (content)</a></li>
+<li class=""><a href="https://doc.piecewise.im/matrix/user_power_level_set/"> set power level of user (user) in room (room) to (power_level)</a></li>
+<li class=""><a href="https://doc.piecewise.im/matrix/sticker/"> sticker with image location (url) with description (body)</a></li>
+<li class=""><a href="https://doc.piecewise.im/matrix/user_is/"> user (user1) is (user2)</a></li>
+<li class=""><a href="https://doc.piecewise.im/matrix/event_initiator/"> 🔔 initiator</a></li>
+<li class=""><a href="https://doc.piecewise.im/matrix/event_message/"> 🔔 message</a></li>
+<li class=""><a href="https://doc.piecewise.im/matrix/event_message_room/"> 🔔 room</a></li>
+<li class=""><a href="https://doc.piecewise.im/matrix/event_sticker/"> 🔔 sticker</a></li>
+<li class=""><a href="https://doc.piecewise.im/matrix/event_user/"> 🔔 user</a></li>
+<li class=""><a href="https://doc.piecewise.im/matrix/when/">🔔  when (event)  do (statement)</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="https://doc.piecewise.im/system/">System<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://doc.piecewise.im/system/file_write/">(mode) file (file) with text (text)</a></li>
+<li class=""><a href="https://doc.piecewise.im/system/command_result_output/">(stream) of command (result)</a></li>
+<li class=""><a href="https://doc.piecewise.im/system/file_read/">contents of file (file) as text</a></li>
+<li class=""><a href="https://doc.piecewise.im/system/file_mkdir/">create directory (directory)</a></li>
+<li class=""><a href="https://doc.piecewise.im/system/file_delete/">delete item (file)</a></li>
+<li class=""><a href="https://doc.piecewise.im/system/command_exec/">execute command (command) with arguments (arguments)</a></li>
+<li class=""><a href="https://doc.piecewise.im/system/command_result_code/">exit code of command (result)</a></li>
+<li class=""><a href="https://doc.piecewise.im/system/file_stat/">file (file) (property)</a></li>
+<li class=""><a href="https://doc.piecewise.im/system/file_ls/">files in directory (directory)</a></li>
+<li class=""><a href="https://doc.piecewise.im/system/env_get/">value of environment variable with name (name) or default (default)</a></li>
+<li class=""><a href="https://doc.piecewise.im/system/throw/">🔥 raise error (error)</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="https://doc.piecewise.im/errors/">Errors<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://doc.piecewise.im/errors/d000/">D000: Permission denied when querying for a resource (e.g. channel, user, slash commands...).</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d001/">D001: Invalid snowflake. Check any provided snowflakes and/or improve input validation.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d002/">D002: You are requesting a privileged intent you have not also requested for in the console. Check that you have requested the intents in the Developer Console.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d003/">D003: Invalid token. Check that you have entered your bot token correctly.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d100/">D100: Duplicate interactible ID rejected. Make sure all of your interactibles have unique IDs.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/l000/">L000: Required value missing. Check all of your blocks to make sure you have values at all required connections.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/l001/">L001: Tried to query invalid URL. Check to make sure that any URLs queried are valid.</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

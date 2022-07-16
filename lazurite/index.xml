@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lazurite on Piecewise</title>
+    <link>https://doc.piecewise.im/lazurite/</link>
+    <description>Recent content in Lazurite on Piecewise</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://doc.piecewise.im/lazurite/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title> configure  (ignore_errors) ignore errors</title>
+      <link>https://doc.piecewise.im/lazurite/config/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/config/</guid>
+      <description>In Piecewise
+Jump to block
+ Configure advanced Piecewise settings.
+Parameters    Parameter name Parameter type Required? Description     ignore_errors any ? Ignore errors when running. Errors will be printed to the console, but won&amp;rsquo;t crash your program. This may be useful in some situations, but we recommend leaving this off.    Output void - This is a statement with no outputs
+ window.</description>
+    </item>
+    
+    <item>
+      <title> stop</title>
+      <link>https://doc.piecewise.im/lazurite/control_stop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/control_stop/</guid>
+      <description>In Piecewise
+Jump to block
+ Stop the bot as soon as possible.
+Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;type&#34;:&#34;lazurite_control_stop&#34;,&#34;message0&#34;:&#34;%1 stop&#34;,&#34;args0&#34;:[{&#34;type&#34;:&#34;field_image&#34;,&#34;src&#34;:&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAHlJREFUOE9jNDY2/s9AJmAEaX7Tfpxk7SKVlgwomkECIAAzDJ2PbAOKZphCXE5Adx2q5iprhjdtR8F6sbkAWTNMniQ/o7uOaM0wjWfPnmWEeY0kzcgaQQaQpBmkgSybkQOSZGejxzFJzkaPf4wURkoapY5mUmxEVgsAMiVYMMGwi0YAAAAASUVORK5CYII=&#34;,&#34;width&#34;:15,&#34;height&#34;:15,&#34;alt&#34;:&#34;Piecewise&#34;}],&#34;colour&#34;:180,&#34;tooltip&#34;:&#34;Stop the bot as soon as possible.&#34;,&#34;previousStatement&#34;:null,&#34;category&#34;:&#34;Piecewise&#34;}); Blockly.Blocks[block.type] = { init: function () { this.jsonInit(block) } } Blockly.inject(document.querySelector(&#34;#blockly&#34;), { readOnly: true }); if( block.blockXml ){ Blockly.</description>
+    </item>
+    
+    <item>
+      <title>[deprecated] pick random from list (array)</title>
+      <link>https://doc.piecewise.im/lazurite/array_random/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/array_random/</guid>
+      <description>In the toolbox
+This block is deprecated and will be removed in Piecewise 22.03.0. Use &amp;lsquo;in list (list) [get] [random]&amp;rsquo; instead.
+ Pick a random item in a list.
+Parameters    Parameter name Parameter type Required? Description     array Array ✓ The list of values to pick from.    Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title>add (time) to date (date)</title>
+      <link>https://doc.piecewise.im/lazurite/date_add/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/date_add/</guid>
+      <description>In the toolbox
+ Add a particular amount of time to a date.
+Parameters    Parameter name Parameter type Required? Description     time time ✓ The time to add.   date date ✓ The date to add the specified time to.    Output date - The resulting date.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;</description>
+    </item>
+    
+    <item>
+      <title>add (value) to (property) of (array)</title>
+      <link>https://doc.piecewise.im/lazurite/array_push/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/array_push/</guid>
+      <description>In the toolbox
+ Push a value to the end of a list.
+Parameters    Parameter name Parameter type Required? Description     value any ✓ The value to add to the list.   property any ✓ Where to add the new value.   array Array ✓ The list to add the value to.    Output void - This is a statement with no outputs</description>
+    </item>
+    
+    <item>
+      <title>convert text (text) to number</title>
+      <link>https://doc.piecewise.im/lazurite/parse_int/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/parse_int/</guid>
+      <description>In the toolbox
+ Convert text represented in text to a number.
+Parameters    Parameter name Parameter type Required? Description     text String ✓ The text to convert to a number.    Output Number - The number.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;type&#34;:&#34;lazurite_parse_int&#34;,&#34;message0&#34;:&#34;convert text %1 to number&#34;,&#34;args0&#34;:[{&#34;type&#34;:&#34;input_value&#34;,&#34;name&#34;:&#34;text&#34;,&#34;check&#34;:&#34;String&#34;,&#34;required&#34;:true,&#34;doc_description&#34;:&#34;The text to convert to a number.</description>
+    </item>
+    
+    <item>
+      <title>create empty table</title>
+      <link>https://doc.piecewise.im/lazurite/table_create/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/table_create/</guid>
+      <description>In the toolbox
+ Create an empty table.
+Output table
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;type&#34;:&#34;lazurite_table_create&#34;,&#34;message0&#34;:&#34;create empty table&#34;,&#34;colour&#34;:345,&#34;tooltip&#34;:&#34;Create an empty table.&#34;,&#34;helpUrl&#34;:&#34;&#34;,&#34;output&#34;:[&#34;lazurite_table&#34;]}); Blockly.Blocks[block.type] = { init: function () { this.jsonInit(block) } } Blockly.inject(document.querySelector(&#34;#blockly&#34;), { readOnly: true }); if( block.blockXml ){ Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(&#34;&#34; + block.blockXml + &#34;&#34;), Blockly.getMainWorkspace()); } else { Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(&#34;&#34;), Blockly.getMainWorkspace()); } }; });  </description>
+    </item>
+    
+    <item>
+      <title>create table with pairs  (pairs)</title>
+      <link>https://doc.piecewise.im/lazurite/table_create_pairs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/table_create_pairs/</guid>
+      <description>In the toolbox
+ Create a table with key/value pairs.
+Parameters    Parameter name Parameter type Required? Description     pairs statements&amp;hellip; ✓ The pairs to add to the table.    Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;type&#34;:&#34;lazurite_table_create_pairs&#34;,&#34;message0&#34;:&#34;create table with pairs %1 %2&#34;</description>
+    </item>
+    
+    <item>
+      <title>delete key (key) from table (table)</title>
+      <link>https://doc.piecewise.im/lazurite/table_delete/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/table_delete/</guid>
+      <description>In the toolbox
+ Delete a key from a table.
+Parameters    Parameter name Parameter type Required? Description     key String ✓ The key to delete.   table table ✓ The table to delete the key from.    Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;</description>
+    </item>
+    
+    <item>
+      <title>format text (text) with (values)</title>
+      <link>https://doc.piecewise.im/lazurite/string_interp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/string_interp/</guid>
+      <description>In the toolbox
+ Format a text string with values.
+Parameters    Parameter name Parameter type Required? Description     text String ✓ The text to format. Each {X} will be replaced with the corresponding value, i.e. {1} will be replaced with the first value, {2} with the second, etc.   values any ✓ The values to interpolate.    Output String
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title>get key (key) from table (table)</title>
+      <link>https://doc.piecewise.im/lazurite/table_get/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/table_get/</guid>
+      <description>In the toolbox
+ Get the value from a table associated with a particular key.
+Parameters    Parameter name Parameter type Required? Description     key String ✓ The key to get.   table table ✓ The table to get the key from.    Output String, Boolean, Number, Array, table
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.</description>
+    </item>
+    
+    <item>
+      <title>keys of table (table)</title>
+      <link>https://doc.piecewise.im/lazurite/table_keys/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/table_keys/</guid>
+      <description>In the toolbox
+ Get the keys of a table.
+Parameters    Parameter name Parameter type Required? Description     table table ✓ The table to get the keys of.    Output Array
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;type&#34;:&#34;lazurite_table_keys&#34;,&#34;message0&#34;:&#34;keys of table %1&#34;,&#34;args0&#34;:[{&#34;type&#34;:&#34;input_value&#34;,&#34;name&#34;:&#34;table&#34;,&#34;check&#34;:&#34;lazurite_table&#34;,&#34;doc_description&#34;:&#34;The table to get the keys of.&#34;,&#34;required&#34;:true}],&#34;output&#34;:[&#34;Array&#34;],&#34;colour&#34;:345,&#34;tooltip&#34;:&#34;Get the keys of a table.</description>
+    </item>
+    
+    <item>
+      <title>list (array) contains (value)</title>
+      <link>https://doc.piecewise.im/lazurite/array_contains/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/array_contains/</guid>
+      <description>In the toolbox
+ Determine whether a list contains an element.
+Parameters    Parameter name Parameter type Required? Description     array Array ✓ The list of values to find the specified element in.   value any ✓ The value to find in the list.    Output Boolean
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;</description>
+    </item>
+    
+    <item>
+      <title>load list from file (file)</title>
+      <link>https://doc.piecewise.im/lazurite/array_load/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/array_load/</guid>
+      <description>In the toolbox
+ Load a list from a file previously saved with &amp;ldquo;save list to file&amp;rdquo;. If the file doesn&amp;rsquo;t exist, or does not return an array, returns an empty list.
+Parameters    Parameter name Parameter type Required? Description     file String ✓ The name of the file to load the list from, relative to the .lazurite data directory.    Output Array</description>
+    </item>
+    
+    <item>
+      <title>load table from file (file)</title>
+      <link>https://doc.piecewise.im/lazurite/table_load/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/table_load/</guid>
+      <description>In the toolbox
+ Load a table from a file previously saved with &amp;ldquo;save table to file&amp;rdquo;. If the file doesn&amp;rsquo;t exist, or does not return an table, returns empty table.
+Parameters    Parameter name Parameter type Required? Description     file String ✓ The file to load the table from, relative to the .lazurite data directory.    Output table
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title>new line</title>
+      <link>https://doc.piecewise.im/lazurite/new_line/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/new_line/</guid>
+      <description>In the toolbox
+ Inserts a new line.
+Output String
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;type&#34;:&#34;lazurite_new_line&#34;,&#34;message0&#34;:&#34;new line&#34;,&#34;output&#34;:[&#34;String&#34;],&#34;colour&#34;:160,&#34;tooltip&#34;:&#34;Inserts a new line.&#34;,&#34;helpUrl&#34;:&#34;&#34;}); Blockly.Blocks[block.type] = { init: function () { this.jsonInit(block) } } Blockly.inject(document.querySelector(&#34;#blockly&#34;), { readOnly: true }); if( block.blockXml ){ Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(&#34;&#34; + block.blockXml + &#34;&#34;), Blockly.getMainWorkspace()); } else { Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(&#34;&#34;), Blockly.getMainWorkspace()); } }; });  </description>
+    </item>
+    
+    <item>
+      <title>parse date from text (text)</title>
+      <link>https://doc.piecewise.im/lazurite/date_parse/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/date_parse/</guid>
+      <description>In the toolbox
+ Parse a date from a string.
+Parameters    Parameter name Parameter type Required? Description     text String ✓ The text to parse into a date.    Output date - The date as a date object, if it can be parsed - otherwise null.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;</description>
+    </item>
+    
+    <item>
+      <title>print (print)</title>
+      <link>https://doc.piecewise.im/lazurite/print/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/print/</guid>
+      <description>In the toolbox
+ Print a message or value to the console.
+Parameters    Parameter name Parameter type Required? Description     print any ✓ The message or value to print to the console.    Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;</description>
+    </item>
+    
+    <item>
+      <title>replace (needle) with (replacement) in (haystack)</title>
+      <link>https://doc.piecewise.im/lazurite/string_replace/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/string_replace/</guid>
+      <description>In the toolbox
+ Replace the specified text with the specified replacement.
+Parameters    Parameter name Parameter type Required? Description     needle String ✓ The text to replace.   replacement String ✓ The text to replace the specified text with.   haystack String ✓ The text to search for the specified text in.    Output String - The modified text.
+ window.</description>
+    </item>
+    
+    <item>
+      <title>reverse list (array)</title>
+      <link>https://doc.piecewise.im/lazurite/array_reverse/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/array_reverse/</guid>
+      <description>In the toolbox
+ Reverse a list, i.e. flip it from back to front.
+Parameters    Parameter name Parameter type Required? Description     array Array ✓ The list to reverse.    Output Array - The reversed list.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;type&#34;:&#34;lazurite_array_reverse&#34;,&#34;message0&#34;:&#34;reverse list %1&#34;,&#34;args0&#34;:[{&#34;type&#34;:&#34;input_value&#34;,&#34;name&#34;:&#34;array&#34;,&#34;check&#34;:&#34;Array&#34;,&#34;doc_description&#34;:&#34;The list to reverse.</description>
+    </item>
+    
+    <item>
+      <title>save list (array) to file (file)</title>
+      <link>https://doc.piecewise.im/lazurite/array_save/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/array_save/</guid>
+      <description>In the toolbox
+ Save a list to a local file, to be loaded later with &amp;ldquo;load list from file&amp;rdquo;.
+Parameters    Parameter name Parameter type Required? Description     array Array ✓ The list of values to save.   file String ✓ The name of the file to save the list to, relative to the .lazurite data directory.    Output void - This is a statement with no outputs</description>
+    </item>
+    
+    <item>
+      <title>save table (table) to file (file)</title>
+      <link>https://doc.piecewise.im/lazurite/table_save/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/table_save/</guid>
+      <description>In the toolbox
+ Save a table to a local file, to be loaded later with &amp;ldquo;load table from file&amp;rdquo;.
+Parameters    Parameter name Parameter type Required? Description     table table ✓ The table to save.   file String ✓ The file to save the table to, relative to the .lazurite data directory.    Output void - This is a statement with no outputs</description>
+    </item>
+    
+    <item>
+      <title>set (VAR) to (value) in this block set only</title>
+      <link>https://doc.piecewise.im/lazurite/variable_local/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/variable_local/</guid>
+      <description>In the toolbox
+ Set a variable within this block set only.
+Parameters    Parameter name Parameter type Required? Description     VAR any ✓ The name of the variable to set.   value any ✓ The value to set the variable to.    Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.</description>
+    </item>
+    
+    <item>
+      <title>set key (key) to (value) in table (table)</title>
+      <link>https://doc.piecewise.im/lazurite/table_set/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/table_set/</guid>
+      <description>In the toolbox
+ Set the key in a table to a value. NOTE: You should only insert CONSTANTS into tables (i.e. channel IDs, user IDs as opposed to channels and users).
+Parameters    Parameter name Parameter type Required? Description     key String ✓ The key to set.   value String OR Boolean OR Number OR Array OR table ✓ The value to set.   table table ✓ The table to modify.</description>
+    </item>
+    
+    <item>
+      <title>table (table) contains key (key)</title>
+      <link>https://doc.piecewise.im/lazurite/table_contains_key/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/table_contains_key/</guid>
+      <description>In the toolbox
+ Determine whether a key exists in a table.
+Parameters    Parameter name Parameter type Required? Description     table table ✓ The table to check.   key String ✓ The key to check for.    Output Boolean
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;type&#34;:&#34;lazurite_table_contains_key&#34;,&#34;message0&#34;:&#34;table %1 contains key %2&#34;</description>
+    </item>
+    
+    <item>
+      <title>table pair with key (key) value (value)</title>
+      <link>https://doc.piecewise.im/lazurite/table_pair/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/table_pair/</guid>
+      <description>In the toolbox
+ A key/value pair in a table. Use this with the &amp;lsquo;create table with pairs&amp;rsquo; block.
+Parameters    Parameter name Parameter type Required? Description     key String ✓ The key to use.   value any ✓ The value to use.    Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title>text (haystack) contains (needle)</title>
+      <link>https://doc.piecewise.im/lazurite/string_contains/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/string_contains/</guid>
+      <description>In the toolbox
+ Determine whether text (the haystack) contains a text fragment (the needle).
+Parameters    Parameter name Parameter type Required? Description     haystack String ✓ The text to search in.   needle String ✓ The text to search for.    Output Boolean
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;</description>
+    </item>
+    
+    <item>
+      <title>text (text) (starts_or_ends) with (prefix_or_suffix)</title>
+      <link>https://doc.piecewise.im/lazurite/string_prefix_suffix/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/string_prefix_suffix/</guid>
+      <description>In the toolbox
+ Determine if text starts or ends with other text.
+Parameters    Parameter name Parameter type Required? Description     text String ✓ The text to check.   starts_or_ends any ✓ The operation to run.   prefix_or_suffix String ✓ The text to check the input for.    Output Boolean - Whether &amp;lsquo;text&amp;rsquo; is prefixed or suffixed with &amp;lsquo;prefix_or_suffix&amp;rsquo;.
+ window.</description>
+    </item>
+    
+    <item>
+      <title>try  (statements) 🔥 catch error as (error)  (catch)</title>
+      <link>https://doc.piecewise.im/lazurite/try/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/try/</guid>
+      <description>In System → Error Handling
+Jump to block
+ Run code, and if an error occurs, execute the catch block set.
+Parameters    Parameter name Parameter type Required? Description     statements statements&amp;hellip; ✓ The statements to execute.   error String ✓ The name of the variable to store the error message in.   catch statements&amp;hellip; ✓ The statements to execute if an error occurs.</description>
+    </item>
+    
+    <item>
+      <title>⏰ (count) (unit)</title>
+      <link>https://doc.piecewise.im/lazurite/timer_time/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/timer_time/</guid>
+      <description>In the toolbox
+ Specifies an amount of time.
+Parameters    Parameter name Parameter type Required? Description     count Number ✓ The quantity of time.   unit any ✓ The unit of time.    Output time
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;type&#34;:&#34;lazurite_timer_time&#34;,&#34;message0&#34;:&#34;⏰ %1 %2&#34;,&#34;args0&#34;:[{&#34;type&#34;:&#34;input_value&#34;,&#34;name&#34;:&#34;count&#34;,&#34;check&#34;:&#34;Number&#34;,&#34;doc_description&#34;:&#34;The quantity of time.</description>
+    </item>
+    
+    <item>
+      <title>⏰ (property) of date (date)</title>
+      <link>https://doc.piecewise.im/lazurite/date_property/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/date_property/</guid>
+      <description>In the toolbox
+ Get a property of a specified date.
+Parameters    Parameter name Parameter type Required? Description     property any ✓ The property to get.   date date ✓ The date to get the property from.    Output Number - The value of the specified property.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;</description>
+    </item>
+    
+    <item>
+      <title>⏰ after (time) do (statements)</title>
+      <link>https://doc.piecewise.im/lazurite/timer_after/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/timer_after/</guid>
+      <description>In the toolbox
+ Schedule a task to run after a certain amount of time.
+Parameters    Parameter name Parameter type Required? Description     time time ✓ The amount of time to wait.   statements statements&amp;hellip; ✓ The statements to execute after the specified time has elapsed.    Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title>⏰ create date in (timezone) with  year (year) month (month) day (day) hours (hours) minutes (minutes) seconds (seconds)</title>
+      <link>https://doc.piecewise.im/lazurite/date/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/date/</guid>
+      <description>In the toolbox
+ Create a date to specifications in the server&amp;rsquo;s timezone, the specified timezone, or UTC/GMT.
+Parameters    Parameter name Parameter type Required? Description     timezone any ✓ The timezone to use to create this date.   year Number ✓ The year.   month Number ✓ The month.   day Number ✓ The day.   hours Number ✓ The hours.</description>
+    </item>
+    
+    <item>
+      <title>⏰ every (when) do (statement)</title>
+      <link>https://doc.piecewise.im/lazurite/timer_every/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/timer_every/</guid>
+      <description>In the toolbox
+ Run code when an interval of time has elapsed, i.e. every 5 seconds.
+Parameters    Parameter name Parameter type Required? Description     when time ✓ The interval to run the statements at.   statement statements&amp;hellip; ✓ The statements to run at the specified interval.    Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title>⏰ now</title>
+      <link>https://doc.piecewise.im/lazurite/date_now/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/date_now/</guid>
+      <description>In the toolbox
+ A date representing the time this block eas executed.
+Output date
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;type&#34;:&#34;lazurite_date_now&#34;,&#34;message0&#34;:&#34;⏰ now&#34;,&#34;inputsInline&#34;:false,&#34;output&#34;:[&#34;lazurite_date&#34;],&#34;colour&#34;:45,&#34;tooltip&#34;:&#34;A date representing the time this block eas executed.&#34;,&#34;helpUrl&#34;:&#34;&#34;}); Blockly.Blocks[block.type] = { init: function () { this.jsonInit(block) } } Blockly.inject(document.querySelector(&#34;#blockly&#34;), { readOnly: true }); if( block.blockXml ){ Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(&#34;&#34; + block.blockXml + &#34;&#34;), Blockly.getMainWorkspace()); } else { Blockly.</description>
+    </item>
+    
+    <item>
+      <title>⏰ stop</title>
+      <link>https://doc.piecewise.im/lazurite/timer_stop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/timer_stop/</guid>
+      <description>In the toolbox
+ Stop the current interval from running again.
+Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;type&#34;:&#34;lazurite_timer_stop&#34;,&#34;message0&#34;:&#34;⏰ stop&#34;,&#34;previousStatement&#34;:null,&#34;nextStatement&#34;:null,&#34;colour&#34;:45,&#34;tooltip&#34;:&#34;Stop the current interval from running again.&#34;,&#34;helpUrl&#34;:&#34;&#34;}); Blockly.Blocks[block.type] = { init: function () { this.jsonInit(block) } } Blockly.inject(document.querySelector(&#34;#blockly&#34;), { readOnly: true }); if( block.blockXml ){ Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(&#34;&#34; + block.</description>
+    </item>
+    
+    <item>
+      <title>⏰ time elapsed between (time1) and (time2)</title>
+      <link>https://doc.piecewise.im/lazurite/date_elapsed/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/date_elapsed/</guid>
+      <description>In the toolbox
+ Determine the time elapsed between two dates.
+Parameters    Parameter name Parameter type Required? Description     time1 date ✓ The first date to compare.   time2 date ✓ The second date to compare.    Output time
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;type&#34;:&#34;lazurite_date_elapsed&#34;,&#34;message0&#34;:&#34;⏰ time elapsed between %1 and %2&#34;</description>
+    </item>
+    
+    <item>
+      <title>⏰ wait (time)</title>
+      <link>https://doc.piecewise.im/lazurite/timer_wait/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/timer_wait/</guid>
+      <description>In the toolbox
+ Wait for the specified amount of time, then continue on to the next block.
+Parameters    Parameter name Parameter type Required? Description     time time ✓ The amount of time to wait.    Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;</description>
+    </item>
+    
+    <item>
+      <title>🔔  when (event)  do (statement)</title>
+      <link>https://doc.piecewise.im/lazurite/when/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/lazurite/when/</guid>
+      <description>In Piecewise
+Jump to block
+ Run code when an event occurs, such as the bot starting.
+Parameters    Parameter name Parameter type Required? Description     event any ✓ The event to listen to.   statement statements&amp;hellip; ✓ The statements to execute when the event is triggered.    Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+  </channel>
+</rss>

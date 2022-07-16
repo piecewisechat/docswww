@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Internet on Piecewise</title>
+    <link>https://doc.piecewise.im/internet/</link>
+    <description>Recent content in Internet on Piecewise</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://doc.piecewise.im/internet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title> (method) URL (url) send (datatype) data (data) with headers (headers) parse response as (response)</title>
+      <link>https://doc.piecewise.im/internet/custom_request/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/internet/custom_request/</guid>
+      <description>In Internet
+Jump to block
+ Fetch an Internet URL with these options. Errors return an empty table and print a warning.
+Parameters    Parameter name Parameter type Required? Description     method any ✓ The method to use when fetching the provided URL. GET and HEAD requests cannot have bodies (this will throw an error).   url String ✓ The URL to fetch.   datatype any ✓ The data type to use when sending the request.</description>
+    </item>
+    
+    <item>
+      <title> fetch URL (url) as (type) table</title>
+      <link>https://doc.piecewise.im/internet/json_to_table/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/internet/json_to_table/</guid>
+      <description>In Internet
+Jump to block
+ Fetch and parse the content of a URL as a JSON or XML table. Parse errors return an empty table and print a warning.
+Parameters    Parameter name Parameter type Required? Description     url String ✓ The URL to fetch.   type any ✓ Specify how to parse the resulting response.    Output table, Array, String - The parsed result of fetching the specified URL.</description>
+    </item>
+    
+    <item>
+      <title> parse text (string) as (type)</title>
+      <link>https://doc.piecewise.im/internet/parse_string/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/internet/parse_string/</guid>
+      <description>In Internet
+Jump to block
+ Deserialize text from the specified format.
+Parameters    Parameter name Parameter type Required? Description     string String ✓ The text to parse.   type any ✓ The format to parse it as.    Output Boolean, Number, String, Array, table - The deserialized value.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.</description>
+    </item>
+    
+  </channel>
+</rss>

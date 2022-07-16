@@ -1,0 +1,2127 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Discord on Piecewise</title>
+    <link>https://doc.piecewise.im/discord/</link>
+    <description>Recent content in Discord on Piecewise</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://doc.piecewise.im/discord/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title> (action) permission (permission) to/from role (role)</title>
+      <link>https://doc.piecewise.im/discord/role_permissions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/role_permissions/</guid>
+      <description>In Discord → Roles
+Jump to block
+ Give a permission to a role.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     action any ✓ The action to perform: give or remove.   permission permission ✓ The permission to give or remove.   role role ✓ The role to give or remove the permission to/from.</description>
+    </item>
+    
+    <item>
+      <title> (item) mentioned in message (message)</title>
+      <link>https://doc.piecewise.im/discord/message_mentions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/message_mentions/</guid>
+      <description>In Discord → Messages
+Jump to block
+ Get the users mentioned in a message.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     item any ✓ The item to filter by.   message message ✓ The message to extract mentions from.    Output Array - The users mentioned in the specified message.</description>
+    </item>
+    
+    <item>
+      <title> (obj1) is (obj2)</title>
+      <link>https://doc.piecewise.im/discord/is/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/is/</guid>
+      <description>In Discord → Users; Discord → Channels; Discord → Servers; Discord → Emoji
+Jump to block
+ Determines whether a Discord object is a reference to another, by comparing their snowflake IDs.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     obj1 channel OR guild OR emoji OR user OR message OR interaction ✓ An item to compare.</description>
+    </item>
+    
+    <item>
+      <title> (operation) message (message)</title>
+      <link>https://doc.piecewise.im/discord/message_operations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/message_operations/</guid>
+      <description>In Discord → Messages
+Jump to block
+ Delete, publish (crosspost), or pin a message.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     operation any ✓ The operation to perform   message message ✓ The message to act on.    Output void - This is a statement with no outputs</description>
+    </item>
+    
+    <item>
+      <title> (operation) role (role) to/from user (user)</title>
+      <link>https://doc.piecewise.im/discord/role_give/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/role_give/</guid>
+      <description>In Discord → Roles
+Jump to block
+ Give a role to a user.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     operation any ✓ The operation to perform: give or remove.   role role ✓ The role to give or remove.   user user ✓ The user to give/remove the role to/from.</description>
+    </item>
+    
+    <item>
+      <title> (operation) thread (channel)</title>
+      <link>https://doc.piecewise.im/discord/thread_membership/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/thread_membership/</guid>
+      <description>In Discord → Threads
+Jump to block
+ Join or leave a thread.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     operation any ✓ The operation to perform on this channel (join/leave).   channel channel ✓ The thread to join/leave.    Output void - This is a statement with no outputs</description>
+    </item>
+    
+    <item>
+      <title> (operation) thread (thread)</title>
+      <link>https://doc.piecewise.im/discord/thread_archive/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/thread_archive/</guid>
+      <description>In Discord → Threads
+Jump to block
+ (Un)archive or (un)lock a thread.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     operation any ✓ The operation to perform on this channel ([un]archive or [un]lock).   thread channel ✓ The thread to (un)archive or (un)lock.    Output void - This is a statement with no outputs</description>
+    </item>
+    
+    <item>
+      <title> (operation) user (user) in server (guild)</title>
+      <link>https://doc.piecewise.im/discord/voice_moderation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/voice_moderation/</guid>
+      <description>In Discord → Voice
+Jump to block
+ Server-wide (un)mute or (un)deafen a user.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     operation any ✓ The operation to perform on this user.   user user ✓ The user to mute or unmute.   guild guild ✓ The server to mute the user in.</description>
+    </item>
+    
+    <item>
+      <title> (operation) user (user) to/from thread (thread)</title>
+      <link>https://doc.piecewise.im/discord/thread_membership_other/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/thread_membership_other/</guid>
+      <description>In Discord → Threads
+Jump to block
+ Add or remove a user from a thread.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     operation any ✓ The operation to perform on this channel (add/remove member).   user user ✓ The user to add/remove.   thread channel ✓ The thread to add/remove users from.</description>
+    </item>
+    
+    <item>
+      <title> (permission)</title>
+      <link>https://doc.piecewise.im/discord/permission/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/permission/</guid>
+      <description>In Discord → Roles; Discord → Users
+Jump to block
+ Represents a particular Discord permission.
+Parameters    Parameter name Parameter type Required? Description     permission any ✓ The permission.    Output permission - The Discord permission.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;type&#34;:&#34;discord_permission&#34;,&#34;message0&#34;:&#34;%1 %2&#34;,&#34;args0&#34;:[{&#34;type&#34;:&#34;field_image&#34;,&#34;src&#34;:&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAABYZfFYZPFXZfFXZPFXZPFYZfFYZfJYZfJYZPFXZfFXZfFYZPJXZfFYZPFXZfFYZPFXZfFXZPFXZfFXZPFXZPFYZPFYZfFYZPFYZPFXZfFYZfJYZfFbaPKMlfaiqfdwe/NXZPHDyPr+/v5zfvSutPjr7P2mrfj4+P6ttPjQ1Pu7wPna3fzc3/z6+v7V2Pursvj9/f7m6P27wfnT1vtxfPSjqvdxfPNYZPH///83eggMAAAAGnRSTlMAMpja+tqYMgqcmgrCwpqcMjKYmJoKwsL62kJGyTMAAAABYktHRDnXAJVAAAAAB3RJTUUH5QcLEDIO+ZKhhgAAAK1JREFUGNNNj1kSgkAQQxscXHAbFdyCCjQKAgq43/9kzqClvK9OqtKVECkMsyWE1e7Qh25vjRrP7td6gB9D7YzQYEwkPWCz3fn+brsBgglNlR9yTajOKVlAxF8iwCIB7PkQJ0l84CMgtJFyhjxHxqk2VOTE54K5OPNJR9TTsrpcb7frpSqBGckAuD90h8dTlTWInGYxWzV153+9qMe4zusjA8f97pWmJZYrU+r7DUshGA/6eLOuAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIxLTA3LTExVDE2OjUwOjEyKzAwOjAwb8xQ9QAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMS0wNy0xMVQxNjo1MDoxMiswMDowMB6R6EkAAAAASUVORK5CYII=&#34;,&#34;width&#34;:15,&#34;height&#34;:15,&#34;alt&#34;:&#34;Discord&#34;,&#34;flipRtl&#34;:false},{&#34;type&#34;:&#34;field_dropdown&#34;,&#34;name&#34;:&#34;permission&#34;,&#34;options&#34;:[[&#34;administer the server&#34;,&#34;ADMINISTRATOR&#34;],[&#34;create invites&#34;,&#34;CREATE_INSTANT_INVITE&#34;],[&#34;kick members&#34;</description>
+    </item>
+    
+    <item>
+      <title> (property) of channel (channel)</title>
+      <link>https://doc.piecewise.im/discord/get_channel_property/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/get_channel_property/</guid>
+      <description>In Discord → Channels
+Jump to block
+ Find a property of a channel.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     property any ✓ The property to get.   channel channel ✓ The channel to get a property of.    Output String - The requested property, as a string, or empty string if undefined or not applicable</description>
+    </item>
+    
+    <item>
+      <title> (property) of emoji (emoji)</title>
+      <link>https://doc.piecewise.im/discord/get_emoji_property/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/get_emoji_property/</guid>
+      <description>In Discord → Emoji
+Jump to block
+ Find a property of a emoji.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     property any ✓ The property to get.   emoji emoji ✓ The emoji to get a property of.    Output String - The requested property, as a string, or empty string if undefined or not applicable</description>
+    </item>
+    
+    <item>
+      <title> (property) of role (role)</title>
+      <link>https://doc.piecewise.im/discord/get_role_property/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/get_role_property/</guid>
+      <description>In Discord → Roles
+Jump to block
+ Find a property of a role.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     property any ✓ The property to get.   role role ✓ The role to get a property of.    Output String - The requested property, as a string, or empty string if undefined or not applicable</description>
+    </item>
+    
+    <item>
+      <title> (property) of scheduled event (schevent)</title>
+      <link>https://doc.piecewise.im/discord/schevent_property/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/schevent_property/</guid>
+      <description>In Discord → Scheduled Events
+Jump to block
+ Find a property of a scheduled event.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     property any ✓ The property to get.   schevent schevent ✓ The event to get a property of.    Output String - The requested property, as a string, or empty string if undefined or not applicable</description>
+    </item>
+    
+    <item>
+      <title> (property) of server (guild)</title>
+      <link>https://doc.piecewise.im/discord/get_guild_property/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/get_guild_property/</guid>
+      <description>In Discord → Servers
+Jump to block
+ Find a property of a server.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     property any ✓ The property to get.   guild guild ✓ The server to get a property of.    Output String - The requested property, as a string, or empty string if undefined or not applicable</description>
+    </item>
+    
+    <item>
+      <title> (property) of sticker (sticker)</title>
+      <link>https://doc.piecewise.im/discord/sticker_property/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/sticker_property/</guid>
+      <description>In Discord → Stickers
+Jump to block
+ Find a property of a sticker.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     property any ✓ The property to get.   sticker sticker ✓ The sticker to get a property of.    Output String - The requested property, as a string, or empty string if undefined or not applicable</description>
+    </item>
+    
+    <item>
+      <title> (property) of user (user)</title>
+      <link>https://doc.piecewise.im/discord/get_user_property/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/get_user_property/</guid>
+      <description>In Discord → Users
+Jump to block
+ Find a property of a user.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     property any ✓ The property to get.   user user ✓ The user to get a property of.    Output String - The requested property, as a string, or empty string if undefined or not applicable</description>
+    </item>
+    
+    <item>
+      <title> (property) time of scheduled event (schevent)</title>
+      <link>https://doc.piecewise.im/discord/schevent_times/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/schevent_times/</guid>
+      <description>In Discord → Scheduled Events
+Jump to block
+ Get the start or end time of a scheduled event.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     property any ✓ Define whether to get the start or end time.   schevent schevent ✓ The event to get the start/end time of.    Output date - The start/end time of the event, as a date, or null if undefined or not applicable</description>
+    </item>
+    
+    <item>
+      <title> (property) uses of invite (invite)</title>
+      <link>https://doc.piecewise.im/discord/invite_uses/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/invite_uses/</guid>
+      <description>In Discord → Invites
+Jump to block
+ Get the maximum/total number of uses of an invite
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     property any ✓ The property to get (max/total uses).   invite invite ✓ The invite to get the use count of    Output Number - The maximum/total number of invite uses</description>
+    </item>
+    
+    <item>
+      <title> (type) argument # (argNum)</title>
+      <link>https://doc.piecewise.im/discord/chat_command_argument/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/chat_command_argument/</guid>
+      <description>In Discord → Chat Commands
+Jump to block
+ Get a particular argument of a chat command.
+Only valid in: discord chat command
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     type any ✓ The data type to cast the argument&amp;rsquo;s value to.   argNum Number ✓ The argument number, i.e. the first argument of !</description>
+    </item>
+    
+    <item>
+      <title> (type) event</title>
+      <link>https://doc.piecewise.im/discord/event_type/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/event_type/</guid>
+      <description>In Discord → Scheduled Events
+Jump to block
+ A type of event.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     type any ✓ The type of event.    Output event type - The type of event.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.</description>
+    </item>
+    
+    <item>
+      <title> all channels in server (guild)</title>
+      <link>https://doc.piecewise.im/discord/channels_in_guild/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/channels_in_guild/</guid>
+      <description>In Discord → Servers; Discord → Channels
+Jump to block
+ Get all of the channels in a particular server.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     guild guild ✓ The server to get the channels in.    Output Array - All of the channels in the server.
+ window.</description>
+    </item>
+    
+    <item>
+      <title> all invites for server (guild)</title>
+      <link>https://doc.piecewise.im/discord/guild_invites/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/guild_invites/</guid>
+      <description>In Discord → Servers; Discord → Invites
+Jump to block
+ Fetch all of the valid invites for a server.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     guild guild ✓ The server to get invites for    Output Array - All of the valid invites for a server.
+ window.</description>
+    </item>
+    
+    <item>
+      <title> approximate number of members in server (guild)</title>
+      <link>https://doc.piecewise.im/discord/guild_member_count/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/guild_member_count/</guid>
+      <description>In Discord → Servers
+Jump to block
+ Get the approximate number of members in a particular server.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     guild guild ✓ The server to count the number of members in    Output Number - The approximate number of members in the specified server.</description>
+    </item>
+    
+    <item>
+      <title> arguments</title>
+      <link>https://doc.piecewise.im/discord/chat_command_arguments/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/chat_command_arguments/</guid>
+      <description>In Discord → Chat Commands
+Jump to block
+ Get the arguments to this chat command as a list.
+Only valid in: discord chat command
+Requires the following blocks to be present in the project: discord login
+Output Array - The arguments to this chat command, as a list of strings.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;</description>
+    </item>
+    
+    <item>
+      <title> attachment with location (attachment)</title>
+      <link>https://doc.piecewise.im/discord/attachment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/attachment/</guid>
+      <description>In Discord → Messages
+Jump to block
+ Specifies an item to attach to a message.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     attachment String ✓ A URL or path to the attachment to send    Output attachment - An attachment based on the path provided.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title> attachments of message (message)</title>
+      <link>https://doc.piecewise.im/discord/message_attachments/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/message_attachments/</guid>
+      <description>In Discord → Messages
+Jump to block
+ Get the attachments on a message.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     message message ✓ The message to get attachments from.    Output Array - A list of URLs to attachments on this message, or an empty list if there are no attachments.</description>
+    </item>
+    
+    <item>
+      <title> author of message (message)</title>
+      <link>https://doc.piecewise.im/discord/message_author/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/message_author/</guid>
+      <description>In Discord → Messages
+Jump to block
+ Get the author of a message.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     message message ✓ The message to get the author of.    Output user - The author of the specified message.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title> author with name (name) with image (image) with URL (url)</title>
+      <link>https://doc.piecewise.im/discord/author/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/author/</guid>
+      <description>In Discord → Messages
+Jump to block
+ Specifies the &amp;ldquo;author&amp;rdquo; of a Discord Webhook message or Rich Embed. Empty values are defaults.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     name String  The name of the proposed author (default: empty)   image String  The avatar of the proposed author (default: empty/no avatar)   url String  The link of the proposed author (default: empty/no link)    Output author - An author formed based on the provided parameters</description>
+    </item>
+    
+    <item>
+      <title> ban user (user) from server (guild) with reason (reason)</title>
+      <link>https://doc.piecewise.im/discord/ban/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/ban/</guid>
+      <description>In Discord → Moderation
+Jump to block
+ Ban a user from a server.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     user user ✓ The user to ban.   guild guild ✓ The server to ban the user from.   reason String  The reason for the ban. Viewable in audit logs.</description>
+    </item>
+    
+    <item>
+      <title> channel (channel) is (type)</title>
+      <link>https://doc.piecewise.im/discord/channel_is_type/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/channel_is_type/</guid>
+      <description>In Discord → Channels
+Jump to block
+ Determine if a channel is a particular type.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     channel channel ✓ The channel to check.   type String ✓ The channel type to check for.    Output Boolean - Whether the channel is of the selected type.</description>
+    </item>
+    
+    <item>
+      <title> clear activity</title>
+      <link>https://doc.piecewise.im/discord/activity_clear/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/activity_clear/</guid>
+      <description>In Discord → Users
+Jump to block
+ Clear the bot&amp;rsquo;s activity (the info next to the bot&amp;rsquo;s name in the member list)
+Requires the following blocks to be present in the project: discord login
+Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;type&#34;:&#34;discord_activity_clear&#34;,&#34;message0&#34;:&#34;%1 clear activity&#34;,&#34;args0&#34;:[{&#34;type&#34;:&#34;field_image&#34;,&#34;src&#34;:&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAABYZfFYZPFXZfFXZPFXZPFYZfFYZfJYZfJYZPFXZfFXZfFYZPJXZfFYZPFXZfFYZPFXZfFXZPFXZfFXZPFXZPFYZPFYZfFYZPFYZPFXZfFYZfJYZfFbaPKMlfaiqfdwe/NXZPHDyPr+/v5zfvSutPjr7P2mrfj4+P6ttPjQ1Pu7wPna3fzc3/z6+v7V2Pursvj9/f7m6P27wfnT1vtxfPSjqvdxfPNYZPH///83eggMAAAAGnRSTlMAMpja+tqYMgqcmgrCwpqcMjKYmJoKwsL62kJGyTMAAAABYktHRDnXAJVAAAAAB3RJTUUH5QcLEDIO+ZKhhgAAAK1JREFUGNNNj1kSgkAQQxscXHAbFdyCCjQKAgq43/9kzqClvK9OqtKVECkMsyWE1e7Qh25vjRrP7td6gB9D7YzQYEwkPWCz3fn+brsBgglNlR9yTajOKVlAxF8iwCIB7PkQJ0l84CMgtJFyhjxHxqk2VOTE54K5OPNJR9TTsrpcb7frpSqBGckAuD90h8dTlTWInGYxWzV153+9qMe4zusjA8f97pWmJZYrU+r7DUshGA/6eLOuAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIxLTA3LTExVDE2OjUwOjEyKzAwOjAwb8xQ9QAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMS0wNy0xMVQxNjo1MDoxMiswMDowMB6R6EkAAAAASUVORK5CYII=&#34;,&#34;width&#34;:15,&#34;height&#34;:15,&#34;alt&#34;:&#34;Discord&#34;,&#34;flipRtl&#34;:false}],&#34;inputsInline&#34;:true,&#34;previousStatement&#34;:null,&#34;nextStatement&#34;:null,&#34;colour&#34;:230,&#34;tooltip&#34;:&#34;Clear the bot&#39;s activity (the info next to the bot&#39;s name in the member list)&#34;</description>
+    </item>
+    
+    <item>
+      <title> content of message (message)</title>
+      <link>https://doc.piecewise.im/discord/message_content/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/message_content/</guid>
+      <description>In Discord → Messages
+Jump to block
+ Get the (text) content of a message.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     message message ✓ The message to get the content of.    Output String - The text content of the specified message.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title> create (privacy) event of type (type) in server (guild) with name (name) with description (description) starting at (start) ending at (end) in voice channel (channel) at location (location)</title>
+      <link>https://doc.piecewise.im/discord/event_create/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/event_create/</guid>
+      <description>In Discord → Scheduled Events
+Jump to block
+ Create an event.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     privacy any ✓ The privacy of the event.   type event_type ✓ The type of event.   guild guild ✓ The server to create the event in.   name String ✓ The name of the event.</description>
+    </item>
+    
+    <item>
+      <title> create (type) channel with name (name) in server/category (parent)</title>
+      <link>https://doc.piecewise.im/discord/channel_create/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/channel_create/</guid>
+      <description>In Discord → Channels
+Jump to block
+ Create a channel.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     type String ✓ The type of channel to create.   name String ✓ The name of the channel to create.   parent guild OR channel ✓ The parent of this channel. If a parent channel is specified, it MUST be a category channel.</description>
+    </item>
+    
+    <item>
+      <title> create (type) channel with name (name) in server/category (parent)</title>
+      <link>https://doc.piecewise.im/discord/channel_create_return/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/channel_create_return/</guid>
+      <description>In Discord → Channels
+Jump to block
+ Create a channel.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     type String ✓ The type of channel to create.   name String ✓ The name of the channel to create.   parent guild OR channel ✓ The parent of this channel. If a parent channel is specified, it MUST be a category channel.</description>
+    </item>
+    
+    <item>
+      <title> create emoji with name (name) in server (guild) with file (location_resolvable)</title>
+      <link>https://doc.piecewise.im/discord/emoji_create/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/emoji_create/</guid>
+      <description>In Discord → Emoji
+Jump to block
+ Create an emoji.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     name String ✓ The name of the emoji   guild guild ✓ The server to create the emoji in   location_resolvable String ✓ The location of the source image for this emoji.</description>
+    </item>
+    
+    <item>
+      <title> create invite to channel (channel) probationary? (temporary) re-use similar existing invite? (not_unique) time until expiry (max_age) maximum # of uses (max_uses)</title>
+      <link>https://doc.piecewise.im/discord/channel_create_invite/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/channel_create_invite/</guid>
+      <description>In Discord → Channels; Discord → Invites
+Jump to block
+ Create an invite to a channel with options.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     channel channel ✓ The channel to create an invite to   temporary Boolean  Whether those who use this invite should be kicked after 24 hours if they do not receive a role.</description>
+    </item>
+    
+    <item>
+      <title> create role in server (server) with name (name) with color (color) position (position) hoisted? (hoisted) mentionable? (mentionable)</title>
+      <link>https://doc.piecewise.im/discord/role_create_return/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/role_create_return/</guid>
+      <description>In Discord → Roles
+Jump to block
+ Create a role.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     server guild ✓ The server to create the role in.   name String ✓ The name of the role.   color Colour  The color of the role.   position Number  The position of the role.</description>
+    </item>
+    
+    <item>
+      <title> create server with name (name) with icon (image)</title>
+      <link>https://doc.piecewise.im/discord/guild_create/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/guild_create/</guid>
+      <description>In Discord → Servers
+Jump to block
+ Create a server. Note: this method can only be used by bots in 10 or less servers.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     name String ✓ The name of the server to create.   image String  The location of the source image for the server&amp;rsquo;s icon.</description>
+    </item>
+    
+    <item>
+      <title> create server with name (name) with icon (image)</title>
+      <link>https://doc.piecewise.im/discord/guild_create_return/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/guild_create_return/</guid>
+      <description>In Discord → Servers
+Jump to block
+ Create a server. Note: this method can only be used by bots in 10 or less servers.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     name String ✓ The name of the server to create.   image String  The location of the source image for the server&amp;rsquo;s icon.</description>
+    </item>
+    
+    <item>
+      <title> create sticker in server (guild) with name (name) with image (image) represented by emoji (emoji)</title>
+      <link>https://doc.piecewise.im/discord/sticker_create/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/sticker_create/</guid>
+      <description>In Discord → Stickers
+Jump to block
+ Create a sticker.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     guild guild ✓ The server to create this sticker in.   name String ✓ The name of this sticker.   image String ✓ The location of the source image for this sticker.</description>
+    </item>
+    
+    <item>
+      <title> create sticker in server (guild) with name (name) with image (image) represented by emoji (emoji)</title>
+      <link>https://doc.piecewise.im/discord/sticker_create_return/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/sticker_create_return/</guid>
+      <description>In Discord → Stickers
+Jump to block
+ Create a sticker.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     guild guild ✓ The server to create this sticker in.   name String ✓ The name of this sticker.   image String ✓ The location of the source image for this sticker.</description>
+    </item>
+    
+    <item>
+      <title> create thread with name (name) in channel (channel) archive after (archivetime)</title>
+      <link>https://doc.piecewise.im/discord/thread_create/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/thread_create/</guid>
+      <description>In Discord → Threads
+Jump to block
+ Create a thread in a channel. NOTE: If targeting a channel, the thread will always be public.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     name any ✓ The name of the thread.   channel channel ✓ The parent channel of this thread.   archivetime any ✓ Auto-archive the thread after this amount of inactive time.</description>
+    </item>
+    
+    <item>
+      <title> create thread with name (name) in channel (channel) archive after (archivetime)</title>
+      <link>https://doc.piecewise.im/discord/thread_create_return/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/thread_create_return/</guid>
+      <description>In Discord → Threads
+Jump to block
+ Create a thread in a channel. NOTE: If targeting a channel, the thread will always be public.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     name any ✓ The name of the thread.   channel channel ✓ The parent channel of this thread.   archivetime any ✓ Auto-archive the thread after this amount of inactive time.</description>
+    </item>
+    
+    <item>
+      <title> custom ID of interaction (interaction)</title>
+      <link>https://doc.piecewise.im/discord/interaction_id/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/interaction_id/</guid>
+      <description>In Discord → Interactions
+Jump to block
+ Get the custom ID of this interaction.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     interaction interaction ✓ The interaction to get the ID of.    Output String - The custom ID of this interaction, or empty string if not found. Use this to determine the source of an interaction.</description>
+    </item>
+    
+    <item>
+      <title> delete channel (channel)</title>
+      <link>https://doc.piecewise.im/discord/channel_delete/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/channel_delete/</guid>
+      <description>In Discord → Channels
+Jump to block
+ Delete a channel.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     channel channel ✓ The channel to delete.    Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.</description>
+    </item>
+    
+    <item>
+      <title> delete emoji (emoji)</title>
+      <link>https://doc.piecewise.im/discord/emoji_delete/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/emoji_delete/</guid>
+      <description>In Discord → Emoji
+Jump to block
+ Delete an emoji.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     emoji emoji ✓ The emoji to delete.    Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.</description>
+    </item>
+    
+    <item>
+      <title> delete role (role)</title>
+      <link>https://doc.piecewise.im/discord/role_delete/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/role_delete/</guid>
+      <description>In Discord → Roles
+Jump to block
+ Delete a role.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     role role ✓ The role to delete.    Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.</description>
+    </item>
+    
+    <item>
+      <title> delete scheduled event (schevent)</title>
+      <link>https://doc.piecewise.im/discord/schevent_delete/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/schevent_delete/</guid>
+      <description>In Discord → Scheduled Events
+Jump to block
+ Delete a scheduled event.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     schevent schevent ✓ The event to delete.    Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;</description>
+    </item>
+    
+    <item>
+      <title> delete server (guild)</title>
+      <link>https://doc.piecewise.im/discord/guild_delete/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/guild_delete/</guid>
+      <description>In Discord → Servers
+Jump to block
+ Delete a server. Only the server owner can delete servers.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     guild guild ✓ The server to delete.    Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title> delete sticker (sticker)</title>
+      <link>https://doc.piecewise.im/discord/sticker_delete/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/sticker_delete/</guid>
+      <description>In Discord → Stickers
+Jump to block
+ Delete a sticker.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     sticker sticker ✓ The sticker to delete.    Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.</description>
+    </item>
+    
+    <item>
+      <title> edit role (role) with name (name) with color (color) with position (position) hoisted? (hoisted) mentionable? (mentionable)</title>
+      <link>https://doc.piecewise.im/discord/role_create/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/role_create/</guid>
+      <description>In Discord → Roles
+Jump to block
+ Edit a role.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     role role ✓ The role to edit.   name String  The new name of the role.   color Colour  The new color of the role.   position Number  The new position of the role.</description>
+    </item>
+    
+    <item>
+      <title> events scheduled in server (guild)</title>
+      <link>https://doc.piecewise.im/discord/schevent_in_guild/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/schevent_in_guild/</guid>
+      <description>In Discord → Scheduled Events
+Jump to block
+ Get all events scheduled in a server.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     guild guild ✓ The server to get the events from.    Output Array - The events scheduled in the specified server.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title> fetch message (message) references</title>
+      <link>https://doc.piecewise.im/discord/message_reference/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/message_reference/</guid>
+      <description>In Discord → Messages
+Jump to block
+ Fetch the reference this message references (i.e. a reply, an original crosspost, the message that was pinned).
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     message message ✓ The message to fetch a reference for.    Output message - The message this message references, or NULL if this message does not reference any other message</description>
+    </item>
+    
+    <item>
+      <title> fetch message with ID (id) in channel (channel)</title>
+      <link>https://doc.piecewise.im/discord/message_fetch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/message_fetch/</guid>
+      <description>In Discord → Messages
+Jump to block
+ Find a message in a server with a particular ID.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     id String ✓ The ID of the message to look for.   channel channel ✓ The channel to get the message from.    Output message - The message, if found (otherwise null).</description>
+    </item>
+    
+    <item>
+      <title> find channel in server (guild) with name (name)</title>
+      <link>https://doc.piecewise.im/discord/find_channel_with_name/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/find_channel_with_name/</guid>
+      <description>In Discord → Channels
+Jump to block
+ Find a channel in a server with a particular name. (Note: you should be using IDs instead. Enable developer mode and right click the channel to get its ID.)
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     guild guild ✓ The server to look for the channel in.</description>
+    </item>
+    
+    <item>
+      <title> find channel with ID (channel)</title>
+      <link>https://doc.piecewise.im/discord/find_channel_by_id/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/find_channel_by_id/</guid>
+      <description>In Discord → Channels
+Jump to block
+ Find a channel by their ID. You can find a channels&amp;rsquo;s ID by right-clicking on it while in Discord&amp;rsquo;s developer mode. IDs are 18 digit-long snowflakes.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     channel String ✓ The ID to locate the channel by.    Output channel - The channel, if found (otherwise null).</description>
+    </item>
+    
+    <item>
+      <title> find emoji in server (guild) with name (name)</title>
+      <link>https://doc.piecewise.im/discord/find_emoji_with_name/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/find_emoji_with_name/</guid>
+      <description>In Discord → Emoji
+Jump to block
+ Find an emoji in a server with a particular name. (Note: you should be using IDs instead. Enable developer mode and right click the emoji to get its ID.)
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     guild guild ✓ The server to look for the emoji in.</description>
+    </item>
+    
+    <item>
+      <title> find emoji with ID (id)</title>
+      <link>https://doc.piecewise.im/discord/find_emoji_by_id/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/find_emoji_by_id/</guid>
+      <description>In Discord → Emoji
+Jump to block
+ Find an emoji with a particular ID.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     id any ✓ The ID of the emoji to find.    Output emoji - The emoji, if found (otherwise null).
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title> find emoji with Unicode character (unicode)</title>
+      <link>https://doc.piecewise.im/discord/find_emoji_by_unicode/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/find_emoji_by_unicode/</guid>
+      <description>In Discord → Emoji
+Jump to block
+ Find a Discord emoji that corresponds to a particular Unicode emoji.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     unicode String ✓ The Unicode character to match an emoji to.    Output emoji - The emoji, if it exists - otherwise throws an exception.</description>
+    </item>
+    
+    <item>
+      <title> find role in server (guild) with ID (id)</title>
+      <link>https://doc.piecewise.im/discord/find_role_by_id/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/find_role_by_id/</guid>
+      <description>In Discord → Roles
+Jump to block
+ Find a role in a server with a particular ID.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     guild guild ✓ The server to search for the role in.   id String ✓ The ID of the role to search for.    Output role - The role if found, or null.</description>
+    </item>
+    
+    <item>
+      <title> find role in server (guild) with name (name)</title>
+      <link>https://doc.piecewise.im/discord/find_role_with_name/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/find_role_with_name/</guid>
+      <description>In Discord → Roles
+Jump to block
+ Finds the first role in a server with a particular name. (Note: you should be using IDs instead. Enable developer mode and right click the role to get its ID.)
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     guild guild ✓ The server to search for the role in.</description>
+    </item>
+    
+    <item>
+      <title> find server with ID (id)</title>
+      <link>https://doc.piecewise.im/discord/find_guild_with_id/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/find_guild_with_id/</guid>
+      <description>In Discord → Servers
+Jump to block
+ Find a server with a particular ID.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     id String ✓ The ID of the server to find.    Output guild - The server if found, or null.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title> find server with name (name)</title>
+      <link>https://doc.piecewise.im/discord/find_guild_with_name/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/find_guild_with_name/</guid>
+      <description>In Discord → Servers
+Jump to block
+ Find a server with a particular name. (Note: you should be using IDs instead. Enable developer mode and right click the server&amp;rsquo;s icon to get its ID.)
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     name String ✓ The name of the server to find.</description>
+    </item>
+    
+    <item>
+      <title> find sticker with ID (id)</title>
+      <link>https://doc.piecewise.im/discord/sticker_by_id/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/sticker_by_id/</guid>
+      <description>In Discord → Stickers
+Jump to block
+ Find a sticker with a particular ID.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     id String ✓ The ID to find a sticker by.    Output sticker - The sticker, if found (otherwise null).
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title> find user with ID (userid)</title>
+      <link>https://doc.piecewise.im/discord/find_user_by_id/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/find_user_by_id/</guid>
+      <description>In Discord → Users
+Jump to block
+ Find a user by their ID. You can find a user&amp;rsquo;s ID by right-clicking on them while in Discord&amp;rsquo;s developer mode. IDs are 18 digit-long snowflakes.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     userid String ✓ The ID of the user to find.    Output user - The user - if one was found with that ID - or null</description>
+    </item>
+    
+    <item>
+      <title> ID of message (message)</title>
+      <link>https://doc.piecewise.im/discord/message_id/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/message_id/</guid>
+      <description>In Discord → Messages
+Jump to block
+ Get the ID of a message.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     message message ✓ The message to get an ID for.    Output String - The ID of the message.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.</description>
+    </item>
+    
+    <item>
+      <title> invite (invite) is temporary</title>
+      <link>https://doc.piecewise.im/discord/invite_is_temporary/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/invite_is_temporary/</guid>
+      <description>In Discord → Invites
+Jump to block
+ Determines whether an invite is temporary, if possible.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     invite invite ✓ The invite to check.    Output Boolean - Whether this invite is temporary. Always returns FALSE if it cannot be determined.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title> kick user (user) from server (guild) with reason (reason)</title>
+      <link>https://doc.piecewise.im/discord/kick/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/kick/</guid>
+      <description>In Discord → Moderation
+Jump to block
+ Kick a user from a server. They can rejoin if they have another invite.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     user user ✓ The user to kick.   guild guild ✓ The server to kick the user from.   reason String  A reason for the kick.</description>
+    </item>
+    
+    <item>
+      <title> leave server (guild)</title>
+      <link>https://doc.piecewise.im/discord/guild_leave/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/guild_leave/</guid>
+      <description>In Discord → Servers
+Jump to block
+ Leave a server.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     guild guild ✓ The server to leave.    Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.</description>
+    </item>
+    
+    <item>
+      <title> log on (token)  (ignore_me) ignore my own actions  (ignore_bots) ignore other bots  (ignore_system) ignore system messages  (request_presence_intent) request presence intent  (request_members_intent) request members intent</title>
+      <link>https://doc.piecewise.im/discord/login/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/login/</guid>
+      <description>In Discord → Configuration
+Jump to block
+ Log on to Discord with a token. To obtain a token, visit https://discord.com/developers.
+Parameters    Parameter name Parameter type Required? Description     token any ✓ The bot token to log on with. This is not the same as the bot&amp;rsquo;s client ID. For more information on registering a bot and obtaining a bot token, see Piecewise&amp;rsquo;s tutorial or the Discord developers site.</description>
+    </item>
+    
+    <item>
+      <title> me</title>
+      <link>https://doc.piecewise.im/discord/me/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/me/</guid>
+      <description>In Discord → Users
+Jump to block
+ Get the user the bot is running as.
+Requires the following blocks to be present in the project: discord login
+Output user - The user the bot is running as.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;type&#34;:&#34;discord_me&#34;,&#34;message0&#34;:&#34;%1 me&#34;,&#34;args0&#34;:[{&#34;type&#34;:&#34;field_image&#34;,&#34;src&#34;:&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAABYZfFYZPFXZfFXZPFXZPFYZfFYZfJYZfJYZPFXZfFXZfFYZPJXZfFYZPFXZfFYZPFXZfFXZPFXZfFXZPFXZPFYZPFYZfFYZPFYZPFXZfFYZfJYZfFbaPKMlfaiqfdwe/NXZPHDyPr+/v5zfvSutPjr7P2mrfj4+P6ttPjQ1Pu7wPna3fzc3/z6+v7V2Pursvj9/f7m6P27wfnT1vtxfPSjqvdxfPNYZPH///83eggMAAAAGnRSTlMAMpja+tqYMgqcmgrCwpqcMjKYmJoKwsL62kJGyTMAAAABYktHRDnXAJVAAAAAB3RJTUUH5QcLEDIO+ZKhhgAAAK1JREFUGNNNj1kSgkAQQxscXHAbFdyCCjQKAgq43/9kzqClvK9OqtKVECkMsyWE1e7Qh25vjRrP7td6gB9D7YzQYEwkPWCz3fn+brsBgglNlR9yTajOKVlAxF8iwCIB7PkQJ0l84CMgtJFyhjxHxqk2VOTE54K5OPNJR9TTsrpcb7frpSqBGckAuD90h8dTlTWInGYxWzV153+9qMe4zusjA8f97pWmJZYrU+r7DUshGA/6eLOuAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIxLTA3LTExVDE2OjUwOjEyKzAwOjAwb8xQ9QAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMS0wNy0xMVQxNjo1MDoxMiswMDowMB6R6EkAAAAASUVORK5CYII=&#34;,&#34;width&#34;:15,&#34;height&#34;:15,&#34;alt&#34;:&#34;Discord&#34;,&#34;flipRtl&#34;:false}],&#34;output&#34;:[&#34;discord_user&#34;],&#34;colour&#34;:230,&#34;tooltip&#34;:&#34;Get the user the bot is running as.&#34;,&#34;category&#34;:&#34;Discord/Users&#34;,&#34;doc_output&#34;:&#34;The user the bot is running as.</description>
+    </item>
+    
+    <item>
+      <title> message (message) (property)</title>
+      <link>https://doc.piecewise.im/discord/message_can/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/message_can/</guid>
+      <description>In Discord → Messages
+Jump to block
+ Determine whether a message is publishable (crosspostable), deletable, pinnable, or pinned; or whether the message fulfills other properties.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     message message ✓ The message to check.   property any ✓ The property to check.    Output Boolean - Whether the message has the specified property</description>
+    </item>
+    
+    <item>
+      <title> message (message) has reaction with emoji (emoji)</title>
+      <link>https://doc.piecewise.im/discord/has_reaction_with_emoji/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/has_reaction_with_emoji/</guid>
+      <description>In Discord → Messages; Discord → Reactions
+Jump to block
+ Determine whether a message has a particular emoji reaction.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     message message ✓ The message to get the reaction from   emoji emoji ✓ The emoji to match    Output Boolean - Whether the message has a particular emoji reaction</description>
+    </item>
+    
+    <item>
+      <title> message (message) mentions (target)</title>
+      <link>https://doc.piecewise.im/discord/message_mentions_target/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/message_mentions_target/</guid>
+      <description>In Discord → Messages
+Jump to block
+ Determine if a user, role, or channel is mentioned in a particular message.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     message message ✓ The message to extract mentions from.   target role OR channel OR user ✓ The user, role, or channel to check.</description>
+    </item>
+    
+    <item>
+      <title> message (message) mentions @everyone</title>
+      <link>https://doc.piecewise.im/discord/message_mentions_everyone/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/message_mentions_everyone/</guid>
+      <description>In Discord → Messages
+Jump to block
+ Determine whether a message mentions @everyone (or @here).
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     message message ✓ The message to extract mentions from.    Output Array - Whether the message mentions @everyone (or @here).
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title> number of Nitro boosters in server (guild)</title>
+      <link>https://doc.piecewise.im/discord/guild_premium_count/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/guild_premium_count/</guid>
+      <description>In Discord → Servers
+Jump to block
+ Get the number of Nitro boosters in a particular server
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     guild guild ✓ The server to count the number of Nitro boosters in    Output Number - The number of Nitro boosters in the specified server.</description>
+    </item>
+    
+    <item>
+      <title> number of reactions on message (message) with emoji (emoji)</title>
+      <link>https://doc.piecewise.im/discord/user_reaction_count/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/user_reaction_count/</guid>
+      <description>In Discord → Reactions
+Jump to block
+ Get the number of users that reacted with a particular emoji.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     message message ✓ The message to count reactions on.   emoji emoji ✓ The emoji to count reactions with.    Output Number - The number of users that reacted with the specified emoji</description>
+    </item>
+    
+    <item>
+      <title> on chat command named (name) with minimum # of parameters (count) do (statements) (dms) also in DMs </title>
+      <link>https://doc.piecewise.im/discord/chat_command/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/chat_command/</guid>
+      <description>In Discord → Chat Commands
+Jump to block
+ Declare an executable chat command.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     name String ✓ The name of the command.   count Number  The number of parameters required to execute this command. For example, if you wanted to create command !</description>
+    </item>
+    
+    <item>
+      <title> origin channel of message (message)</title>
+      <link>https://doc.piecewise.im/discord/message_channel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/message_channel/</guid>
+      <description>In Discord → Messages
+Jump to block
+ Get the channel that a message was sent to.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     message message ✓ The message to get the origin channel of.    Output channel - The channel the specified message was sent to. This may be a DM channel, if the message is a DM.</description>
+    </item>
+    
+    <item>
+      <title> origin server of message (message)</title>
+      <link>https://doc.piecewise.im/discord/message_guild/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/message_guild/</guid>
+      <description>In Discord → Messages
+Jump to block
+ Get the server the provided message was posted in.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     message message ✓ The message to get the origin server for.    Output guild - The server this message was posted in.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title> owner of bot</title>
+      <link>https://doc.piecewise.im/discord/user_owner/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/user_owner/</guid>
+      <description>In Discord → Users
+Jump to block
+ The owner of the bot. If you&amp;rsquo;re looking to check if a user owns this bot, consider using user (user) is owner as it will also check Team ownership.
+Requires the following blocks to be present in the project: discord login
+Output user - The owner of the bot. If the owner of the bot is a Team, the owner of the Team.</description>
+    </item>
+    
+    <item>
+      <title> owner of server (guild)</title>
+      <link>https://doc.piecewise.im/discord/guild_owner/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/guild_owner/</guid>
+      <description>In Discord → Servers
+Jump to block
+ Get the owner of a server.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     guild guild ✓ The server to get the owner of.    Output user - The owner of the server.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.</description>
+    </item>
+    
+    <item>
+      <title> parent channel of (channel)</title>
+      <link>https://doc.piecewise.im/discord/channel_parent/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/channel_parent/</guid>
+      <description>In Discord → Channels
+Jump to block
+ Find the parent channel of the provided channel.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     channel channel ✓ The channel to get the parent of.    Output channel - The parent channel, or null if there is no parent channel.
+ window.</description>
+    </item>
+    
+    <item>
+      <title> parent server of channel (channel)</title>
+      <link>https://doc.piecewise.im/discord/channel_guild/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/channel_guild/</guid>
+      <description>In Discord → Channels
+Jump to block
+ Find the parent server of the provided channel.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     channel channel ✓ The channel to get the parent server of.    Output guild - The parent server of the channel, or null if this is a DM.</description>
+    </item>
+    
+    <item>
+      <title> pinned messages in channel (channel)</title>
+      <link>https://doc.piecewise.im/discord/channel_pinned_messages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/channel_pinned_messages/</guid>
+      <description>In Discord → Channels
+Jump to block
+ Find the pinned messages of the provided channel.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     channel channel ✓ The channel to get the pinned messages of.    Output Array - The pinned messages in this channel, or an empty array.
+ window.</description>
+    </item>
+    
+    <item>
+      <title> play audio at location (sound) in channel (channel)</title>
+      <link>https://doc.piecewise.im/discord/voice_play_sound/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/voice_play_sound/</guid>
+      <description>In Discord → Voice
+Jump to block
+ Play audio a channel.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     sound String ✓ The location of the source image for this audio. It can be a path on the filesystem (i.e. C:\Users\Piecewise\sound.mp3), or a URL (https://piecewise.im/stream.m3u8).   channel channel ✓ The voice channel to play this audio in.</description>
+    </item>
+    
+    <item>
+      <title> react to message (message) with emoji (emoji)</title>
+      <link>https://doc.piecewise.im/discord/react/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/react/</guid>
+      <description>In Discord → Reactions
+Jump to block
+ React to a message with an emoji.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     message message ✓ The message to react to.   emoji emoji ✓ The emoji to react with.    Output void - This is a statement with no outputs</description>
+    </item>
+    
+    <item>
+      <title> remove all reactions on message (message)</title>
+      <link>https://doc.piecewise.im/discord/reaction_remove/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/reaction_remove/</guid>
+      <description>In Discord → Reactions
+Jump to block
+ Remove all reactions from a message.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     message message ✓ The message to remove all reactions from.    Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title> remove all reactions on message (message) from user (user)</title>
+      <link>https://doc.piecewise.im/discord/reactions_remove_from_user/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/reactions_remove_from_user/</guid>
+      <description>In Discord → Reactions
+Jump to block
+ Remove all reactions created by a user from a message.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     message message ✓ The message to remove reactions from.   user user ✓ Remove reactions from this user.    Output void - This is a statement with no outputs</description>
+    </item>
+    
+    <item>
+      <title> remove time out from user (user) in server (guild) with reason (reason)</title>
+      <link>https://doc.piecewise.im/discord/user_timeout_remove/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/user_timeout_remove/</guid>
+      <description>In Discord → Moderation
+Jump to block
+ Remove a time out from a user.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     user user ✓ The user to remove a time out from.   guild guild ✓ The server to remove the time out from.   reason String  The reason for removing the time-out.</description>
+    </item>
+    
+    <item>
+      <title> resolve invite from URL/code (invite)</title>
+      <link>https://doc.piecewise.im/discord/invite_resolve/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/invite_resolve/</guid>
+      <description>In Discord → Invites
+Jump to block
+ Resolve an invite.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     invite String ✓ The invite URL or code to resolve    Output invite - The invite if resolved, or null
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;</description>
+    </item>
+    
+    <item>
+      <title> rich embed with title (title) with description (description) with URL (url) with author (author) with image URL (image_url) with thumbnail URL (thumbnail_url) with color (color) with footer (footer) with footer logo (footer_logo) with timestamp (timestamp)</title>
+      <link>https://doc.piecewise.im/discord/embed/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/embed/</guid>
+      <description>In Discord → Messages
+Jump to block
+ Specifies a Discord Rich Embed. Empty values represent defaults.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     title String  The title of the embed. (default: no title)   description String  The main body text/description of the embed. (default: no description)   url String  The URL this embed should link to.</description>
+    </item>
+    
+    <item>
+      <title> roles in server (server)</title>
+      <link>https://doc.piecewise.im/discord/guild_roles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/guild_roles/</guid>
+      <description>In Discord → Roles
+Jump to block
+ Get all of the roles in a server.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     server guild ✓ The server to retrieve all of the the roles for.    Output Array - A list of all of the roles in the specified server.</description>
+    </item>
+    
+    <item>
+      <title> roles user (user) has in server (guild)</title>
+      <link>https://doc.piecewise.im/discord/user_roles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/user_roles/</guid>
+      <description>In Discord → Roles
+Jump to block
+ Get the roles a user has in a server.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     user user ✓ The user to get roles for.   guild guild ✓ The server to get roles for the user in.    Output Array - The roles the user has in the specified server.</description>
+    </item>
+    
+    <item>
+      <title> send embed paginator to channel (target) with content (content) with pages (pages) with next emoji (next) with previous emoji (previous) with timeout (timeout)</title>
+      <link>https://doc.piecewise.im/discord/embed_paginator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/embed_paginator/</guid>
+      <description>In Discord → Messages
+Jump to block
+ Send an embed paginator to a user, a channel, or as a reply to another message. Embed paginators create a menu a user can scroll through using reactions. See documentation for more information.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     target channel OR user OR message ✓ The target to send the embed paginator to (a user, a channel, or a message).</description>
+    </item>
+    
+    <item>
+      <title> send message to (to) with content (content) with components (interaction) as (as) (suppress_embeds) suppress embeds</title>
+      <link>https://doc.piecewise.im/discord/send/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/send/</guid>
+      <description>In Discord → Messages
+Jump to block
+ Send a message or embed to a user, a channel, or as a reply to another message. See documentation for more information.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     to user OR channel OR message ✓ The target of the message. Specifying a user will send the message to their DMs.</description>
+    </item>
+    
+    <item>
+      <title> send message to (to) with content (content) with components (interaction) as (as) (suppress_embeds) suppress embeds</title>
+      <link>https://doc.piecewise.im/discord/send_return/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/send_return/</guid>
+      <description>In Discord → Messages
+Jump to block
+ Send a message or embed to a user, a channel, or as a reply to another message. See documentation for more information.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     to user OR channel OR message ✓ The target of the message. Specifying a user will send the message to their DMs.</description>
+    </item>
+    
+    <item>
+      <title> server (guild) is available</title>
+      <link>https://doc.piecewise.im/discord/guild_available/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/guild_available/</guid>
+      <description>In Discord → Servers
+Jump to block
+ Determine whether a server is available - i.e. not down or experiencing an outage
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     guild guild ✓ The server to check    Output Boolean - Whether the guild is available
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title> server that owns sticker (sticker)</title>
+      <link>https://doc.piecewise.im/discord/sticker_guild/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/sticker_guild/</guid>
+      <description>In Discord → Stickers
+Jump to block
+ Determine the server that owns a sticker.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     sticker sticker ✓ The sticker to get the server of.    Output guild - The server that owns the sticker, or NULL if the sticker is part of a sticker pack.</description>
+    </item>
+    
+    <item>
+      <title> servers I am in</title>
+      <link>https://doc.piecewise.im/discord/user_my_servers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/user_my_servers/</guid>
+      <description>In Discord → Users
+Jump to block
+ Get the servers that the bot is a member of.
+Requires the following blocks to be present in the project: discord login
+Output Array
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;type&#34;:&#34;discord_user_my_servers&#34;,&#34;message0&#34;:&#34;%1 servers I am in&#34;,&#34;args0&#34;:[{&#34;type&#34;:&#34;field_image&#34;,&#34;src&#34;:&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAABYZfFYZPFXZfFXZPFXZPFYZfFYZfJYZfJYZPFXZfFXZfFYZPJXZfFYZPFXZfFYZPFXZfFXZPFXZfFXZPFXZPFYZPFYZfFYZPFYZPFXZfFYZfJYZfFbaPKMlfaiqfdwe/NXZPHDyPr+/v5zfvSutPjr7P2mrfj4+P6ttPjQ1Pu7wPna3fzc3/z6+v7V2Pursvj9/f7m6P27wfnT1vtxfPSjqvdxfPNYZPH///83eggMAAAAGnRSTlMAMpja+tqYMgqcmgrCwpqcMjKYmJoKwsL62kJGyTMAAAABYktHRDnXAJVAAAAAB3RJTUUH5QcLEDIO+ZKhhgAAAK1JREFUGNNNj1kSgkAQQxscXHAbFdyCCjQKAgq43/9kzqClvK9OqtKVECkMsyWE1e7Qh25vjRrP7td6gB9D7YzQYEwkPWCz3fn+brsBgglNlR9yTajOKVlAxF8iwCIB7PkQJ0l84CMgtJFyhjxHxqk2VOTE54K5OPNJR9TTsrpcb7frpSqBGckAuD90h8dTlTWInGYxWzV153+9qMe4zusjA8f97pWmJZYrU+r7DUshGA/6eLOuAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIxLTA3LTExVDE2OjUwOjEyKzAwOjAwb8xQ9QAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMS0wNy0xMVQxNjo1MDoxMiswMDowMB6R6EkAAAAASUVORK5CYII=&#34;,&#34;width&#34;:15,&#34;height&#34;:15,&#34;alt&#34;:&#34;Discord&#34;,&#34;flipRtl&#34;:false}],&#34;output&#34;:[&#34;Array&#34;],&#34;colour&#34;:230,&#34;tooltip&#34;:&#34;Get the servers that the bot is a member of.&#34;,&#34;category&#34;:&#34;Discord/Users&#34;,&#34;require&#34;:[&#34;discord_login&#34;]}); Blockly.Blocks[block.type] = { init: function () { this.</description>
+    </item>
+    
+    <item>
+      <title> set activity to (activity) (name)</title>
+      <link>https://doc.piecewise.im/discord/set_activity/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/set_activity/</guid>
+      <description>In Discord → Users
+Jump to block
+ Set the bot&amp;rsquo;s activity (the info next to the bot&amp;rsquo;s name in the member list)
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     activity any ✓ The descriptor of this activity (i.e. playing, watching, competing&amp;hellip;)   name String  The name of the activity.</description>
+    </item>
+    
+    <item>
+      <title> set my status to (activity)</title>
+      <link>https://doc.piecewise.im/discord/user_set_status/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/user_set_status/</guid>
+      <description>In Discord → Users
+Jump to block
+ Set the bot&amp;rsquo;s Discord status.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     activity any ✓ The status to set the user to.    Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title> set nickname of user (user) in server (server) to (nickname)</title>
+      <link>https://doc.piecewise.im/discord/user_nickname/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/user_nickname/</guid>
+      <description>In Discord → Users
+Jump to block
+ Set a user&amp;rsquo;s nickname in a server.
+Parameters    Parameter name Parameter type Required? Description     user user ✓ The user to set the nickname of.   server guild ✓ The server to set the nickname in.   nickname String ✓ The nickname to set.    Output void - This is a statement with no outputs</description>
+    </item>
+    
+    <item>
+      <title> set slow mode on channel (channel) to time (time) with reason (reason)</title>
+      <link>https://doc.piecewise.im/discord/channel_ratelimit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/channel_ratelimit/</guid>
+      <description>In Discord → Channels
+Jump to block
+ Set the slow mode time limit on a channel.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     channel channel ✓ The channel to set slow mode on.   time time ✓ The amount of time users without the Manage Messages permission must wait before sending another message.</description>
+    </item>
+    
+    <item>
+      <title> start typing in channel (channel)</title>
+      <link>https://doc.piecewise.im/discord/user_start_typing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/user_start_typing/</guid>
+      <description>In Discord → Users
+Jump to block
+ Start typing in a channel.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     channel any ✓ The channel to start typing in.    Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.</description>
+    </item>
+    
+    <item>
+      <title> stop sound</title>
+      <link>https://doc.piecewise.im/discord/voice_stop_sound/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/voice_stop_sound/</guid>
+      <description>In Discord → Voice
+Jump to block
+ Stop the sound that&amp;rsquo;s playing now, and disconnect from the voice channel.
+Requires the following blocks to be present in the project: discord login
+Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;type&#34;:&#34;discord_voice_stop_sound&#34;,&#34;message0&#34;:&#34;%1 stop sound&#34;,&#34;args0&#34;:[{&#34;type&#34;:&#34;field_image&#34;,&#34;src&#34;:&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAABYZfFYZPFXZfFXZPFXZPFYZfFYZfJYZfJYZPFXZfFXZfFYZPJXZfFYZPFXZfFYZPFXZfFXZPFXZfFXZPFXZPFYZPFYZfFYZPFYZPFXZfFYZfJYZfFbaPKMlfaiqfdwe/NXZPHDyPr+/v5zfvSutPjr7P2mrfj4+P6ttPjQ1Pu7wPna3fzc3/z6+v7V2Pursvj9/f7m6P27wfnT1vtxfPSjqvdxfPNYZPH///83eggMAAAAGnRSTlMAMpja+tqYMgqcmgrCwpqcMjKYmJoKwsL62kJGyTMAAAABYktHRDnXAJVAAAAAB3RJTUUH5QcLEDIO+ZKhhgAAAK1JREFUGNNNj1kSgkAQQxscXHAbFdyCCjQKAgq43/9kzqClvK9OqtKVECkMsyWE1e7Qh25vjRrP7td6gB9D7YzQYEwkPWCz3fn+brsBgglNlR9yTajOKVlAxF8iwCIB7PkQJ0l84CMgtJFyhjxHxqk2VOTE54K5OPNJR9TTsrpcb7frpSqBGckAuD90h8dTlTWInGYxWzV153+9qMe4zusjA8f97pWmJZYrU+r7DUshGA/6eLOuAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIxLTA3LTExVDE2OjUwOjEyKzAwOjAwb8xQ9QAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMS0wNy0xMVQxNjo1MDoxMiswMDowMB6R6EkAAAAASUVORK5CYII=&#34;,&#34;width&#34;:15,&#34;height&#34;:15,&#34;alt&#34;:&#34;Discord&#34;,&#34;flipRtl&#34;:false}],&#34;inputsInline&#34;:true,&#34;previousStatement&#34;:null,&#34;nextStatement&#34;:null,&#34;colour&#34;:230,&#34;tooltip&#34;:&#34;Stop the sound that&#39;s playing now, and disconnect from the voice channel.</description>
+    </item>
+    
+    <item>
+      <title> target channel of invite (invite)</title>
+      <link>https://doc.piecewise.im/discord/invite_channel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/invite_channel/</guid>
+      <description>In Discord → Invites
+Jump to block
+ Get the target channel of an invite.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     invite invite ✓ The invite to get the target channel of    Output channel - The target channel of an invite
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title> target server of invite (invite)</title>
+      <link>https://doc.piecewise.im/discord/invite_guild/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/invite_guild/</guid>
+      <description>In Discord → Invites
+Jump to block
+ Get the target server of an invite.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     invite invite ✓ The invite to get the target server of    Output guild - The target server of an invite. Note: some properties may be missing when accessing a server in this way.</description>
+    </item>
+    
+    <item>
+      <title> time message (message) sent</title>
+      <link>https://doc.piecewise.im/discord/message_created_at/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/message_created_at/</guid>
+      <description>In Discord → Messages
+Jump to block
+ Determine when the provided message was originally sent.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     message message ✓ The message to check.    Output date - When this message was originally sent.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.</description>
+    </item>
+    
+    <item>
+      <title> time out user (user) for length (time) in server (guild) with reason (reason)</title>
+      <link>https://doc.piecewise.im/discord/user_timeout/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/user_timeout/</guid>
+      <description>In Discord → Moderation
+Jump to block
+ Time a user out.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     user user ✓ The user to time out.   time time ✓ The duration of the time-out.   guild guild ✓ The server to time the user out in.   reason String  The reason for the time-out.</description>
+    </item>
+    
+    <item>
+      <title> timeout end time for user (user) in server (guild)</title>
+      <link>https://doc.piecewise.im/discord/user_timeout_ends/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/user_timeout_ends/</guid>
+      <description>In Discord → Moderation
+Jump to block
+ Get the timeout end time for a user in a server.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     user user ✓ The user to get the timeout end time for.   guild guild ✓ The server to get the user&amp;rsquo;s timeout end time for.</description>
+    </item>
+    
+    <item>
+      <title> unban user (user) from server (guild) with reason (reason)</title>
+      <link>https://doc.piecewise.im/discord/unban/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/unban/</guid>
+      <description>In Discord → Moderation
+Jump to block
+ Unban a user from a server.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     user user ✓ The user to unban.   guild guild ✓ The server to unban the user from.   reason String  The reason for unbanning this user. Visible in Audit Logs.</description>
+    </item>
+    
+    <item>
+      <title> URL of invite (invite)</title>
+      <link>https://doc.piecewise.im/discord/invite_url/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/invite_url/</guid>
+      <description>In Discord → Invites
+Jump to block
+ Get an invite&amp;rsquo;s URL.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     invite invite ✓ The invite to get the URL of    Output String - The invite URL
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.</description>
+    </item>
+    
+    <item>
+      <title> URL of message (message)</title>
+      <link>https://doc.piecewise.im/discord/message_url/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/message_url/</guid>
+      <description>In Discord → Messages
+Jump to block
+ Get a URL pointing to a message.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     message message ✓ The message to retrieve a URL for.    Output String - A URL pointing to the specified message.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title> user (user) has role (role)</title>
+      <link>https://doc.piecewise.im/discord/user_has_role/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/user_has_role/</guid>
+      <description>In Discord → Users; Discord → Roles
+Jump to block
+ Determine whether a user has a particular role.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     user user ✓ The user to check.   role role ✓ The role to check membership of.    Output Boolean - Whether the user has the specified role.</description>
+    </item>
+    
+    <item>
+      <title> user (user) is (property) in server (guild)</title>
+      <link>https://doc.piecewise.im/discord/voice_is/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/voice_is/</guid>
+      <description>In Discord → Voice
+Jump to block
+ Check if the user matches a particular voice property in a server.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     user user ✓ The user to check the status of.   property any ✓ The property to check.   guild guild ✓ The server to check the user&amp;rsquo;s status in.</description>
+    </item>
+    
+    <item>
+      <title> user (user) is (status) in server (guild)</title>
+      <link>https://doc.piecewise.im/discord/user_presence/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/user_presence/</guid>
+      <description>In Discord → Users
+Jump to block
+ Check if a user has a particular status in a server.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     user user ✓ The user to get the status of.   status any ✓ The status to check for.   guild guild ✓ The server to check the user&amp;rsquo;s status in.</description>
+    </item>
+    
+    <item>
+      <title> user (user) is banned from server (guild)</title>
+      <link>https://doc.piecewise.im/discord/user_banned_from_guild/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/user_banned_from_guild/</guid>
+      <description>In Discord → Moderation; Discord → Users; Discord → Servers
+Jump to block
+ Determine if a user is banned from a server.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     user user ✓ The user to check.   guild guild ✓ The server to check.    Output Boolean - Whether the user is banned from the server.</description>
+    </item>
+    
+    <item>
+      <title> user (user) is bot</title>
+      <link>https://doc.piecewise.im/discord/user_is_bot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/user_is_bot/</guid>
+      <description>In Discord → Users
+Jump to block
+ Determines whether a user is a bot.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     user user ✓ The user to check.    Output Boolean - Whether the user is a bot
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;</description>
+    </item>
+    
+    <item>
+      <title> user (user) is bot owner</title>
+      <link>https://doc.piecewise.im/discord/user_is_bot_owner/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/user_is_bot_owner/</guid>
+      <description>In Discord → Users
+Jump to block
+ Determines whether a user is the bot&amp;rsquo;s owner.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     user user ✓ The user to check.    Output Boolean - Whether the user is the bot&amp;rsquo;s owner
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title> user (user) is in server (guild)</title>
+      <link>https://doc.piecewise.im/discord/user_in_guild/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/user_in_guild/</guid>
+      <description>In Discord → Users; Discord → Servers
+Jump to block
+ Determines whether a user is in a particular server. This may require the &amp;ldquo;membership&amp;rdquo; privileged intent.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     user user ✓ The user to check.   guild guild ✓ The server to check.    Output Boolean - Whether the user is in a particular server</description>
+    </item>
+    
+    <item>
+      <title> user (user) is timed out in server (guild)</title>
+      <link>https://doc.piecewise.im/discord/user_is_timed_out/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/user_is_timed_out/</guid>
+      <description>In Discord → Moderation
+Jump to block
+ Check if a user is timed out in a particular server.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     user user ✓ The user to check.   guild guild ✓ The server to check timeout status in.    Output Boolean - Whether the user is timed out in the specified server.</description>
+    </item>
+    
+    <item>
+      <title> user or role (userOrRole) can (permission) in (target)</title>
+      <link>https://doc.piecewise.im/discord/user_can/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/user_can/</guid>
+      <description>In Discord → Users
+Jump to block
+ Determine if a user has a particular permission in a channel or server.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     userOrRole user OR role ✓ The user or role to check permissions for.   permission permission ✓ The permission to check.   target channel OR guild ✓ The channel or server to check permissions in.</description>
+    </item>
+    
+    <item>
+      <title> users banned from server (guild)</title>
+      <link>https://doc.piecewise.im/discord/guild_bans/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/guild_bans/</guid>
+      <description>In Discord → Servers; Discord → Moderation
+Jump to block
+ Get the IDs of the users banned from a particular server. This may be inefficient in large servers.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     guild guild ✓ The server to get banned users from    Output Array - The IDs of the users banned from a particular server.</description>
+    </item>
+    
+    <item>
+      <title> users in voice channel (channel)</title>
+      <link>https://doc.piecewise.im/discord/voice_channel_members/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/voice_channel_members/</guid>
+      <description>In Discord → Voice
+Jump to block
+ Determine the users in a voice channel
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     channel channel ✓ The channel to get the members of.    Output Array - The members of the specified voice channel.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title> users that reacted to message (message) with emoji (emoji)</title>
+      <link>https://doc.piecewise.im/discord/reaction_users/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/reaction_users/</guid>
+      <description>In Discord → Reactions
+Jump to block
+ Get the users that reacted to a message with a particular emoji.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     message message ✓ The message to get reactors for.   emoji emoji ✓ The emoji to get reactors for.    Output Array - A list of users that reacted to the message with the specified emoji</description>
+    </item>
+    
+    <item>
+      <title> wait for message in channel (channel) from user (user) time out after (timeout)</title>
+      <link>https://doc.piecewise.im/discord/message_await/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/message_await/</guid>
+      <description>In Discord → Messages; Discord → Channels
+Jump to block
+ Wait for a message in a Discord channel.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     channel channel ✓ The channel to wait for a message in.   user user  The user to wait for a message from.   timeout time  The maximum amount of time to wait for a message.</description>
+    </item>
+    
+    <item>
+      <title> 📄 for each member of server (guild) as (VAR)</title>
+      <link>https://doc.piecewise.im/discord/guild_members_paginator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/guild_members_paginator/</guid>
+      <description>In Discord → Servers
+Jump to block
+ Loop through every member in a server.
+📄 Paginator: Paginators are incredibly useful and powerful, but come with some drawbacks and warnings. Click here to learn more about paginators.
+Parameters    Parameter name Parameter type Required? Description     guild guild ✓ The server to stream members from.   VAR any ?     Output void - This is a statement with no outputs</description>
+    </item>
+    
+    <item>
+      <title> 📄 for each message in channel (channel) as (VAR)</title>
+      <link>https://doc.piecewise.im/discord/message_paginator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/message_paginator/</guid>
+      <description>In Discord → Channels
+Jump to block
+ Loop through every message in a channel.
+📄 Paginator: Paginators are incredibly useful and powerful, but come with some drawbacks and warnings. Click here to learn more about paginators.
+Parameters    Parameter name Parameter type Required? Description     channel channel ✓ The channel to stream messages from.   VAR any ?     Output void - This is a statement with no outputs</description>
+    </item>
+    
+    <item>
+      <title> 🔔 channel</title>
+      <link>https://doc.piecewise.im/discord/event_channel/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/event_channel/</guid>
+      <description>In Discord → Events
+Jump to block
+ The channel that is the target of this event.
+Only valid in: 🔔 when (event) do (statement), discord command create, discord chat command
+Only valid in events: message, message deleted, reaction added, reaction removed, message updated, message pinned, voice left, voice joined, voice server deafened, voice server undeafened, voice server muted, voice server unmuted, voice self deafened, voice self undeafened, voice self muted, voice self unmuted, voice video started, voice video stopped, voice stream started, voice stream stopped, voice joined, voice left, thread created, thread deleted, thread leave, thread join, channel created, channel deleted, typing start</description>
+    </item>
+    
+    <item>
+      <title> 🔔 emoji</title>
+      <link>https://doc.piecewise.im/discord/event_emoji/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/event_emoji/</guid>
+      <description>In Discord → Events
+Jump to block
+ The emoji that is the target of this event.
+Only valid in: 🔔 when (event) do (statement)
+Only valid in events: emoji created, emoji deleted, reaction added, reaction removed
+Requires the following blocks to be present in the project: discord login
+Output emoji - The emoji that is the target of this event.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.</description>
+    </item>
+    
+    <item>
+      <title> 🔔 interaction</title>
+      <link>https://doc.piecewise.im/discord/event_interaction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/event_interaction/</guid>
+      <description>In Discord → Events
+Jump to block
+ Get the interaction that triggered this event.
+Only valid in: 🔔 when (event) do (statement), discord interaction button, discord interaction dropdown
+Only valid in events: interactible
+Requires the following blocks to be present in the project: discord login
+Output interaction - The interaction that triggered this event.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;</description>
+    </item>
+    
+    <item>
+      <title> 🔔 message</title>
+      <link>https://doc.piecewise.im/discord/event_message_message/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/event_message_message/</guid>
+      <description>In Discord → Events
+Jump to block
+ The target message of this event.
+Only valid in: 🔔 when (event) do (statement), discord chat command
+Only valid in events: message, message deleted, reaction added, reaction removed, message updated, message pinned
+Requires the following blocks to be present in the project: discord login
+Output message - The message that is the target of this event.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title> 🔔 message before edit</title>
+      <link>https://doc.piecewise.im/discord/event_message_old/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/event_message_old/</guid>
+      <description>In Discord → Events
+Jump to block
+ The message before the edit.
+Only valid in: 🔔 when (event) do (statement)
+Only valid in events: message updated
+Requires the following blocks to be present in the project: discord login
+Output message - The message before the edit. Only valid if the bot has seen this message before.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.</description>
+    </item>
+    
+    <item>
+      <title> 🔔 server</title>
+      <link>https://doc.piecewise.im/discord/event_guild/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/event_guild/</guid>
+      <description>In Discord → Events
+Jump to block
+ The server that is the target of this event.
+Only valid in: 🔔 when (event) do (statement), discord command create, discord interaction button, discord interaction dropdown, discord chat command
+Only valid in events: message, message deleted, reaction added, reaction removed, message updated, message pinned, emoji created, emoji deleted, reaction added, reaction removed, message, message deleted, reaction added, reaction removed, message updated, message pinned, voice left, voice joined, voice server deafened, voice server undeafened, voice server muted, voice server unmuted, voice self deafened, voice self undeafened, voice self muted, voice self unmuted, voice video started, voice video stopped, voice stream started, voice stream stopped, voice joined, voice left, thread created, thread deleted, thread leave, thread join, channel created, channel deleted, typing start, message, message deleted, reaction added, reaction removed, message updated, message pinned, message, message deleted, reaction added, reaction removed, message updated, message pinned, voice left, voice joined, voice server deafened, voice server undeafened, voice server muted, voice server unmuted, voice self deafened, voice self undeafened, voice self muted, voice self unmuted, voice video started, voice video stopped, voice stream started, voice stream stopped, voice joined, voice left, role added, role removed, thread leave, thread join, member joined, member left, interactible, typing start, voice left, voice joined, voice server deafened, voice server undeafened, voice server muted, voice server unmuted, voice self deafened, voice self undeafened, voice self muted, voice self unmuted, voice video started, voice video stopped, voice stream started, voice stream stopped, voice joined, voice left, interactible</description>
+    </item>
+    
+    <item>
+      <title> 🔔 user</title>
+      <link>https://doc.piecewise.im/discord/event_user/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/event_user/</guid>
+      <description>In Discord → Events
+Jump to block
+ The user that is the target of this event.
+Only valid in: 🔔 when (event) do (statement), discord command create, discord interaction button, discord interaction dropdown, discord chat command
+Only valid in events: message, message deleted, reaction added, reaction removed, message updated, message pinned, voice left, voice joined, voice server deafened, voice server undeafened, voice server muted, voice server unmuted, voice self deafened, voice self undeafened, voice self muted, voice self unmuted, voice video started, voice video stopped, voice stream started, voice stream stopped, voice joined, voice left, role added, role removed, thread leave, thread join, member joined, member left, interactible, typing start</description>
+    </item>
+    
+    <item>
+      <title> 🗣️ (operation) interaction with content (content) with component (interaction) ephemeral (ephemeral)  suppress embeds (suppress_embeds) </title>
+      <link>https://doc.piecewise.im/discord/interaction_reply/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/interaction_reply/</guid>
+      <description>In Discord → Interactions
+Jump to block
+ Reply to an interaction (i.e. a slash command). You may use ONE of these per interaction and MUST respond to or defer every reaction you receive.
+Only valid in: 🔔 when (event) do (statement), discord command create, discord interaction button, discord interaction dropdown
+Only valid in events: interactible
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required?</description>
+    </item>
+    
+    <item>
+      <title> 🗣️ (required) required (type) option with name (name) description (description)</title>
+      <link>https://doc.piecewise.im/discord/command_arg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/command_arg/</guid>
+      <description>In Discord → Interactions → Slash Commands
+Jump to block
+ Represents an option of a command. Pass this either individually or as part of a list to create slash command&amp;hellip;.
+Only valid in: discord command create
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     required any ✓ Whether this option is required, i.</description>
+    </item>
+    
+    <item>
+      <title> 🗣️ (type) input with label (label) with ID (id) with placeholder (placeholder) with minimum length (min) with maximum length (max) with initial value (initial) (required) required?</title>
+      <link>https://doc.piecewise.im/discord/interaction_modal_input/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/interaction_modal_input/</guid>
+      <description>In Discord → Interactions → Modals
+Jump to block
+ A field on a modal that can be filled out by the user.
+Parameters    Parameter name Parameter type Required? Description     type any ✓ The type of input to show. Short text is a single line of text, paragraph is a multi-line text box.   label String ✓ Text that labels this input.   id String ✓ The ID of the input.</description>
+    </item>
+    
+    <item>
+      <title> 🗣️ create interactible button with label (label) color (type)  emoji (emoji) enabled? (enabled) do (statements)</title>
+      <link>https://doc.piecewise.im/discord/interaction_button/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/interaction_button/</guid>
+      <description>In Discord → Interactions → Buttons
+Jump to block
+ Add a clickable button to a message.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     label String  The text to show on this button. At least an emoji or a label must be supplied.   type any ✓ The type of button to show - this mainly determines its color.</description>
+    </item>
+    
+    <item>
+      <title> 🗣️ create interactible button with label (label) color (type)  emoji (emoji) enabled? (enabled) with custom ID (id)</title>
+      <link>https://doc.piecewise.im/discord/interaction_button_id/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/interaction_button_id/</guid>
+      <description>In Discord → Interactions → Buttons
+Jump to block
+ Add a clickable button to a message.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     label String  The text to show on this button. At least an emoji or a label must be supplied.   type any ✓ The type of button to show - this mainly determines its color.</description>
+    </item>
+    
+    <item>
+      <title> 🗣️ create interactible dropdown with items (values) maximum selection count (maxValues) minimum selection count (minValues) placeholder (placeholder) enabled? (enabled) do (statements)</title>
+      <link>https://doc.piecewise.im/discord/interaction_dropdown/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/interaction_dropdown/</guid>
+      <description>In Discord → Interactions → Dropdowns
+Jump to block
+ Create an interactable dropdown list.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     values Array ✓ The items in the dropdown. They must be dropdown items.   maxValues Number ✓ The maximum number of items a user can select from this dropdown.</description>
+    </item>
+    
+    <item>
+      <title> 🗣️ create interactible dropdown with items (values) maximum selection count (maxValues) minimum selection count (minValues) placeholder (placeholder) enabled? (enabled) with custom ID (id)</title>
+      <link>https://doc.piecewise.im/discord/interaction_dropdown_id/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/interaction_dropdown_id/</guid>
+      <description>In Discord → Interactions → Dropdowns
+Jump to block
+ Create an interactable dropdown list.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     values Array ✓ The items in the dropdown. They must be dropdown items.   maxValues Number ✓ The maximum number of items a user can select from this dropdown.</description>
+    </item>
+    
+    <item>
+      <title> 🗣️ defer interaction response</title>
+      <link>https://doc.piecewise.im/discord/interaction_defer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/interaction_defer/</guid>
+      <description>In Discord → Interactions
+Jump to block
+ Defer a reply to an interaction. Use this if your interaction may take more than three seconds to execute; this increases the deadline to 15 minutes.
+Requires the following blocks to be present in the project: discord login
+Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;</description>
+    </item>
+    
+    <item>
+      <title> 🗣️ get (type) option with name (argument)</title>
+      <link>https://doc.piecewise.im/discord/command_get_arg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/command_get_arg/</guid>
+      <description>In Discord → Interactions → Slash Commands
+Jump to block
+ Get an argument from a command invocation.
+Only valid in: discord command create
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     type any ✓ The type of argument. This should match what you&amp;rsquo;ve declared in option with&amp;hellip;, otherwise you might get weird results.</description>
+    </item>
+    
+    <item>
+      <title> 🗣️ reply to interaction with modal titled (title) with fields (fields) do (do)</title>
+      <link>https://doc.piecewise.im/discord/interaction_reply_modal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/interaction_reply_modal/</guid>
+      <description>In Discord → Interactions → Modals
+Jump to block
+ Send a modal to the user in response to an interaction.
+Parameters    Parameter name Parameter type Required? Description     title String ✓ The title of the modal.   fields Array OR modal_field ✓ The fields to add to the modal.   do statements&amp;hellip; ✓ The statements to run when the modal is submitted.</description>
+    </item>
+    
+    <item>
+      <title> 🗣️ selected dropdown values</title>
+      <link>https://doc.piecewise.im/discord/interaction_dropdown_values/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/interaction_dropdown_values/</guid>
+      <description>In Discord → Interactions → Dropdowns
+Jump to block
+ Get the selected values from an interactible dropdown.
+Requires the following blocks to be present in the project: discord login
+Output Array - The values, or an empty list.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;type&#34;:&#34;discord_interaction_dropdown_values&#34;,&#34;message0&#34;:&#34;%1 🗣️ selected dropdown values&#34;,&#34;args0&#34;:[{&#34;type&#34;:&#34;field_image&#34;,&#34;src&#34;:&#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUAAABYZfFYZPFXZfFXZPFXZPFYZfFYZfJYZfJYZPFXZfFXZfFYZPJXZfFYZPFXZfFYZPFXZfFXZPFXZfFXZPFXZPFYZPFYZfFYZPFYZPFXZfFYZfJYZfFbaPKMlfaiqfdwe/NXZPHDyPr+/v5zfvSutPjr7P2mrfj4+P6ttPjQ1Pu7wPna3fzc3/z6+v7V2Pursvj9/f7m6P27wfnT1vtxfPSjqvdxfPNYZPH///83eggMAAAAGnRSTlMAMpja+tqYMgqcmgrCwpqcMjKYmJoKwsL62kJGyTMAAAABYktHRDnXAJVAAAAAB3RJTUUH5QcLEDIO+ZKhhgAAAK1JREFUGNNNj1kSgkAQQxscXHAbFdyCCjQKAgq43/9kzqClvK9OqtKVECkMsyWE1e7Qh25vjRrP7td6gB9D7YzQYEwkPWCz3fn+brsBgglNlR9yTajOKVlAxF8iwCIB7PkQJ0l84CMgtJFyhjxHxqk2VOTE54K5OPNJR9TTsrpcb7frpSqBGckAuD90h8dTlTWInGYxWzV153+9qMe4zusjA8f97pWmJZYrU+r7DUshGA/6eLOuAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIxLTA3LTExVDE2OjUwOjEyKzAwOjAwb8xQ9QAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMS0wNy0xMVQxNjo1MDoxMiswMDowMB6R6EkAAAAASUVORK5CYII=&#34;,&#34;width&#34;:15,&#34;height&#34;:15,&#34;alt&#34;:&#34;Discord&#34;,&#34;flipRtl&#34;:false}],&#34;output&#34;:[&#34;Array&#34;],&#34;doc_output&#34;:&#34;The values, or an empty list.&#34;,&#34;colour&#34;:230,&#34;tooltip&#34;:&#34;Get the selected values from an interactible dropdown.</description>
+    </item>
+    
+    <item>
+      <title> 🗣️ value of modal field with ID (id)</title>
+      <link>https://doc.piecewise.im/discord/interaction_modal_value/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/interaction_modal_value/</guid>
+      <description>In Discord → Interactions → Modals
+Jump to block
+ Get the value of a modal field.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     id String ✓ The ID of the input to retrieve the value for.    Output String - The value of the input, or empty string if not found.</description>
+    </item>
+    
+    <item>
+      <title> 🗣️ when (type) with name (name) description (description) in server (guild) with options (args) do (do)</title>
+      <link>https://doc.piecewise.im/discord/command_create/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/command_create/</guid>
+      <description>In Discord → Interactions → Slash Commands
+Jump to block
+ Create a slash command.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     type any ✓ The type of command to create.   name String ✓ The name of the slash command.   description String ✓ The description of this slash command.</description>
+    </item>
+    
+    <item>
+      <title>[deprecated]  # reactors on (reaction)</title>
+      <link>https://doc.piecewise.im/discord/reaction_count/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/reaction_count/</guid>
+      <description>In Discord → Reactions
+Jump to block
+This block is deprecated and will be removed in Piecewise 22.03.0. Use &amp;lsquo;number of reactions on message (message) with emoji (emoji)&amp;rsquo; instead.
+ Get the number of users that reacted with this reaction.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     reaction reaction ✓ The reaction to count reactions for.</description>
+    </item>
+    
+    <item>
+      <title>[deprecated]  get reaction on message (message) with emoji (emoji)</title>
+      <link>https://doc.piecewise.im/discord/get_reaction_with_emoji/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/get_reaction_with_emoji/</guid>
+      <description>In Discord → Reactions
+Jump to block
+This block is deprecated and will be removed in Piecewise 22.03.0. Use &amp;lsquo;users that reacted to message (message) with emoji (emoji)&amp;rsquo; instead.
+ Get the reaction that matches an emoji.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     message message ✓ The message to get the reaction from   emoji emoji ✓ The emoji to match    Output reaction - The matching reaction, or null</description>
+    </item>
+    
+    <item>
+      <title>[deprecated]  reactors to reaction (reaction)</title>
+      <link>https://doc.piecewise.im/discord/reaction_reactors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/reaction_reactors/</guid>
+      <description>In Discord → Reactions
+Jump to block
+This block is deprecated and will be removed in Piecewise 22.03.0. Use &amp;lsquo;users that reacted to message (message) with emoji (emoji)&amp;rsquo; instead.
+ Get the users that reacted to a message with a particular reaction.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     reaction reaction ✓ The reaction to get reactors for.</description>
+    </item>
+    
+    <item>
+      <title>[deprecated]  user (user) can (permission) in (target)</title>
+      <link>https://doc.piecewise.im/discord/user_has_permission/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/user_has_permission/</guid>
+      <description>In the toolbox
+This block is deprecated and will be removed in Piecewise 22.05.0. Use the &amp;lsquo;user or role (userOrRole) can (permission) in (target)&amp;rsquo; block in the toolbox instead.
+ Determine if a user has a particular permission in a channel or server.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     user user ✓ The user to check permissions for.</description>
+    </item>
+    
+    <item>
+      <title>[deprecated]  🔔 reaction</title>
+      <link>https://doc.piecewise.im/discord/event_reaction_reaction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/event_reaction_reaction/</guid>
+      <description>In Discord → Events
+Jump to block
+This block is deprecated and will be removed in Piecewise 22.03.0. Use 🔔 emoji or 🔔 user instead.
+ The reaction that was added or removed.
+Only valid in: 🔔 when (event) do (statement)
+Only valid in events: reaction removed, reaction added
+Requires the following blocks to be present in the project: discord login
+Output reaction - The reaction that was added or removed.</description>
+    </item>
+    
+    <item>
+      <title>🔔  when (event)  do (statement)</title>
+      <link>https://doc.piecewise.im/discord/when/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/when/</guid>
+      <description>In Discord → Events
+Jump to block
+ Run code when an event occurs, such as your bot receiving a message.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     event any ✓ The event to bind to.   statement statements&amp;hellip; ✓ The statements to run when the event is received.    Output void - This is a statement with no outputs</description>
+    </item>
+    
+    <item>
+      <title>🗣️  (default) default option with name (name) value (value) description (description) emoji (emoji)</title>
+      <link>https://doc.piecewise.im/discord/interaction_dropdown_arg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/discord/interaction_dropdown_arg/</guid>
+      <description>In Discord → Interactions → Dropdowns
+Jump to block
+ Represents an argument to a dropdown.
+Requires the following blocks to be present in the project: discord login
+Parameters    Parameter name Parameter type Required? Description     default any ✓ Whether this is the default dropdown option.   name String ✓ The name of the dropdown option.   value String ✓ An application-defined value for the dropdown option.</description>
+    </item>
+    
+  </channel>
+</rss>

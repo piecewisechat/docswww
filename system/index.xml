@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>System on Piecewise</title>
+    <link>https://doc.piecewise.im/system/</link>
+    <description>Recent content in System on Piecewise</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://doc.piecewise.im/system/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>(mode) file (file) with text (text)</title>
+      <link>https://doc.piecewise.im/system/file_write/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/system/file_write/</guid>
+      <description>In System → Files
+Jump to block
+ Write text to a file
+Parameters    Parameter name Parameter type Required? Description     mode any ✓ The operation to perform   file String ✓ The file to write, relative to the .lazurite data directory.   text String ✓ The text to write to the file. This will overwrite the existing text in the file.    Output void - This is a statement with no outputs</description>
+    </item>
+    
+    <item>
+      <title>(stream) of command (result)</title>
+      <link>https://doc.piecewise.im/system/command_result_output/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/system/command_result_output/</guid>
+      <description>In System → Commands
+Jump to block
+ Returns the specified stream from the result.
+Parameters    Parameter name Parameter type Required? Description     stream any ✓ The stream to return.   result command_result ✓ The result to return the stream from.    Output String - The stream.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;</description>
+    </item>
+    
+    <item>
+      <title>contents of file (file) as text</title>
+      <link>https://doc.piecewise.im/system/file_read/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/system/file_read/</guid>
+      <description>In System → Files
+Jump to block
+ Read the contents of a file as text
+Parameters    Parameter name Parameter type Required? Description     file String ✓ The file to read, relative to the .lazurite data directory.    Output String - The contents of the file
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;</description>
+    </item>
+    
+    <item>
+      <title>create directory (directory)</title>
+      <link>https://doc.piecewise.im/system/file_mkdir/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/system/file_mkdir/</guid>
+      <description>In System → Files
+Jump to block
+ Create a directory
+Parameters    Parameter name Parameter type Required? Description     directory String ✓ The directory to create, relative to the .lazurite data directory. Directories will be created recursively, i.e. if you specify path/to/directory, path and path/to will also be created if they don&amp;rsquo;t already exist.    Output void - This is a statement with no outputs</description>
+    </item>
+    
+    <item>
+      <title>delete item (file)</title>
+      <link>https://doc.piecewise.im/system/file_delete/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/system/file_delete/</guid>
+      <description>In System → Files
+Jump to block
+ Delete a file
+Parameters    Parameter name Parameter type Required? Description     file String ✓ The file or directory to delete, relative to the .lazurite data directory.    Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;</description>
+    </item>
+    
+    <item>
+      <title>execute command (command) with arguments (arguments)</title>
+      <link>https://doc.piecewise.im/system/command_exec/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/system/command_exec/</guid>
+      <description>In System → Commands
+Jump to block
+ Execute a command on the system. See the documentation for more information, including potential pitfalls.
+Parameters    Parameter name Parameter type Required? Description     command String ✓ The command to execute.    NOTE: this command is executed in the current $SHELL or %ComSpec% (i.e. sh or cmd), and the current working directory is specified as the .</description>
+    </item>
+    
+    <item>
+      <title>exit code of command (result)</title>
+      <link>https://doc.piecewise.im/system/command_result_code/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/system/command_result_code/</guid>
+      <description>In System → Commands
+Jump to block
+ Get the exit code from a command result.
+Parameters    Parameter name Parameter type Required? Description     result command_result ✓ The command result to obtain the exit code from.    Output Number - The exit code from a command result.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;</description>
+    </item>
+    
+    <item>
+      <title>file (file) (property)</title>
+      <link>https://doc.piecewise.im/system/file_stat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/system/file_stat/</guid>
+      <description>In System → Files
+Jump to block
+ Checks if a file exists, relative to the .lazurite data directory.
+Parameters    Parameter name Parameter type Required? Description     file String ✓ The file to check   property any ✓ The property to check    Output Boolean - Whether the file exists
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;</description>
+    </item>
+    
+    <item>
+      <title>files in directory (directory)</title>
+      <link>https://doc.piecewise.im/system/file_ls/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/system/file_ls/</guid>
+      <description>In System → Files
+Jump to block
+ List the files in a directory
+Parameters    Parameter name Parameter type Required? Description     directory String ✓ The directory to list files of, relative to the .lazurite data directory.    Output Array - The files in the directory
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;</description>
+    </item>
+    
+    <item>
+      <title>value of environment variable with name (name) or default (default)</title>
+      <link>https://doc.piecewise.im/system/env_get/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/system/env_get/</guid>
+      <description>In System → Environment
+Jump to block
+ Get the value of an environment variable.
+Parameters    Parameter name Parameter type Required? Description     name String ✓ The name of the environment variable to fetch.   default String  The default value to return if the environment variable is not set.    Output String - The value of the environment variable.
+ window.</description>
+    </item>
+    
+    <item>
+      <title>🔥 raise error (error)</title>
+      <link>https://doc.piecewise.im/system/throw/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/system/throw/</guid>
+      <description>In System → Error Handling
+Jump to block
+ Raise an error.
+Parameters    Parameter name Parameter type Required? Description     error String ✓ The error to raise.    Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;type&#34;:&#34;system_throw&#34;,&#34;message0&#34;:&#34;🔥 raise error %1&#34;</description>
+    </item>
+    
+  </channel>
+</rss>

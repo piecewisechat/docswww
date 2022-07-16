@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mastodon on Piecewise</title>
+    <link>https://doc.piecewise.im/mastodon/</link>
+    <description>Recent content in Mastodon on Piecewise</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://doc.piecewise.im/mastodon/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title> (interaction) status (status)</title>
+      <link>https://doc.piecewise.im/mastodon/status_interact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/status_interact/</guid>
+      <description>In Mastodon → Statuses
+Jump to block
+ (Un)favorite/(un)boost a status.
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     interaction any ✓ The action to perform.   status status ✓ The status to (un)favorite or (un)reblog.    Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title> (interaction) user (user)</title>
+      <link>https://doc.piecewise.im/mastodon/user_interact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/user_interact/</guid>
+      <description>In Mastodon → Users
+Jump to block
+ (Un)follow, (un)block, or (un)mute a user.
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     interaction any ✓ The action to perform.   user user ✓ The user to (un)follow, (un)block, or (un)mute.    Output void - This is a statement with no outputs</description>
+    </item>
+    
+    <item>
+      <title> (property) count of user (user)</title>
+      <link>https://doc.piecewise.im/mastodon/user_countable_property/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/user_countable_property/</guid>
+      <description>In Mastodon → Users
+Jump to block
+ Find a countable property of a user.
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     property any ✓ The property to get.   user user ✓ The user to get the property of.    Output Number - The specified property.
+ window.</description>
+    </item>
+    
+    <item>
+      <title> (property) of user (user)</title>
+      <link>https://doc.piecewise.im/mastodon/user_property/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/user_property/</guid>
+      <description>In Mastodon → Users
+Jump to block
+ Find a property of a user.
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     property any ✓ The property to get.   user user ✓ The user to get the property of.    Output String - The specified property.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title> (scope) scope</title>
+      <link>https://doc.piecewise.im/mastodon/scope/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/scope/</guid>
+      <description>In Mastodon → Statuses
+Jump to block
+ Describe who can view a particular status.
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     scope any ✓ The scope.    Output scope - The specified scope.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;</description>
+    </item>
+    
+    <item>
+      <title> (type) content of status (status)</title>
+      <link>https://doc.piecewise.im/mastodon/status_content/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/status_content/</guid>
+      <description>In Mastodon → Statuses
+Jump to block
+ Get the content of a status.
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     type any ✓ The type of output to return.   status status ✓ The status to extract content from.    Output String - The content of the status, as the selected type.</description>
+    </item>
+    
+    <item>
+      <title> attachment with location (attachment)</title>
+      <link>https://doc.piecewise.im/mastodon/attachment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/attachment/</guid>
+      <description>In Mastodon → Statuses
+Jump to block
+ Specifies an item to attach to a status.
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     attachment String ✓ A path or a URL to the attachment to send    Output attachment - An attachment based on the path or URL provided.</description>
+    </item>
+    
+    <item>
+      <title> attachments in status (status)</title>
+      <link>https://doc.piecewise.im/mastodon/status_attachments/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/status_attachments/</guid>
+      <description>In Mastodon → Statuses
+Jump to block
+ Get the attachments of a status.
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     status status ✓ The status to get the attachments of.    Output Array - A list of URLs of the attachments of the status.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title> author of status (status)</title>
+      <link>https://doc.piecewise.im/mastodon/status_author/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/status_author/</guid>
+      <description>In Mastodon → Statuses
+Jump to block
+ Get the author of a status.
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     status status ✓ The status to get the author of.    Output user - The author of the status.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.</description>
+    </item>
+    
+    <item>
+      <title> delete status (status)</title>
+      <link>https://doc.piecewise.im/mastodon/status_delete/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/status_delete/</guid>
+      <description>In Mastodon → Statuses
+Jump to block
+ Delete a status.
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     status status ✓ The status to delete.    Output void - This is a statement with no outputs
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.</description>
+    </item>
+    
+    <item>
+      <title> emoji of reaction (reaction)</title>
+      <link>https://doc.piecewise.im/mastodon/pleroma_react_emoji/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/pleroma_react_emoji/</guid>
+      <description>In Mastodon → Statuses
+Jump to block
+ Get the emoji of a reaction.
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     reaction pleroma_reaction ✓ The reaction to get the emoji of.    Output String - The emoji of the reaction.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.</description>
+    </item>
+    
+    <item>
+      <title> emoji reactions on status (status)</title>
+      <link>https://doc.piecewise.im/mastodon/pleroma_reacts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/pleroma_reacts/</guid>
+      <description>In Mastodon → Statuses
+Jump to block
+ Get the emoji reactions on a status.
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     status status ✓ The status to get emoji reactions for.    Output Array - A list of the emoji reactions on this status.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title> get status with ID (localid)</title>
+      <link>https://doc.piecewise.im/mastodon/status_lookup_id/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/status_lookup_id/</guid>
+      <description>In Mastodon → Statuses
+Jump to block
+ Look up a status by its local ID (i.e. ACKnNemqjYvEUbhgo4, 107094725323115556)
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     localid String ✓ The local ID of the status.    Output status - The status, or NULL if it could not be found.</description>
+    </item>
+    
+    <item>
+      <title> handle of user (user)</title>
+      <link>https://doc.piecewise.im/mastodon/user_handle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/user_handle/</guid>
+      <description>In Mastodon → Users
+Jump to block
+ Get the @-handle of a user.
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     user user ✓ The user to find the handle of.    Output String - The user&amp;rsquo;s @-handle.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;</description>
+    </item>
+    
+    <item>
+      <title> I (state) user (user)</title>
+      <link>https://doc.piecewise.im/mastodon/user_relationship/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/user_relationship/</guid>
+      <description>In Mastodon → Users
+Jump to block
+ Check the state of the bot&amp;rsquo;s relationship with a user.
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     state any ✓ The state to check.   user user ✓ The user to check relationship state with.    Output Boolean - Whether the bot has the specified relationship with a user.</description>
+    </item>
+    
+    <item>
+      <title> I voted on poll (poll)</title>
+      <link>https://doc.piecewise.im/mastodon/poll_voted/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/poll_voted/</guid>
+      <description>In Mastodon → Polls
+Jump to block
+ Check whether the current user voted on a particular poll.
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     poll poll ✓ The poll to check.    Output Boolean - Whether the current user voted on the specified poll.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title> ID of status (status)</title>
+      <link>https://doc.piecewise.im/mastodon/status_id/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/status_id/</guid>
+      <description>In Mastodon → Statuses
+Jump to block
+ Get the ID of a status
+Parameters    Parameter name Parameter type Required? Description     status status ✓ The status to get the ID from    Output String - The ID of the status
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;</description>
+    </item>
+    
+    <item>
+      <title> initiator of notification (notification)</title>
+      <link>https://doc.piecewise.im/mastodon/notification_actor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/notification_actor/</guid>
+      <description>In Mastodon → Notifications
+Jump to block
+ Get the user that initiated this notification.
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     notification notification ✓ The notification to get the initiator of.    Output user - The user that initiated this notification.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title> initiator of reaction (reaction)</title>
+      <link>https://doc.piecewise.im/mastodon/pleroma_react_account/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/pleroma_react_account/</guid>
+      <description>In Mastodon → Statuses
+Jump to block
+ Get the user that initiated a reaction.
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     reaction pleroma_reaction ✓ The reaction to get the initiator of.    Output user - The user that the reaction was initiated by.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title> instance maximum status length</title>
+      <link>https://doc.piecewise.im/mastodon/instance_chars/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/instance_chars/</guid>
+      <description>In Mastodon → Instance
+Jump to block
+ Get the maximum number of characters that can be included in a status on this instance.
+Requires the following blocks to be present in the project: mastodon login
+Output Number - The maximum number of characters that can be included in a status, on this instance.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;</description>
+    </item>
+    
+    <item>
+      <title> items I voted for on poll (poll)</title>
+      <link>https://doc.piecewise.im/mastodon/poll_votes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/poll_votes/</guid>
+      <description>In Mastodon → Polls
+Jump to block
+ Get the items the current user voted for on a poll in a status.
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     poll poll ✓ The poll to check.    Output Array - The items the current user voted for on the poll in the specified status.</description>
+    </item>
+    
+    <item>
+      <title> log on (token) (instance)  (ignore_my_statuses) ignore my statuses in feeds  (include_mentions) include mentions when replying</title>
+      <link>https://doc.piecewise.im/mastodon/login/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/login/</guid>
+      <description>In Mastodon → Configuration
+Jump to block
+ Log on to Mastodon with a token on an instance. To obtain a token, use Tools -&amp;gt; Mastodon token generator&amp;hellip;
+Parameters    Parameter name Parameter type Required? Description     token any ✓ The access_token of the account to control   instance any ✓ The instance the account to control is on. Do not include https://   ignore_my_statuses any ?</description>
+    </item>
+    
+    <item>
+      <title> look up status with URL (apid)</title>
+      <link>https://doc.piecewise.im/mastodon/status_lookup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/status_lookup/</guid>
+      <description>In Mastodon → Statuses
+Jump to block
+ Look up a status by its URL (i.e. https://outerheaven.club/notice/ACKnNemqjYvEUbhgo4, https://koyu.space/@koyuchan/107094725323115556)
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     apid String ✓ The URL of an ActivityPub-compatible activity URL.    Output status - The status, or NULL if it could not be found.</description>
+    </item>
+    
+    <item>
+      <title> look up user by handle (handle)</title>
+      <link>https://doc.piecewise.im/mastodon/user_lookup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/user_lookup/</guid>
+      <description>In Mastodon → Users
+Jump to block
+ Look up a user by their @-handle.
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     handle String ✓ The handle of the user (i.e. @blog@blog.piecewise.im)    Output user - The user, or NULL if it could not be found.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title> me</title>
+      <link>https://doc.piecewise.im/mastodon/user_me/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/user_me/</guid>
+      <description>In Mastodon → Users
+Jump to block
+ Get the user the bot is logged in as
+Requires the following blocks to be present in the project: mastodon login
+Output user - The user the bot is logged in as
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;type&#34;:&#34;mastodon_user_me&#34;,&#34;message0&#34;:&#34;%1 me&#34;,&#34;args0&#34;:[{&#34;type&#34;:&#34;field_image&#34;,&#34;src&#34;:&#34;data:image/png;base64,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&#34;,&#34;width&#34;:15,&#34;height&#34;:15,&#34;alt&#34;:&#34;Mastodon&#34;}],&#34;output&#34;:[&#34;mastodon_user&#34;],&#34;doc_output&#34;:&#34;The user the bot is logged in as&#34;,&#34;colour&#34;:30,&#34;tooltip&#34;:&#34;Get the user the bot is logged in as&#34;</description>
+    </item>
+    
+    <item>
+      <title> notification (notification) is (type)</title>
+      <link>https://doc.piecewise.im/mastodon/notification_type/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/notification_type/</guid>
+      <description>In Mastodon → Notifications
+Jump to block
+ Determine if a notification is of a particular type.
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     notification notification ✓ The notification to check.   type any ✓ The type to check.    Output Boolean - Whether the notification is of the specified type.</description>
+    </item>
+    
+    <item>
+      <title> number of votes for poll option (option) in poll (poll)</title>
+      <link>https://doc.piecewise.im/mastodon/poll_stats/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/poll_stats/</guid>
+      <description>In Mastodon → Polls
+Jump to block
+ Returns the number of votes for a given option in a given poll.
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     option String ✓ The option to check.   poll poll ✓ The poll to check.    Output Number - The number of votes for a given option in a given poll.</description>
+    </item>
+    
+    <item>
+      <title> original author of status (status)</title>
+      <link>https://doc.piecewise.im/mastodon/status_original_author/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/status_original_author/</guid>
+      <description>In Mastodon → Statuses
+Jump to block
+ Get the original author of a post (i.e. a reblog).
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     status status ✓ The post to get the original author for.    Output user - The original post, if this is a reblog; otherwise null.</description>
+    </item>
+    
+    <item>
+      <title> poll in status (status)</title>
+      <link>https://doc.piecewise.im/mastodon/status_poll/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/status_poll/</guid>
+      <description>In Mastodon → Polls
+Jump to block
+ Get the attached poll, if any, in the provided status.
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     status status ✓ The status to get the attached poll of.    Output poll - The poll. If there is no poll, returns null.</description>
+    </item>
+    
+    <item>
+      <title> poll options in status (poll)</title>
+      <link>https://doc.piecewise.im/mastodon/poll_options/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/poll_options/</guid>
+      <description>In Mastodon → Polls
+Jump to block
+ Get the options of a particular poll.
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     poll poll ✓ The poll to get the options of.    Output Array - The options of the provided poll.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title> poll with options (options) expires in (expires) allow multiple choices? (multiple)</title>
+      <link>https://doc.piecewise.im/mastodon/poll/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/poll/</guid>
+      <description>In Mastodon → Statuses; Mastodon → Polls
+Jump to block
+ Attach a poll with the specified options.
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     options Array ✓ The options on this poll.   expires time ✓ When this poll should close.   multiple Boolean  Whether users should be allowed to pick multiple choices.</description>
+    </item>
+    
+    <item>
+      <title> scope of status (status)</title>
+      <link>https://doc.piecewise.im/mastodon/status_scope/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/status_scope/</guid>
+      <description>In Mastodon → Statuses
+Jump to block
+ Get the scope (visibility) of a status.
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     status status ✓ The status to get the scope of.    Output scope
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;</description>
+    </item>
+    
+    <item>
+      <title> send status with content (content) spoiler/subject (spoiler) with scope (scope) in reply to (post) sensitive? (sensitive)  as (format) </title>
+      <link>https://doc.piecewise.im/mastodon/send/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/send/</guid>
+      <description>In Mastodon → Statuses
+Jump to block
+ Post a status to Mastodon.
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     content attachment OR String OR Array ✓ The content of the status. This can be an attachment, a poll, plain text, or an array of any of these.   spoiler String  The spoiler text/&amp;ldquo;subject&amp;rdquo; of this post.</description>
+    </item>
+    
+    <item>
+      <title> send status with content (content) spoiler/subject (spoiler) with scope (scope) in reply to (post) sensitive? (sensitive)  as (format) </title>
+      <link>https://doc.piecewise.im/mastodon/send_return/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/send_return/</guid>
+      <description>In Mastodon → Statuses
+Jump to block
+ Post a status to Mastodon.
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     content attachment OR String OR Array ✓ The content of the status. This can be an attachment, a poll, plain text, or an array of any of these.   spoiler String  The spoiler text/&amp;ldquo;subject&amp;rdquo; of this post.</description>
+    </item>
+    
+    <item>
+      <title> set my (field) to (name)</title>
+      <link>https://doc.piecewise.im/mastodon/profile_edit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/profile_edit/</guid>
+      <description>In Mastodon → Profile
+Jump to block
+ Change the bot&amp;rsquo;s profile name.
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     field any ✓ The field to edit   name String ✓ The profile name to change to    Output void - This is a statement with no outputs</description>
+    </item>
+    
+    <item>
+      <title> status (status) is (property)</title>
+      <link>https://doc.piecewise.im/mastodon/status_is/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/status_is/</guid>
+      <description>In Mastodon → Statuses
+Jump to block
+ Check if a status matches a particular property.
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     status status ✓ The status to check.   property any ✓ The property to check.    Output Boolean - Whether the status matches the selected property.</description>
+    </item>
+    
+    <item>
+      <title> time poll (poll) ends</title>
+      <link>https://doc.piecewise.im/mastodon/poll_ends/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/poll_ends/</guid>
+      <description>In Mastodon → Polls
+Jump to block
+ Get the time when a particular ends.
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     poll poll ✓ The poll to check.    Output date - The time when the specified poll ends.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.</description>
+    </item>
+    
+    <item>
+      <title> users that (stat) status (status)</title>
+      <link>https://doc.piecewise.im/mastodon/status_user_stats/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/status_user_stats/</guid>
+      <description>In Mastodon → Statuses
+Jump to block
+ Get the users that boosted/favourited/reblogged a particular status.
+Parameters    Parameter name Parameter type Required? Description     stat any ✓ The stat to get.   status status ✓ The status to get the favorites or reblogs of.    Output Array
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;</description>
+    </item>
+    
+    <item>
+      <title> vote for poll option (option) in poll (poll)</title>
+      <link>https://doc.piecewise.im/mastodon/poll_vote/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/poll_vote/</guid>
+      <description>In Mastodon → Polls
+Jump to block
+ Vote for the specified poll option.
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     option String OR Array ✓ The option or options to vote for.   poll poll ✓ The poll to vote on.    Output void - This is a statement with no outputs</description>
+    </item>
+    
+    <item>
+      <title> winning item(s) in poll (poll)</title>
+      <link>https://doc.piecewise.im/mastodon/poll_winner/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/poll_winner/</guid>
+      <description>In Mastodon → Polls
+Jump to block
+ Get the winning option(s) of a poll.
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     poll poll ✓ The poll to get the winner from    Output Array - The winning option or options.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.</description>
+    </item>
+    
+    <item>
+      <title> 📄 for each status from user (user) as (VAR)</title>
+      <link>https://doc.piecewise.im/mastodon/user_post_foreach/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/user_post_foreach/</guid>
+      <description>In Mastodon → Users
+Jump to block
+ Loop through every post from a user.
+📄 Paginator: Paginators are incredibly useful and powerful, but come with some drawbacks and warnings. Click here to learn more about paginators.
+Parameters    Parameter name Parameter type Required? Description     user user ✓ The user to fetch the posts of.   VAR any ?     Output void - This is a statement with no outputs</description>
+    </item>
+    
+    <item>
+      <title> 🔔 notification</title>
+      <link>https://doc.piecewise.im/mastodon/event_notification/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/event_notification/</guid>
+      <description>In Mastodon → Events
+Jump to block
+ The notification that is the target of this event.
+Only valid in: 🔔 when (event) do (statement)
+Only valid in events: notification
+Requires the following blocks to be present in the project: mastodon login
+Output notification - The notification that is the target of this event.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.onload = () = { const block = ({&#34;</description>
+    </item>
+    
+    <item>
+      <title> 🔔 status</title>
+      <link>https://doc.piecewise.im/mastodon/event_status/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/event_status/</guid>
+      <description>In Mastodon → Events
+Jump to block
+ The status that is the target of this event.
+Only valid in: 🔔 when (event) do (statement)
+Only valid in events: notification, update, update, update
+Requires the following blocks to be present in the project: mastodon login
+Output status - The status that is the target of this event.
+ window.addEventListener(&#34;load&#34;, () = { let script = document.createElement(&#34;script&#34;); script.src = &#34;https://unpkg.com/blockly/blockly.min.js&#34;; document.body.appendChild(script); script.</description>
+    </item>
+    
+    <item>
+      <title>🔔  when (event)  do (statement)</title>
+      <link>https://doc.piecewise.im/mastodon/when/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/mastodon/when/</guid>
+      <description>In Mastodon → Events
+Jump to block
+ Run statements when an event occurs.
+Requires the following blocks to be present in the project: mastodon login
+Parameters    Parameter name Parameter type Required? Description     event any ✓ The event to bind to.   statement statements&amp;hellip; ✓ The statements to run when the event is received.    Output void - This is a statement with no outputs</description>
+    </item>
+    
+  </channel>
+</rss>
