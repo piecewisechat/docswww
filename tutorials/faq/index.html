@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Frequently Asked Questions - Piecewise</title>
+<meta name="description" content="Build chat bots with blocks">
+<meta name="generator" content="Hugo 0.86.0" />
+<link href="https://doc.piecewise.im/index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://doc.piecewise.im/tutorials/faq/">
+<link rel="stylesheet" href="https://doc.piecewise.im/css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="https://doc.piecewise.im/css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script src="https://doc.piecewise.im/js/bundle.js"></script><style>
+:root {}
+</style>
+<meta property="og:title" content="Frequently Asked Questions" />
+<meta property="og:description" content="This document answers frequently-asked questions about Piecewise.
+Editor Why aren&rsquo;t blocks connecting? In order to connect, connecting blocks must output the type the incoming block is expecting. For example - send message to (to) with content (content) with components (interaction) expects that the option &ldquo;to&rdquo; be a user, channel, or message. Trying to connect blocks of any other type will not work.
+Additionally, trying to compare two different outputs using the (obj1) = (obj2) block will result in the newest block being disconnected." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://doc.piecewise.im/tutorials/faq/" /><meta property="article:section" content="tutorials" />
+
+<meta property="og:site_name" content="Piecewise" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Frequently Asked Questions"/>
+<meta name="twitter:description" content="This document answers frequently-asked questions about Piecewise.
+Editor Why aren&rsquo;t blocks connecting? In order to connect, connecting blocks must output the type the incoming block is expecting. For example - send message to (to) with content (content) with components (interaction) expects that the option &ldquo;to&rdquo; be a user, channel, or message. Trying to connect blocks of any other type will not work.
+Additionally, trying to compare two different outputs using the (obj1) = (obj2) block will result in the newest block being disconnected."/>
+<meta itemprop="name" content="Frequently Asked Questions">
+<meta itemprop="description" content="This document answers frequently-asked questions about Piecewise.
+Editor Why aren&rsquo;t blocks connecting? In order to connect, connecting blocks must output the type the incoming block is expecting. For example - send message to (to) with content (content) with components (interaction) expects that the option &ldquo;to&rdquo; be a user, channel, or message. Trying to connect blocks of any other type will not work.
+Additionally, trying to compare two different outputs using the (obj1) = (obj2) block will result in the newest block being disconnected.">
+
+<meta itemprop="wordCount" content="387">
+<meta itemprop="keywords" content="" /></head>
+<body><div class="container"><header>
+<h1>Piecewise</h1>
+<p class="description">Build chat bots with blocks</p>
+
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="/">Home</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main><h1>Frequently Asked Questions</h1>
+<p>This document answers frequently-asked questions about Piecewise.</p>
+<h2 id="editor">Editor</h2>
+<h3 id="why-arent-blocks-connecting">Why aren&rsquo;t blocks connecting?</h3>
+<p>In order to connect, connecting blocks must output the type the incoming block is expecting. For example - <a href="https://doc.piecewise.im/discord/send/"><code>send message to (to) with content (content) with components (interaction)</code></a> expects that the option &ldquo;to&rdquo; be a <code>user</code>, <code>channel</code>, or <code>message</code>. Trying to connect blocks of any other type will not work.</p>
+<p>Additionally, trying to compare two different outputs using the <code>(obj1) = (obj2)</code> block will result in the newest block being disconnected.</p>
+<p><img src="/static/img_20211015_001.png" alt="use content of message"></p>
+<h3 id="why-cant-i-resize-the-window">Why can&rsquo;t I resize the window?</h3>
+<p>Due to a Chrome or Blockly bug I have yet to investigate, resizing the window breaks inactive workspaces. You can set the size of the window at any time under Piecewise -&gt; Preferences. You can also enable window resizing anyway through this window.</p>
+<h3 id="i-found-a-bug">I found a bug!</h3>
+<p>Oh no! Please report it by clicking the <code>Submit Feedback</code> button at the top right corner. Include an <strong>in-depth description of the problem</strong>, <strong>your Piecewise logs</strong>, and a screenshot of the workspace, if necessary.</p>
+<h3 id="any-block-i-drag-on-to-the-workspace-is-yellow-and-has-stripes-through-it-what-does-that-mean">Any block I drag on to the workspace is yellow and has stripes through it! What does that mean?</h3>
+<p>In order for a block to be used, it must be inside a root block - a block that has no connections on top or bottom. Usually you&rsquo;re looking for &ldquo;when (action) do&rdquo; blocks - you can find these under the &ldquo;Events&rdquo; category of each provider.</p>
+<p>You shouldn&rsquo;t manually force-enable these blocks that were disabled by the editor - that will create new and confusing errors.</p>
+<h2 id="bots">Bots</h2>
+<h3 id="how-do-i-run-my-bot-247">How do I run my bot 24/7?</h3>
+<p>You can either keep your computer on 24/7, or deploy your bot to a server. The README.md included with your exported bot has tips and instructions on doing the latter.</p>
+<h3 id="my-bot-is-never-showing-up-as-online-whats-happening">My bot is never showing up as online! What&rsquo;s happening?</h3>
+<p>Make sure you have <em>exactly one</em> of each type of configuration block, i.e. <a href="https://doc.piecewise.im/discord/login/">the Discord configuration block</a>, in <em>one</em> of your workspaces. Also check that any tokens are correct. Please note that Piecewise does not support Discord self/user bots.</p>
+<h3 id="do-exported-piecewise-bots-run-in-bun">Do exported Piecewise bots run in <code>bun</code>?</h3>
+<p>No, they do not. I haven&rsquo;t done much testing, but this appears to be an issue with a third-party library, rather than <code>bun</code> or Piecewise.</p>
+<h2 id="misc">Misc</h2>
+<h3 id="how-do-you-get-the-steal-achievement">How do you get the <code>Steal</code> achievement?</h3>
+<p>You have to steal something.</p>
+<div class="edit-meta">
+
+<br></div><nav class="pagination"><a class="nav nav-prev" href="https://doc.piecewise.im/tutorials/adding-custom-styles/" title="Creating Custom Themes"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Creating Custom Themes</a>
+<a class="nav nav-next" href="https://doc.piecewise.im/tutorials/paginators/" title="Paginators">Next - Paginators <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="slide-menu">
+<ul>
+<li class=""><a href="https://doc.piecewise.im">Home</a></li>
+
+<li class="parent has-sub-menu"><a href="https://doc.piecewise.im/tutorials/">Tutorials<span class="mark opened">-</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://doc.piecewise.im/tutorials/backpacks/">Backpacks</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/adding-custom-blocks/">Creating Custom Blocks (Legacy)</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/adding-custom-styles/">Creating Custom Themes</a></li>
+<li class="active"><a href="https://doc.piecewise.im/tutorials/faq/">Frequently Asked Questions</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/paginators/">Paginators</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/persistent-data/">Persistent data</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/piecewise-together/">Piecewise Together</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/plugins/">Plugins</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/sharing-blocks/">Sharing Blocks</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/steam-deck/">Steam Deck</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/workshop/">Steam Workshop</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/matrix_encryption/">Using Matrix Encryption</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/aimer/">Using the aimer branch</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/your-first-bot/">Your First Bot</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="https://doc.piecewise.im/errors/">Errors<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://doc.piecewise.im/errors/d000/">D000: Permission denied when querying for a resource (e.g. channel, user, slash commands...).</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d001/">D001: Invalid snowflake. Check any provided snowflakes and/or improve input validation.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d002/">D002: You are requesting a privileged intent you have not also requested for in the console. Check that you have requested the intents in the Developer Console.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d003/">D003: Invalid token. Check that you have entered your bot token correctly.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d100/">D100: Duplicate interactible ID rejected. Make sure all of your interactibles have unique IDs.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/l000/">L000: Required value missing. Check all of your blocks to make sure you have values at all required connections.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/l001/">L001: Tried to query invalid URL. Check to make sure that any URLs queried are valid.</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

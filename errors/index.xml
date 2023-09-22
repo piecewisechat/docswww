@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Errors on Piecewise</title>
+    <link>https://doc.piecewise.im/errors/</link>
+    <description>Recent content in Errors on Piecewise</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://doc.piecewise.im/errors/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>D000: Permission denied when querying for a resource (e.g. channel, user, slash commands...).</title>
+      <link>https://doc.piecewise.im/errors/d000/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/errors/d000/</guid>
+      <description>This error may occur in a few situations.
+ When accessing a channel you do not have access to When accessing a server you do not have access to (i.e. the bot is not a member of the server) When accessing a message you do not have access to (i.e. it is in a channel or server you do not have access to) When accessing slash commands for a server that has not authorized them.</description>
+    </item>
+    
+    <item>
+      <title>D001: Invalid snowflake. Check any provided snowflakes and/or improve input validation.</title>
+      <link>https://doc.piecewise.im/errors/d001/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/errors/d001/</guid>
+      <description>This error occurs when a provided Snowflake is invalid. A Snowflake is a 64-bit number, and Discord&amp;rsquo;s way of creating globally-unique identifiers that point to objects (e.g. messages, channels&amp;hellip;).
+Errors like this can be avoided through increased input validation, and/or ensuring any hard-coded values are correct.
+ Matches exception with text: is not a snowflake
+Having issues? Join us on Discord or ask for help on the Steam forums.</description>
+    </item>
+    
+    <item>
+      <title>D002: You are requesting a privileged intent you have not also requested for in the console. Check that you have requested the intents in the Developer Console.</title>
+      <link>https://doc.piecewise.im/errors/d002/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/errors/d002/</guid>
+      <description>This error occurs when you are requesting a privileged intent within Piecewise, but not in the Developer Console.
+If your bot is in more than 100 servers, you&amp;rsquo;ll need to contact Discord Support to request access to privileged intents. Otherwise, you can adjust privileged intents within the Discord console.
+ Matches exception with text: Privileged intent provided is not enabled or whitelisted
+Having issues? Join us on Discord or ask for help on the Steam forums.</description>
+    </item>
+    
+    <item>
+      <title>D003: Invalid token. Check that you have entered your bot token correctly.</title>
+      <link>https://doc.piecewise.im/errors/d003/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/errors/d003/</guid>
+      <description>This error occurs when you have not entered your bot token correctly. Ensure that you have copied and pasted the token exactly from Discord.
+ Matches exception with text: An invalid token was provided
+Having issues? Join us on Discord or ask for help on the Steam forums.</description>
+    </item>
+    
+    <item>
+      <title>D100: Duplicate interactible ID rejected. Make sure all of your interactibles have unique IDs.</title>
+      <link>https://doc.piecewise.im/errors/d100/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/errors/d100/</guid>
+      <description>This error occurs when the specified ID of one or more of your interactibles (e.g. buttons, dropdowns&amp;hellip;) has the same custom ID as another interactible.
+The following is invalid, because two interactibles have the same ID:
+This can be fixed by changing the ID of the second interactible:
+ Matches exception with text: Component custom id was already specified
+Having issues? Join us on Discord or ask for help on the Steam forums.</description>
+    </item>
+    
+    <item>
+      <title>L000: Required value missing. Check all of your blocks to make sure you have values at all required connections.</title>
+      <link>https://doc.piecewise.im/errors/l000/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/errors/l000/</guid>
+      <description>Check your blocks to make sure all required connections have values. You can check which fields are required on any non-extension block by right clicking it and then selecting &amp;lsquo;Help&amp;rsquo;.
+ Matches exception with text: Unexpected token &#39;,&#39;
+Having issues? Join us on Discord or ask for help on the Steam forums.</description>
+    </item>
+    
+    <item>
+      <title>L001: Tried to query invalid URL. Check to make sure that any URLs queried are valid.</title>
+      <link>https://doc.piecewise.im/errors/l001/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/errors/l001/</guid>
+      <description>This error occurs when trying to query an invalid URL. Improve input validation and make sure any hard-coded URLs are correct.
+If you are using the Mastodon blocks, this error may occur if you use &amp;ldquo;https://&amp;rdquo; in your instance location when initializing. Only include the domain name (i.e. mastodon.social) in that box.
+ Matches exception with text: ENOTFOUND
+Having issues? Join us on Discord or ask for help on the Steam forums.</description>
+    </item>
+    
+  </channel>
+</rss>

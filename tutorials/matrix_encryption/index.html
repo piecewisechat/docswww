@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Using Matrix Encryption - Piecewise</title>
+<meta name="description" content="Build chat bots with blocks">
+<meta name="generator" content="Hugo 0.86.0" />
+<link href="https://doc.piecewise.im/index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://doc.piecewise.im/tutorials/matrix_encryption/">
+<link rel="stylesheet" href="https://doc.piecewise.im/css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="https://doc.piecewise.im/css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script src="https://doc.piecewise.im/js/bundle.js"></script><style>
+:root {}
+</style>
+<meta property="og:title" content="Using Matrix Encryption" />
+<meta property="og:description" content="End-to-end encrypted rooms utilize the Olm algorithm to encrypt messages. Piecewise is able to read these messages, but some setup is involved in making things work.
+Important note: Piecewise can handle unencrypted message retrieval from Matrix without any special setup. This guide need only be followed if you wish for your bot to receive encrypted messages.
+Create an account You will want a dedicated Matrix account for your bot. If you do not have a dedicated bot account on a homeserver, create one." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://doc.piecewise.im/tutorials/matrix_encryption/" /><meta property="article:section" content="tutorials" />
+
+<meta property="og:site_name" content="Piecewise" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Using Matrix Encryption"/>
+<meta name="twitter:description" content="End-to-end encrypted rooms utilize the Olm algorithm to encrypt messages. Piecewise is able to read these messages, but some setup is involved in making things work.
+Important note: Piecewise can handle unencrypted message retrieval from Matrix without any special setup. This guide need only be followed if you wish for your bot to receive encrypted messages.
+Create an account You will want a dedicated Matrix account for your bot. If you do not have a dedicated bot account on a homeserver, create one."/>
+<meta itemprop="name" content="Using Matrix Encryption">
+<meta itemprop="description" content="End-to-end encrypted rooms utilize the Olm algorithm to encrypt messages. Piecewise is able to read these messages, but some setup is involved in making things work.
+Important note: Piecewise can handle unencrypted message retrieval from Matrix without any special setup. This guide need only be followed if you wish for your bot to receive encrypted messages.
+Create an account You will want a dedicated Matrix account for your bot. If you do not have a dedicated bot account on a homeserver, create one.">
+
+<meta itemprop="wordCount" content="499">
+<meta itemprop="keywords" content="" /></head>
+<body><div class="container"><header>
+<h1>Piecewise</h1>
+<p class="description">Build chat bots with blocks</p>
+
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="/">Home</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main><h1>Using Matrix Encryption</h1>
+<p>End-to-end encrypted rooms utilize the Olm algorithm to encrypt messages. Piecewise is able to read these messages, but some setup is involved in making things work.</p>
+<p>Important note: Piecewise can handle unencrypted message retrieval from Matrix without any special setup. This guide need only be followed if you wish for your bot to receive encrypted messages.</p>
+<h2 id="create-an-account">Create an account</h2>
+<p>You will want a dedicated Matrix account for your bot. If you do not have a dedicated bot account on a homeserver, create one. <a href="https://joinmatrix.org/servers/">Here</a> is a list of public homeservers.</p>
+<h2 id="set-up-encryption-keys">Set up encryption keys</h2>
+<p>Before using your account in Piecewise, you&rsquo;ll need to log into its account in order to set up encryption keys. This guide will reference the popular <a href="https://element.io">Element</a> client.</p>
+<ol>
+<li>Open Element, either from your homeserver, from <a href="https://app.element.io/">app.element.io</a>, or from the downloadable app.</li>
+<li>Log in with the username and password for your bot. Remember to set your homeserver properly.</li>
+<li>Encryption keys are now automatically set up for you within your browser. You should export your E2E keys and store them in a safe place.</li>
+</ol>
+<h2 id="log-in-with-piecewise">Log in with Piecewise</h2>
+<p>Now you&rsquo;ll need to log in to the account with Piecewise in order to add it to your devices list.</p>
+<ol>
+<li>Drag the <a href="/matrix/login">Matrix configuration</a> block onto your workspace. Enter your full Matrix handle (i.e. @piecewise:piecewise.im), select the PASSWORD authentication option, and enter your bot&rsquo;s password.</li>
+<li>Click the &ldquo;Run&rdquo; button at the top of the screen. This will initiate a connection to your homeserver and add Piecewise to your bot account&rsquo;s devices list.</li>
+</ol>
+<h2 id="verify-your-bots-account">Verify your bot&rsquo;s account</h2>
+<p>In general, in order for other clients to trust your bot&rsquo;s encryption keys and send you encrypted messages, the Piecewise Matrix client will need to be &ldquo;trusted.&rdquo; There may be other ways of accomplishing this, but this is the easiest in my opinion:</p>
+<ol>
+<li>Create a private room from your bot account (the <code>+</code> in the top left corner of Element) and enable E2E encryption.</li>
+<li>Click on &ldquo;Room info&rdquo; in the top right, then click People -&gt; the bot&rsquo;s name.</li>
+<li>Click the Piecewise session&rsquo;s name - it may look like a random string of letters and numbers like T12345Y6789.</li>
+<li>A &ldquo;Not Trusted&rdquo; dialog will appear. Click &ldquo;Manually Verify By Text&rdquo;, and then &ldquo;Verify Session&rdquo;.</li>
+<li>Your session will now be verified. Any users that have previously communicated with your bot may have to refresh their clients in order for them to trust your keys.</li>
+</ol>
+<h2 id="important-notes">Important notes</h2>
+<ul>
+<li>These steps will have to be completed on each computer you wish to run your bot on.</li>
+<li>If you change your bot&rsquo;s Matrix password, these steps will have to be completed again.</li>
+<li>The authentication information is stored in the .lazurite folder as matrix_[sha512hash].token. Your bot&rsquo;s encryption information is stored in the .lazurite folder as matrix__username_homeserver.name.store. Keep these files safe as they contain everything anyone would need to log in to your bot&rsquo;s Matrix account.
+<ul>
+<li>In theory, these files are portable and can be used to authenticate your bot in multiple locations, but this configuration is not recommended or supported.</li>
+</ul>
+</li>
+</ul>
+<div class="edit-meta">
+
+<br></div><nav class="pagination"><a class="nav nav-prev" href="https://doc.piecewise.im/tutorials/workshop/" title="Steam Workshop"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Steam Workshop</a>
+<a class="nav nav-next" href="https://doc.piecewise.im/tutorials/aimer/" title="Using the aimer branch">Next - Using the aimer branch <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="slide-menu">
+<ul>
+<li class=""><a href="https://doc.piecewise.im">Home</a></li>
+
+<li class="parent has-sub-menu"><a href="https://doc.piecewise.im/tutorials/">Tutorials<span class="mark opened">-</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://doc.piecewise.im/tutorials/backpacks/">Backpacks</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/adding-custom-blocks/">Creating Custom Blocks (Legacy)</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/adding-custom-styles/">Creating Custom Themes</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/faq/">Frequently Asked Questions</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/paginators/">Paginators</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/persistent-data/">Persistent data</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/piecewise-together/">Piecewise Together</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/plugins/">Plugins</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/sharing-blocks/">Sharing Blocks</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/steam-deck/">Steam Deck</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/workshop/">Steam Workshop</a></li>
+<li class="active"><a href="https://doc.piecewise.im/tutorials/matrix_encryption/">Using Matrix Encryption</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/aimer/">Using the aimer branch</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/your-first-bot/">Your First Bot</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="https://doc.piecewise.im/errors/">Errors<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://doc.piecewise.im/errors/d000/">D000: Permission denied when querying for a resource (e.g. channel, user, slash commands...).</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d001/">D001: Invalid snowflake. Check any provided snowflakes and/or improve input validation.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d002/">D002: You are requesting a privileged intent you have not also requested for in the console. Check that you have requested the intents in the Developer Console.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d003/">D003: Invalid token. Check that you have entered your bot token correctly.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d100/">D100: Duplicate interactible ID rejected. Make sure all of your interactibles have unique IDs.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/l000/">L000: Required value missing. Check all of your blocks to make sure you have values at all required connections.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/l001/">L001: Tried to query invalid URL. Check to make sure that any URLs queried are valid.</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

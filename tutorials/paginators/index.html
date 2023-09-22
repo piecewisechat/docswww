@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Paginators - Piecewise</title>
+<meta name="description" content="Build chat bots with blocks">
+<meta name="generator" content="Hugo 0.86.0" />
+<link href="https://doc.piecewise.im/index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://doc.piecewise.im/tutorials/paginators/">
+<link rel="stylesheet" href="https://doc.piecewise.im/css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="https://doc.piecewise.im/css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script src="https://doc.piecewise.im/js/bundle.js"></script><style>
+:root {}
+</style>
+<meta property="og:title" content="Paginators" />
+<meta property="og:description" content="Paginators allow you to consume potentially-long streams of data - like lists of posts for Mastodon, or messages in a channel for Discord - in a sustainable and transparent manner. Essentially, Piecewise allows you to loop through the structure easily, while obtaining more data (pages) behind-the-scenes. Paginators are marked by the paper 📄 emoji in Piecewise.
+There are a few things to keep in mind when using paginators:
+ Paginators are designed to loop through long streams of data." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://doc.piecewise.im/tutorials/paginators/" /><meta property="article:section" content="tutorials" />
+
+<meta property="og:site_name" content="Piecewise" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Paginators"/>
+<meta name="twitter:description" content="Paginators allow you to consume potentially-long streams of data - like lists of posts for Mastodon, or messages in a channel for Discord - in a sustainable and transparent manner. Essentially, Piecewise allows you to loop through the structure easily, while obtaining more data (pages) behind-the-scenes. Paginators are marked by the paper 📄 emoji in Piecewise.
+There are a few things to keep in mind when using paginators:
+ Paginators are designed to loop through long streams of data."/>
+<meta itemprop="name" content="Paginators">
+<meta itemprop="description" content="Paginators allow you to consume potentially-long streams of data - like lists of posts for Mastodon, or messages in a channel for Discord - in a sustainable and transparent manner. Essentially, Piecewise allows you to loop through the structure easily, while obtaining more data (pages) behind-the-scenes. Paginators are marked by the paper 📄 emoji in Piecewise.
+There are a few things to keep in mind when using paginators:
+ Paginators are designed to loop through long streams of data.">
+
+<meta itemprop="wordCount" content="198">
+<meta itemprop="keywords" content="" /></head>
+<body><div class="container"><header>
+<h1>Piecewise</h1>
+<p class="description">Build chat bots with blocks</p>
+
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="/">Home</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main><h1>Paginators</h1>
+<p>Paginators allow you to consume potentially-long streams of data - like lists of posts for Mastodon, or messages in a channel for Discord - in a sustainable and transparent manner. Essentially, Piecewise allows you to loop through the structure easily, while obtaining more data (pages) behind-the-scenes. Paginators are marked by the paper 📄 emoji in Piecewise.</p>
+<p>There are a few things to keep in mind when using paginators:</p>
+<ol>
+<li>Paginators are designed to loop through <strong>long streams of data</strong>. By design, they are inherently <em>expensive</em> and <em>incredibly slow</em>, and should be used in cases where collecting large amounts of data is necessary.</li>
+<li>Piecewise, in most cases, will attempt to automatically throttle requests made via your paginator. However, Piecewise does not monitor all paginator requests, so avoid multiple paginator requests to a single resource at the same time to reduce the possibility of exceeding rate limits.</li>
+<li>Paginators will continue to run until <em>there is no data left</em>. In many cases, this may be the first post a user made, the first post in a channel, etc. Use the &ldquo;break&rdquo; block when you have obtained the data you require, if you do not intend to request all data from a paginator.</li>
+</ol>
+<div class="edit-meta">
+
+<br></div><nav class="pagination"><a class="nav nav-prev" href="https://doc.piecewise.im/tutorials/faq/" title="Frequently Asked Questions"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Frequently Asked Questions</a>
+<a class="nav nav-next" href="https://doc.piecewise.im/tutorials/persistent-data/" title="Persistent data">Next - Persistent data <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="slide-menu">
+<ul>
+<li class=""><a href="https://doc.piecewise.im">Home</a></li>
+
+<li class="parent has-sub-menu"><a href="https://doc.piecewise.im/tutorials/">Tutorials<span class="mark opened">-</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://doc.piecewise.im/tutorials/backpacks/">Backpacks</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/adding-custom-blocks/">Creating Custom Blocks (Legacy)</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/adding-custom-styles/">Creating Custom Themes</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/faq/">Frequently Asked Questions</a></li>
+<li class="active"><a href="https://doc.piecewise.im/tutorials/paginators/">Paginators</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/persistent-data/">Persistent data</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/piecewise-together/">Piecewise Together</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/plugins/">Plugins</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/sharing-blocks/">Sharing Blocks</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/steam-deck/">Steam Deck</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/workshop/">Steam Workshop</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/matrix_encryption/">Using Matrix Encryption</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/aimer/">Using the aimer branch</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/your-first-bot/">Your First Bot</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="https://doc.piecewise.im/errors/">Errors<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://doc.piecewise.im/errors/d000/">D000: Permission denied when querying for a resource (e.g. channel, user, slash commands...).</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d001/">D001: Invalid snowflake. Check any provided snowflakes and/or improve input validation.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d002/">D002: You are requesting a privileged intent you have not also requested for in the console. Check that you have requested the intents in the Developer Console.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d003/">D003: Invalid token. Check that you have entered your bot token correctly.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d100/">D100: Duplicate interactible ID rejected. Make sure all of your interactibles have unique IDs.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/l000/">L000: Required value missing. Check all of your blocks to make sure you have values at all required connections.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/l001/">L001: Tried to query invalid URL. Check to make sure that any URLs queried are valid.</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

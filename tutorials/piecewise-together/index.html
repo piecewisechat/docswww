@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Piecewise Together - Piecewise</title>
+<meta name="description" content="Build chat bots with blocks">
+<meta name="generator" content="Hugo 0.86.0" />
+<link href="https://doc.piecewise.im/index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://doc.piecewise.im/tutorials/piecewise-together/">
+<link rel="stylesheet" href="https://doc.piecewise.im/css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="https://doc.piecewise.im/css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script src="https://doc.piecewise.im/js/bundle.js"></script><style>
+:root {}
+</style>
+<meta property="og:title" content="Piecewise Together" />
+<meta property="og:description" content="Piecewise Together allows you to work on Piecewise projects together with multiple people (there is currently no limit to the number of people that can be invited to a Piecewise Together session, but this may change soon).
+Note: Piecewise Together is currently in a very early alpha phase and will probably have bugs (and lots of them). Take backups of your projects before you share them over Piecewise Together.
+Prerequisites  A Piecewise installation running on the aimer branch, at least version 00448." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://doc.piecewise.im/tutorials/piecewise-together/" /><meta property="article:section" content="tutorials" />
+
+<meta property="og:site_name" content="Piecewise" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Piecewise Together"/>
+<meta name="twitter:description" content="Piecewise Together allows you to work on Piecewise projects together with multiple people (there is currently no limit to the number of people that can be invited to a Piecewise Together session, but this may change soon).
+Note: Piecewise Together is currently in a very early alpha phase and will probably have bugs (and lots of them). Take backups of your projects before you share them over Piecewise Together.
+Prerequisites  A Piecewise installation running on the aimer branch, at least version 00448."/>
+<meta itemprop="name" content="Piecewise Together">
+<meta itemprop="description" content="Piecewise Together allows you to work on Piecewise projects together with multiple people (there is currently no limit to the number of people that can be invited to a Piecewise Together session, but this may change soon).
+Note: Piecewise Together is currently in a very early alpha phase and will probably have bugs (and lots of them). Take backups of your projects before you share them over Piecewise Together.
+Prerequisites  A Piecewise installation running on the aimer branch, at least version 00448.">
+
+<meta itemprop="wordCount" content="336">
+<meta itemprop="keywords" content="" /></head>
+<body><div class="container"><header>
+<h1>Piecewise</h1>
+<p class="description">Build chat bots with blocks</p>
+
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="/">Home</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main><h1>Piecewise Together</h1>
+<p>Piecewise Together allows you to work on Piecewise projects together with multiple people (there is currently no limit to the number of people that can be invited to a Piecewise Together session, but this may change soon).</p>
+<p><strong>Note</strong>: Piecewise Together is currently in a very early alpha phase and will probably have bugs (and lots of them). Take backups of your projects before you share them over Piecewise Together.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>A Piecewise installation running on the <a href="https://doc.piecewise.im/tutorials/aimer/">aimer branch</a>, at least version <code>00448</code>.</li>
+<li>A tolerance for everything being rough or broken.</li>
+</ul>
+<h2 id="creating-a-piecewise-together-room">Creating a Piecewise Together room</h2>
+<p>Click the File menu, and then click Piecewise Together.</p>
+<p>You&rsquo;ll see a screen that prompts you to &ldquo;Enter the Together session ID to join or enter nothing to create a new session&rdquo;. Enter nothing here and click OK.</p>
+<p>In the bottom logs you&rsquo;ll see that you&rsquo;ve joined a room with a specific room code - you&rsquo;ll need this room code for&hellip;</p>
+<h2 id="joining-a-piecewise-together-room">Joining a Piecewise Together room</h2>
+<p>Click the File menu, and then click Piecewise Together.</p>
+<p>You&rsquo;ll see a screen that prompts you to &ldquo;Enter the Together session ID to join or enter nothing to create a new session&rdquo;. Enter the code from the previous step and then click OK.</p>
+<p>If all goes well, the person joining will see your project and you&rsquo;ll be able to see each other&rsquo;s edits in real time.</p>
+<h2 id="some-things-to-know">Some things to know</h2>
+<ul>
+<li>If a block is selected by a user, it will be blocked for the other user(s) until it is deselected.</li>
+<li>Creating a new project or opening a different project will end the Piecewise Together session.</li>
+<li>Your entire project will be shared with the other user, tokens and all. Only share with someone you trust with your project!</li>
+<li>This is still really jank and flaky and bad things might happen and your project might break. Ensure that you&rsquo;re keeping frequent backups of your projects.</li>
+<li>Users that join will have to synchronize the project with the host which might cause a very brief disruption in your work.</li>
+</ul>
+<div class="edit-meta">
+
+<br></div><nav class="pagination"><a class="nav nav-prev" href="https://doc.piecewise.im/tutorials/persistent-data/" title="Persistent data"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Persistent data</a>
+<a class="nav nav-next" href="https://doc.piecewise.im/tutorials/plugins/" title="Plugins">Next - Plugins <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="slide-menu">
+<ul>
+<li class=""><a href="https://doc.piecewise.im">Home</a></li>
+
+<li class="parent has-sub-menu"><a href="https://doc.piecewise.im/tutorials/">Tutorials<span class="mark opened">-</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://doc.piecewise.im/tutorials/backpacks/">Backpacks</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/adding-custom-blocks/">Creating Custom Blocks (Legacy)</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/adding-custom-styles/">Creating Custom Themes</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/faq/">Frequently Asked Questions</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/paginators/">Paginators</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/persistent-data/">Persistent data</a></li>
+<li class="active"><a href="https://doc.piecewise.im/tutorials/piecewise-together/">Piecewise Together</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/plugins/">Plugins</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/sharing-blocks/">Sharing Blocks</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/steam-deck/">Steam Deck</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/workshop/">Steam Workshop</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/matrix_encryption/">Using Matrix Encryption</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/aimer/">Using the aimer branch</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/your-first-bot/">Your First Bot</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="https://doc.piecewise.im/errors/">Errors<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://doc.piecewise.im/errors/d000/">D000: Permission denied when querying for a resource (e.g. channel, user, slash commands...).</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d001/">D001: Invalid snowflake. Check any provided snowflakes and/or improve input validation.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d002/">D002: You are requesting a privileged intent you have not also requested for in the console. Check that you have requested the intents in the Developer Console.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d003/">D003: Invalid token. Check that you have entered your bot token correctly.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d100/">D100: Duplicate interactible ID rejected. Make sure all of your interactibles have unique IDs.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/l000/">L000: Required value missing. Check all of your blocks to make sure you have values at all required connections.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/l001/">L001: Tried to query invalid URL. Check to make sure that any URLs queried are valid.</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Persistent data - Piecewise</title>
+<meta name="description" content="Build chat bots with blocks">
+<meta name="generator" content="Hugo 0.86.0" />
+<link href="https://doc.piecewise.im/index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://doc.piecewise.im/tutorials/persistent-data/">
+<link rel="stylesheet" href="https://doc.piecewise.im/css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="https://doc.piecewise.im/css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script src="https://doc.piecewise.im/js/bundle.js"></script><style>
+:root {}
+</style>
+<meta property="og:title" content="Persistent data" />
+<meta property="og:description" content="By default, Piecewise will not save any data when your bot stops, leaving it up to you to manage data you want to keep. There are a few ways to save and load data into Piecewise:
+ Using the save list to file and load list from file blocks Using the save table to file and load table from file blocks Using the [append to|write] file with text and contents of file as text blocks." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://doc.piecewise.im/tutorials/persistent-data/" /><meta property="article:section" content="tutorials" />
+
+<meta property="og:site_name" content="Piecewise" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Persistent data"/>
+<meta name="twitter:description" content="By default, Piecewise will not save any data when your bot stops, leaving it up to you to manage data you want to keep. There are a few ways to save and load data into Piecewise:
+ Using the save list to file and load list from file blocks Using the save table to file and load table from file blocks Using the [append to|write] file with text and contents of file as text blocks."/>
+<meta itemprop="name" content="Persistent data">
+<meta itemprop="description" content="By default, Piecewise will not save any data when your bot stops, leaving it up to you to manage data you want to keep. There are a few ways to save and load data into Piecewise:
+ Using the save list to file and load list from file blocks Using the save table to file and load table from file blocks Using the [append to|write] file with text and contents of file as text blocks.">
+
+<meta itemprop="wordCount" content="286">
+<meta itemprop="keywords" content="" /></head>
+<body><div class="container"><header>
+<h1>Piecewise</h1>
+<p class="description">Build chat bots with blocks</p>
+
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="/">Home</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main><h1>Persistent data</h1>
+<p>By default, Piecewise will not save any data when your bot stops, leaving it up to you to manage data you want to keep. There are a few ways to save and load data into Piecewise:</p>
+<ol>
+<li>Using the <a href="https://doc.piecewise.im/lazurite/array_save/">save list to file</a> and <a href="https://doc.piecewise.im/lazurite/array_load/">load list from file</a> blocks</li>
+<li>Using the <a href="https://doc.piecewise.im/lazurite/table_save/">save table to file</a> and <a href="https://doc.piecewise.im/lazurite/table_load/">load table from file</a> blocks</li>
+<li>Using the <a href="https://doc.piecewise.im/system/file_write/">[append to|write] file with text</a> and <a href="https://doc.piecewise.im/system/file_read/">contents of file as text</a> blocks.</li>
+</ol>
+<p>Where Piecewise looks for and/or saves data from these blocks depends on your operating system and how you run your bot:</p>
+<ol>
+<li>Windows: <code>%appdata%\Piecewise\.lazurite</code></li>
+<li>macOS: <code>~/Library/Application Support/Piecewise/.lazurite</code></li>
+<li>Linux: <code>~/.lazurite</code></li>
+</ol>
+<h2 id="saving-and-loading-lists">Saving and loading lists</h2>
+<p>To save and load data stored as a list, use the <a href="https://doc.piecewise.im/lazurite/array_save/">save list to file</a> and <a href="https://doc.piecewise.im/lazurite/array_load/">load list from file</a> blocks. When loading, if the requested file does not exist or does not contain a JSON-encoded table, an empty table will be returned.</p>
+<p><img src="/static/img_20220423_001.png" alt="Saving and loading lists"></p>
+<p><a href="https://piece.ws/block/sGX9oPfuil">Open in Piecewise</a></p>
+<h2 id="saving-and-loading-tables">Saving and loading tables</h2>
+<p>To save and load data stored as a table, use the <a href="https://doc.piecewise.im/lazurite/table_save/">save table to file</a> and <a href="https://doc.piecewise.im/lazurite/table_load/">load table from file</a> blocks. When loading, if the requested file does not exist or does not contain a JSON-encoded table, an empty table will be returned.</p>
+<p><img src="/static/img_20220423_002.png" alt="Saving and loading tables"></p>
+<p><a href="https://piece.ws/block/4sO1W5QXoP">Open in Piecewise</a></p>
+<h2 id="saving-and-loading-arbitrary-text">Saving and loading arbitrary text</h2>
+<p>To save and load arbitrary text, use the  <a href="https://doc.piecewise.im/system/file_write/">[append to|write] file with text</a> and <a href="https://doc.piecewise.im/system/file_read/">contents of file as text</a> blocks.</p>
+<p>When loading, if the file does not exist, an error will be thrown. Use the <a href="https://doc.piecewise.im/system/file_stat/">if file exists</a> block to check if a file exists before loading it.</p>
+<p>Appending to a file will add the supplied text to the end of it. Overwriting the file will clear its contents and replace it with the supplied text.</p>
+<p><img src="/static/img_20220423_003.png" alt="Saving and loading tables"></p>
+<p><a href="https://piece.ws/block/AqGHLI4pvo">Open in Piecewise</a></p>
+<div class="edit-meta">
+
+<br></div><nav class="pagination"><a class="nav nav-prev" href="https://doc.piecewise.im/tutorials/paginators/" title="Paginators"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Paginators</a>
+<a class="nav nav-next" href="https://doc.piecewise.im/tutorials/piecewise-together/" title="Piecewise Together">Next - Piecewise Together <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="slide-menu">
+<ul>
+<li class=""><a href="https://doc.piecewise.im">Home</a></li>
+
+<li class="parent has-sub-menu"><a href="https://doc.piecewise.im/tutorials/">Tutorials<span class="mark opened">-</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://doc.piecewise.im/tutorials/backpacks/">Backpacks</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/adding-custom-blocks/">Creating Custom Blocks (Legacy)</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/adding-custom-styles/">Creating Custom Themes</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/faq/">Frequently Asked Questions</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/paginators/">Paginators</a></li>
+<li class="active"><a href="https://doc.piecewise.im/tutorials/persistent-data/">Persistent data</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/piecewise-together/">Piecewise Together</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/plugins/">Plugins</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/sharing-blocks/">Sharing Blocks</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/steam-deck/">Steam Deck</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/workshop/">Steam Workshop</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/matrix_encryption/">Using Matrix Encryption</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/aimer/">Using the aimer branch</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/your-first-bot/">Your First Bot</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="https://doc.piecewise.im/errors/">Errors<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://doc.piecewise.im/errors/d000/">D000: Permission denied when querying for a resource (e.g. channel, user, slash commands...).</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d001/">D001: Invalid snowflake. Check any provided snowflakes and/or improve input validation.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d002/">D002: You are requesting a privileged intent you have not also requested for in the console. Check that you have requested the intents in the Developer Console.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d003/">D003: Invalid token. Check that you have entered your bot token correctly.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d100/">D100: Duplicate interactible ID rejected. Make sure all of your interactibles have unique IDs.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/l000/">L000: Required value missing. Check all of your blocks to make sure you have values at all required connections.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/l001/">L001: Tried to query invalid URL. Check to make sure that any URLs queried are valid.</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

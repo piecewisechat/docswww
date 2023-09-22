@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Your First Bot - Piecewise</title>
+<meta name="description" content="Build chat bots with blocks">
+<meta name="generator" content="Hugo 0.86.0" />
+<link href="https://doc.piecewise.im/index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://doc.piecewise.im/tutorials/your-first-bot/">
+<link rel="stylesheet" href="https://doc.piecewise.im/css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="https://doc.piecewise.im/css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script src="https://doc.piecewise.im/js/bundle.js"></script><style>
+:root {}
+</style>
+<meta property="og:title" content="Your First Bot" />
+<meta property="og:description" content="This tutorial aims to give you a short overview of creating bots in Piecewise and how the system works.
+1. Get Piecewise If you don&rsquo;t have Piecewise already, you&rsquo;ll need it for this tutorial. You can purchase Piecewise or download Piecewise&rsquo;s demo on Steam (and itch.io, soon). Once you have a copy, download it and open it.
+For the sake of brevity, this tutorial will focus on the Discord platform, so if you want to follow along, you&rsquo;ll need an account." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://doc.piecewise.im/tutorials/your-first-bot/" /><meta property="article:section" content="tutorials" />
+
+<meta property="og:site_name" content="Piecewise" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Your First Bot"/>
+<meta name="twitter:description" content="This tutorial aims to give you a short overview of creating bots in Piecewise and how the system works.
+1. Get Piecewise If you don&rsquo;t have Piecewise already, you&rsquo;ll need it for this tutorial. You can purchase Piecewise or download Piecewise&rsquo;s demo on Steam (and itch.io, soon). Once you have a copy, download it and open it.
+For the sake of brevity, this tutorial will focus on the Discord platform, so if you want to follow along, you&rsquo;ll need an account."/>
+<meta itemprop="name" content="Your First Bot">
+<meta itemprop="description" content="This tutorial aims to give you a short overview of creating bots in Piecewise and how the system works.
+1. Get Piecewise If you don&rsquo;t have Piecewise already, you&rsquo;ll need it for this tutorial. You can purchase Piecewise or download Piecewise&rsquo;s demo on Steam (and itch.io, soon). Once you have a copy, download it and open it.
+For the sake of brevity, this tutorial will focus on the Discord platform, so if you want to follow along, you&rsquo;ll need an account.">
+
+<meta itemprop="wordCount" content="2362">
+<meta itemprop="keywords" content="" /></head>
+<body><div class="container"><header>
+<h1>Piecewise</h1>
+<p class="description">Build chat bots with blocks</p>
+
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="/">Home</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main><h1>Your First Bot</h1>
+<p>This tutorial aims to give you a short overview of creating bots in Piecewise and how the system works.</p>
+<h2 id="1-get-piecewise">1. Get Piecewise</h2>
+<p>If you don&rsquo;t have Piecewise already, you&rsquo;ll need it for this tutorial. You can purchase Piecewise or download Piecewise&rsquo;s demo on <a href="https://s.team/a/1702210">Steam</a> (and itch.io, soon). Once you have a copy, download it and open it.</p>
+<p>For the sake of brevity, this tutorial will focus on the Discord platform, so if you want to follow along, you&rsquo;ll need an account. However, most of the steps in this guide are relevant to all platforms Piecewise supports.</p>
+<h2 id="2-familiarizing-yourself-with-the-interface">2. Familiarizing yourself with the interface</h2>
+<h3 id="the-main-window">The main window</h3>
+<p>Opening Piecewise yields a window that looks similar to the following:</p>
+<p><img src="/static/img_20210802_001.png" alt="Piecewise main window"></p>
+<p>Let&rsquo;s take a look at the main elements of this window:</p>
+<ul>
+<li>
+<p><strong>Run</strong> - The run button is at the top, to the right of the &ldquo;Piecewise&rdquo; branding. This button executes your bot as you have built it on the canvas. This button can also be activated by pressing Ctrl-Shift-B (or ⌘⇧B, on macOS).</p>
+</li>
+<li>
+<p><strong>Workspaces</strong> - The tabs at the top of the window allow you to switch workspaces. Workspaces are designed to split your bot up into organized, digestible portions. Each &ldquo;workspace&rdquo; provides a new, blank canvas to drag and drop blocks onto. We&rsquo;ll go in-depth into workspaces, including their benefits and limitations, later.</p>
+</li>
+<li>
+<p><strong>Toolbox</strong> - The toolbox is at the left side of the workspace, in a grayer color to separate it from the canvas. The toolbox contains all of the blocks you can use to create bots, divided into relevant categories.</p>
+</li>
+<li>
+<p><strong>Canvas</strong> - The canvas, to the right of the toolbox, is where you will put and assemble the blocks you have selected.</p>
+</li>
+<li>
+<p><strong>Welcome screen</strong> - The welcome window appears in the center of the canvas when you have created a new project, or have opened the program for the first time. From this window, you can open projects you have saved recently, or read guided tutorials for Piecewise. Dragging any block onto the canvas will hide the Welcome screen.</p>
+</li>
+<li>
+<p><strong>Console</strong> - The console appears to the right when you click the &ldquo;Console&rdquo; button, and contains important messages relating to your bot, including any errors encountered, or any text you decide to put into the console (more on this later).</p>
+</li>
+<li>
+<p><strong>Trash can</strong> - The trash can, at the bottom right, contains blocks you&rsquo;ve removed from your current workspace. While it won&rsquo;t be covered in this tutorial, you can recover blocks from the trash can at any time - as long as you have not closed the program - by clicking on it and dragging the desired blocks out on to your canvas.</p>
+</li>
+</ul>
+<h3 id="the-menu-bar">The menu bar</h3>
+<p><img src="/static/img_20210802_002.png" alt="Piecewise menu bar"></p>
+<p>The menu bar also contains a few options. This is located at the top of your screen on macOS, or the top of the window on Windows or Linux. Here are the options most relevant:</p>
+<ul>
+<li>
+<p><strong>File → Save (As)</strong> - Save your work to a file so it can be opened with Piecewise later. You can save your work at any time by pressing Ctrl-S (or ⌘S, on macOS).</p>
+</li>
+<li>
+<p><strong>File → New</strong> - Create a new project. You&rsquo;ll be asked to save your existing project, if one exists or you haven&rsquo;t already. You can create a new project at any time by pressing Ctrl-N (or ⌘N, on macOS).</p>
+</li>
+<li>
+<p><strong>File → Open</strong> - Open a file you&rsquo;ve previously saved with Piecewise. You&rsquo;ll be asked to save the project you currently have open, if one exists or you haven&rsquo;t already. You can open a project you&rsquo;ve saved at any time by pressing Ctrl-O (or ⌘O, on macOS).</p>
+</li>
+<li>
+<p><strong>Edit → Cut/Copy/Paste</strong> - Cut (move), copy, and paste blocks on a canvas. Blocks can be cut, copied, and pasted between workspaces, but not to programs outside of Piecewise. You can cut by pressing Ctrl-O (or ⌘O, on macOS), copy by pressing Ctrl-C (or ⌘C, on macOS), and paste by pressing Ctrl-V (or ⌘V, on macOS).</p>
+</li>
+<li>
+<p><strong>Edit → Undo/Redo</strong> - Undo or redo your last action on the current canvas, e.g. moving blocks, dragging and dropping onto the canvas, etc. You can undo by pressing Ctrl-Z (or ⌘Z, on macOS) and redo by pressing Ctrl-Shift-Z (or ⌘⇧Z, on macOS).</p>
+</li>
+<li>
+<p><strong>Build → Run</strong> - Run your bot. This is equivalent to clicking the Build button or pressing Ctrl-Shift-B (or ⌘⇧B, on macOS).</p>
+</li>
+<li>
+<p><strong>Build → Export</strong> - Export your bot, so it can be run anywhere, without Piecewise. We&rsquo;ll go more in-depth into exporting later.</p>
+</li>
+</ul>
+<h2 id="3-registering-your-discord-bot">3. Registering your Discord bot</h2>
+<p>Registering a bot account with Discord and adding it to a server is a relatively straightforward process.</p>
+<p>First, navigate to <a href="https://discord.com/developers/applications">https://discord.com/developers/applications</a>. If prompted, sign in. Once you see the Discord developer portal, click &ldquo;New Application&rdquo; at the top right.</p>
+<p><img src="/static/img_20210802_003.png" alt="Discord developer portal"></p>
+<p>Give your new bot a name, and then click &ldquo;Create.&rdquo;</p>
+<p><img src="/static/img_20210802_004.png" alt="New bot"></p>
+<p>You&rsquo;ll then be greeted with your application&rsquo;s dashboard. Now, we&rsquo;ll create a bot user. Click the &ldquo;Bot&rdquo; option on the left sidebar, click &ldquo;Add Bot&rdquo; at the top right, and, finally, &ldquo;Yes, do it!&rdquo;</p>
+<p><img src="/static/img_20210802_005.png" alt="Build a Bot"></p>
+<p>Now you&rsquo;ll have a lot of options to configure on your bot. You can upload an avatar for your bot now, if you wish.</p>
+<p>Next, you&rsquo;ll need your <strong>bot token</strong>, which is used to log your bot into Discord. You can find your <strong>bot token</strong> by clicking &ldquo;Copy&rdquo; under the &ldquo;Token&rdquo; subheading under the bot&rsquo;s user name.</p>
+<p><img src="/static/img_20210802_006.png" alt="Copy Token"></p>
+<p>Also, you&rsquo;ll need your <strong>bot authorization URL</strong>, which is used to add your bot to servers. You can find your <strong>bot authorization URL</strong> in the OAuth2 tab. Under the &ldquo;OAuth2 URL Generator&rdquo;, select <code>bot</code> and <code>applications.commands</code> under &ldquo;Scopes&rdquo; and <code>Send Messages</code> under &ldquo;Bot Permissions.&rdquo; Then, click &ldquo;Copy&rdquo; next to the &ldquo;discord.com/api&rdquo; link.</p>
+<p><img src="/static/img_20211212_001.png" alt="Copy Token"></p>
+<p>Finally, open this URL in your browser and add it to a server using the on-screen prompts. If you don&rsquo;t already have a server to test in, you can create one by clicking the plus icon at the bottom right of your server list, on the left side of your screen, in the main Discord app.</p>
+<p><img src="/static/img_20210802_008.png" alt="Copy Token"></p>
+<h2 id="4-hello-world">4. Hello, world!</h2>
+<p>Switch back to Piecewise. We&rsquo;re about to make our first bot.</p>
+<h3 id="planning-and-objective">Planning and Objective</h3>
+<p>It&rsquo;s generally a good idea to sit down and think about what you aim for your bot to do beforehand. As computers are incredibly pedantic, it helps to frame things as specifically as possible. This will also help you assemble your bot, as  For example, &ldquo;The bot should say &lsquo;hello world&rsquo;&rdquo; is very vague - when should the bot say &ldquo;hello world&rdquo;, and when?</p>
+<p>A better example lays out the exact specifics of what you&rsquo;re looking to do, and answers most questions. For our example, a great description is written as <code>when the bot sees a message saying 'hello world' in any channel, it will respond with 'hello world'.</code></p>
+<p>If you ever get lost at any part of this guide, a finished version of the bot in this guide is available from &ldquo;File -&gt; New From Template.&rdquo;</p>
+<h3 id="log-in-to-discord">Log in to Discord</h3>
+<p>First, you&rsquo;ll want to set your bot to log in to Discord. Under the <strong>Discord → Configuration</strong> menu in the toolbox, drag the &ldquo;<strong><a href="../discord/login/">log on (token)</a></strong>&rdquo; block on to your canvas. Dragging any block on to your canvas will hide the Welcome screen.</p>
+<p><img src="/static/img_20210803_001.gif" alt="Dragging the log on (token) block onto the canvas"></p>
+<p>Then, click the &ldquo;with token&rdquo; text area on the block, paste your bot token, and press enter.</p>
+<p>Now, your bot is configured to log in to Discord. If you run it by using the &ldquo;Run&rdquo; button, it will show up as &ldquo;Online&rdquo; in the members list. However, we haven&rsquo;t put any pieces together to make the bot do anything yet.</p>
+<h3 id="listening-to-events">Listening to events</h3>
+<p>An important thing to understand about Piecewise is that it&rsquo;s primarily an <em>event-driven system</em>. In other words, your bot will operate by reacting to certain things happening, such as a message being received, a reaction being added, or a timer elapsing. In this tutorial, we&rsquo;ll be reacting to a message being received.</p>
+<p>Under the <strong>Discord → Events</strong> tab in the toolbox is a block called &ldquo;<strong><a href="/discord/when">🔔 when (event) do</a></strong>&rdquo;. Drag it to your canvas, under the &ldquo;<strong><a href="../discord/login/">log on (token)</a></strong>&rdquo; block. Then, select &ldquo;<em>message received</em>&rdquo; from the dropdown. The finished product should look like the image below.</p>
+<p><img src="/static/img_20210802_010.png" alt="when message received"></p>
+<p>The bell icon next to the block&rsquo;s name indicates that this is a block relevant to an <em>event</em>. Blocks related to an event usually hold references to whatever <em>thing</em> that just happened. This is outlined further below.</p>
+<h3 id="setting-up-the-logic">Setting up the logic</h3>
+<p>Now, we&rsquo;re reacting to <em>any</em> message sent. But how do we react to a message sent with specific text?</p>
+<p>For this, we&rsquo;ll use blocks in the &ldquo;Logic&rdquo; category. Find the &ldquo;<strong>if (condition) do</strong>&rdquo; block, and drag it inside the &ldquo;<strong><a href="/discord/when">🔔 when message received do</a></strong>&rdquo; block. You&rsquo;ll know you&rsquo;ve put it together correctly when the bottom border of the top portion glows yellow and you hear a &ldquo;click!&rdquo; sound.</p>
+<p><img src="/static/img_20210802_011.gif" alt="when message received do if (condition) do"></p>
+<p>The &ldquo;<strong>if (condition) do</strong>&rdquo; block is the first block of this comparison. It lets the computer know that we are about to do a comparison and only do what the blocks inside say if the comparison we&rsquo;re making is successful.</p>
+<p>Next, drag the <strong>(value) (operand) (value)</strong> block from the Logic category - it will look like the below - onto your canvas. Place it to the right of the <strong>if (condition) do</strong> block. When you&rsquo;ve placed it correctly, it will snap, just like in the last example. Ensure the operand is <code>=</code> by selecting it from the dropdown in the middle.</p>
+<p><img src="/static/img_20210802_012.gif" alt="when message received do if (value) = (value) do"></p>
+<p>This is the block that actually does the comparison - it asks the computer the question &ldquo;is the thing on the left equal to the thing on the right?&rdquo;</p>
+<h3 id="getting-the-message-content">Getting the message content</h3>
+<p>Our next step is to define what two things the computer should compare. Under the <strong>Discord → Messages</strong> category, find the &ldquo;<strong><a href="/discord/message_content">content of message (message)</a></strong>&rdquo; block and place it in the white space on the left of the &ldquo;<strong>(value) = (value)</strong>&rdquo; block. Then, under the <strong>Discord → Events</strong> category, find the &ldquo;<strong><a href="/discord/event_message_message/">🔔 message</a></strong>&rdquo; block and place <em>that</em> inside of the &ldquo;<strong><a href="/discord/message_content">content of message (message)</a></strong>&rdquo;. As usual, all of these blocks should &ldquo;click!&rdquo; when placed properly.</p>
+<p><img src="/static/img_20210802_013.gif" alt="when message received do if content of message message = (value) do"></p>
+<p>All of the statements we&rsquo;ve placed so far read &ldquo;when a message is received, if the content of the message is (&hellip;)&rdquo;. Let&rsquo;s break down the blocks we just placed:</p>
+<ul>
+<li>The &ldquo;<strong><a href="/discord/event_message_message">🔔 message</a></strong>&rdquo; block is an <em>event</em> block, as discussed above. In this case, the block represents the actual message that was received by the bot in response to this event.</li>
+<li>The &ldquo;<strong><a href="/discord/message_content">content of message (message)</a></strong>&rdquo; block retrieves the actual <em>content</em> of a message - what the user typed. We have to use this block because there are other parts of the message that we can access - but we&rsquo;ll save a further explanation for later.</li>
+</ul>
+<blockquote>
+<p><strong>Extra Credit</strong>: There are actually quite a few <em>event blocks</em>, which represent values within an <em>event</em>. Values are only valid where they make sense.</p>
+<table>
+<thead>
+<tr>
+<th>Event block</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><a href="/discord/event_message_message">🔔 message</a></strong></td>
+<td>Represents the message that was sent, deleted, or edited. Only valid in &ldquo;message&rdquo; events, e.g. &ldquo;message created&rdquo;, &ldquo;message deleted&rdquo;&hellip;</td>
+</tr>
+<tr>
+<td><strong><a href="/discord/event_user">🔔 user</a></strong></td>
+<td>Represents the user that initiated this event, or was the target of this event. For example, this might be the user that sent the message, or the user that was kicked or banned from a server.</td>
+</tr>
+<tr>
+<td><strong><a href="/discord/event_channel">🔔 channel</a></strong></td>
+<td>Represents the channel that this event occurred in, or was the target of this event. For example, this might be the channel that a message was sent in, or the channel that was created or deleted in a server.</td>
+</tr>
+<tr>
+<td><strong><a href="/discord/event_guild">🔔 server</a></strong></td>
+<td>Represents the server that this event occurred in, or was the target of this event. For example, this might be the server that a message was sent in, or the server that someone joined or left.</td>
+</tr>
+<tr>
+<td><strong><a href="/discord/event_reaction_reaction">🔔 reaction</a></strong></td>
+<td>Represents the reaction that triggered this event. For example, this might be the reaction that was added or removed from a message.</td>
+</tr>
+<tr>
+<td><strong><a href="/discord/event_emoji">🔔 emoji</a></strong></td>
+<td>Represents the emoji that triggered this event. For example, this might be the reaction that was added to or removed from a message, or an emoji that was created or deleted.</td>
+</tr>
+</tbody>
+</table>
+<p>Using an event block outside of a context that makes sense will cause an error.</p>
+</blockquote>
+<h3 id="comparing-text">Comparing text</h3>
+<p>Now, we&rsquo;re going to define the right side of the comparison - what text we want to compare the message content to.</p>
+<p>Under the &ldquo;Text&rdquo; category is a &ldquo;<strong>‘(text)’</strong>&rdquo; block. Drag it to the right portion of the &ldquo;<strong>(value) = (value)</strong>&rdquo; block. Then click the empty text box, enter <code>hello world</code>, and press ENTER. The finished product should look like the below.</p>
+<p><img src="/static/img_20210802_014.gif" alt="when message received do if content of message message = (value) do"></p>
+<h3 id="sending-the-message">Sending the message</h3>
+<p>We now know that the message says &ldquo;hello world&rdquo; - so let&rsquo;s send &ldquo;hello world&rdquo; back!</p>
+<p>You can send messages using the &ldquo;<strong><a href="/discord/send">send message to (target) with content (content) with components (component)</a></strong>&rdquo; block. It is located in <strong>Discord → Messages</strong> - drag it on to your canvas within the &ldquo;<strong>if (condition) do</strong>&rdquo; block.</p>
+<p><img src="/static/img_20211008_003.png" alt="send message to (target) with content (content)"></p>
+<p>Then, back in the <strong>Discord → Events</strong> tab, find the &ldquo;<strong><a href="/discord/when">🔔 message</a></strong>&rdquo; block we used before and drag it so that it clicks next to the topmost notch on the right - the notch that defines the <em>target</em>.</p>
+<p><img src="/static/img_20211008_001.png" alt="send message to 🔔 message with content (content)"></p>
+<blockquote>
+<p><strong>Extra Credit</strong>: When sending messages, the target can be any of a <em>message</em>, <em>user</em>, or <em>channel</em>.</p>
+<table>
+<thead>
+<tr>
+<th>When the target is&hellip;</th>
+<th>The message will be sent&hellip;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a <em>message</em></td>
+<td>as a reply to the target message</td>
+</tr>
+<tr>
+<td>a <em>user</em></td>
+<td>as a DM to the target user</td>
+</tr>
+<tr>
+<td>a <em>channel</em></td>
+<td>as a normal message to the target channel</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p>Finally, drag the &ldquo;<strong>‘(text)’</strong>&rdquo; block - under <strong>Text</strong> - to the notch under the &ldquo;<strong><a href="/discord/when">🔔 message</a></strong>&rdquo; message block, and edit it to say &ldquo;hello world&rdquo;.</p>
+<p><img src="/static/img_20211008_002.png" alt="send message to 🔔 message with content &ldquo;hello world&rdquo;"></p>
+<h3 id="conclusion">Conclusion</h3>
+<p>Now we have a working bot that does what we planned to do from the beginning - send &ldquo;hello world&rdquo; when the bot receives it.</p>
+<p>Here are some extra modifications that you might want to make to your existing bot in order to learn more about and get comfortable with Piecewise.</p>
+<ul>
+<li>Change the trigger message from &ldquo;hello world&rdquo; to &ldquo;hello planet&rdquo;, and respond with &ldquo;hello planet&rdquo;.</li>
+<li><em>Add</em> another trigger message of your choice, and respond with a different message. For example, you might want &ldquo;hello&rdquo; to return a response with &ldquo;world&rdquo;.</li>
+<li>Make the bot respond to any message that was sent with the same text, regardless of what text contains.</li>
+</ul>
+<div class="edit-meta">
+
+<br></div><nav class="pagination"><a class="nav nav-prev" href="https://doc.piecewise.im/tutorials/aimer/" title="Using the aimer branch"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Using the aimer branch</a>
+<a class="nav nav-next" href="https://doc.piecewise.im/errors/" title="Errors">Next - Errors <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="slide-menu">
+<ul>
+<li class=""><a href="https://doc.piecewise.im">Home</a></li>
+
+<li class="parent has-sub-menu"><a href="https://doc.piecewise.im/tutorials/">Tutorials<span class="mark opened">-</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://doc.piecewise.im/tutorials/backpacks/">Backpacks</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/adding-custom-blocks/">Creating Custom Blocks (Legacy)</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/adding-custom-styles/">Creating Custom Themes</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/faq/">Frequently Asked Questions</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/paginators/">Paginators</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/persistent-data/">Persistent data</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/piecewise-together/">Piecewise Together</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/plugins/">Plugins</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/sharing-blocks/">Sharing Blocks</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/steam-deck/">Steam Deck</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/workshop/">Steam Workshop</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/matrix_encryption/">Using Matrix Encryption</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/aimer/">Using the aimer branch</a></li>
+<li class="active"><a href="https://doc.piecewise.im/tutorials/your-first-bot/">Your First Bot</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="https://doc.piecewise.im/errors/">Errors<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://doc.piecewise.im/errors/d000/">D000: Permission denied when querying for a resource (e.g. channel, user, slash commands...).</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d001/">D001: Invalid snowflake. Check any provided snowflakes and/or improve input validation.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d002/">D002: You are requesting a privileged intent you have not also requested for in the console. Check that you have requested the intents in the Developer Console.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d003/">D003: Invalid token. Check that you have entered your bot token correctly.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d100/">D100: Duplicate interactible ID rejected. Make sure all of your interactibles have unique IDs.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/l000/">L000: Required value missing. Check all of your blocks to make sure you have values at all required connections.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/l001/">L001: Tried to query invalid URL. Check to make sure that any URLs queried are valid.</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

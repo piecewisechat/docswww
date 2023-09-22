@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Creating Custom Blocks (Legacy) - Piecewise</title>
+<meta name="description" content="Build chat bots with blocks">
+<meta name="generator" content="Hugo 0.86.0" />
+<link href="https://doc.piecewise.im/index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://doc.piecewise.im/tutorials/adding-custom-blocks/">
+<link rel="stylesheet" href="https://doc.piecewise.im/css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="https://doc.piecewise.im/css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script src="https://doc.piecewise.im/js/bundle.js"></script><style>
+:root {}
+</style>
+<meta property="og:title" content="Creating Custom Blocks (Legacy)" />
+<meta property="og:description" content="This method of adding blocks is deprecated and will be removed in Piecewise 22.07.0. To add custom blocks to Piecewise, use a plugin. Those wishing to extend Piecewise can do so via custom blocks. To start, you&rsquo;ll just need a block definition for the block you want to add. You can build a block using Blockly&rsquo;s Block Factory here. Then, create a .js file in the addons folder containing a callback that returns a block property with your block definition, and a generator function that will generate the JavaScript code." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://doc.piecewise.im/tutorials/adding-custom-blocks/" /><meta property="article:section" content="tutorials" />
+
+<meta property="og:site_name" content="Piecewise" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Creating Custom Blocks (Legacy)"/>
+<meta name="twitter:description" content="This method of adding blocks is deprecated and will be removed in Piecewise 22.07.0. To add custom blocks to Piecewise, use a plugin. Those wishing to extend Piecewise can do so via custom blocks. To start, you&rsquo;ll just need a block definition for the block you want to add. You can build a block using Blockly&rsquo;s Block Factory here. Then, create a .js file in the addons folder containing a callback that returns a block property with your block definition, and a generator function that will generate the JavaScript code."/>
+<meta itemprop="name" content="Creating Custom Blocks (Legacy)">
+<meta itemprop="description" content="This method of adding blocks is deprecated and will be removed in Piecewise 22.07.0. To add custom blocks to Piecewise, use a plugin. Those wishing to extend Piecewise can do so via custom blocks. To start, you&rsquo;ll just need a block definition for the block you want to add. You can build a block using Blockly&rsquo;s Block Factory here. Then, create a .js file in the addons folder containing a callback that returns a block property with your block definition, and a generator function that will generate the JavaScript code.">
+
+<meta itemprop="wordCount" content="553">
+<meta itemprop="keywords" content="" /></head>
+<body><div class="container"><header>
+<h1>Piecewise</h1>
+<p class="description">Build chat bots with blocks</p>
+
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="/">Home</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main><h1>Creating Custom Blocks (Legacy)</h1>
+<h2 id="this-method-of-adding-blocks-is-deprecated-and-will-be-removed-in-piecewise-22070-to-add-custom-blocks-to-piecewise-use-a-pluginplugins">This method of adding blocks is deprecated and will be removed in Piecewise 22.07.0. To add custom blocks to Piecewise, use a <a href="../plugins">plugin</a>.</h2>
+<p>Those wishing to extend Piecewise can do so via custom blocks. To start, you&rsquo;ll just need a block definition for the block you want to add. You can build a block using Blockly&rsquo;s Block Factory <a href="https://blockly-demo.appspot.com/static/demos/blockfactory/index.html">here</a>. Then, create a .js file in the <code>addons</code> folder containing a callback that returns a <code>block</code> property with your block definition, and a <code>generator</code> function that will generate the JavaScript code. <code>Blockly</code> is available via the first argument of the callback, but you should not register blocks yourself as Piecewise will handle making sure your block shows up in the Toolbox (as long as you define a <code>category</code> field on your block definition). Here&rsquo;s an example of a custom block:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">((<span style="color:#a6e22e">Blockly</span>) =&gt; {
+    <span style="color:#66d9ef">return</span> {
+        <span style="color:#a6e22e">block</span><span style="color:#f92672">:</span> {
+            <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;discord_event_guild&#34;</span>,
+            <span style="color:#e6db74">&#34;message0&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;%1 🔔 server&#34;</span>,
+            <span style="color:#e6db74">&#34;args0&#34;</span><span style="color:#f92672">:</span> [
+                {
+                    <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;field_image&#34;</span>,
+                    <span style="color:#a6e22e">src</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">logo</span>,
+                    <span style="color:#a6e22e">width</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">15</span>,
+                    <span style="color:#a6e22e">height</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">15</span>,
+                    <span style="color:#a6e22e">alt</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Discord&#34;</span>,
+                    <span style="color:#a6e22e">flipRtl</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>
+                }
+            ],
+            <span style="color:#e6db74">&#34;output&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;discord_guild&#34;</span>,
+            <span style="color:#e6db74">&#34;doc_output&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;The server that is the target of this event.&#34;</span>,
+            <span style="color:#e6db74">&#34;colour&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">230</span>,
+            <span style="color:#e6db74">&#34;tooltip&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;The server that is the target of this event.&#34;</span>,
+            <span style="color:#e6db74">&#34;inputsInline&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+            <span style="color:#e6db74">&#34;category&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Discord/Events&#34;</span>,
+            <span style="color:#e6db74">&#34;onlyValidInside&#34;</span><span style="color:#f92672">:</span> [ <span style="color:#e6db74">&#34;discord_when&#34;</span>, <span style="color:#e6db74">&#34;discord_command_create&#34;</span>, <span style="color:#e6db74">&#34;discord_interaction_button&#34;</span>, <span style="color:#e6db74">&#34;discord_interaction_dropdown&#34;</span>, <span style="color:#e6db74">&#34;discord_chat_command&#34;</span> ],
+            <span style="color:#e6db74">&#34;onlyValidEvents&#34;</span><span style="color:#f92672">:</span> [
+                <span style="color:#e6db74">&#34;discord_interactible&#34;</span>,
+                <span style="color:#e6db74">&#34;discord_thread_created&#34;</span>,
+                <span style="color:#e6db74">&#34;discord_thread_deleted&#34;</span>,
+                <span style="color:#e6db74">&#34;discord_thread_leave&#34;</span>,
+                <span style="color:#e6db74">&#34;discord_thread_join&#34;</span>,
+                <span style="color:#e6db74">&#34;discord_channel_created&#34;</span>,
+                <span style="color:#e6db74">&#34;discord_channel_deleted&#34;</span> <span style="color:#75715e">// a bunch more... I have a system within Piecewise to track these
+</span><span style="color:#75715e"></span>            ]
+        },
+        <span style="color:#a6e22e">generator</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">block</span> =&gt; {
+            <span style="color:#66d9ef">return</span> [ <span style="color:#e6db74">`Lazurite.extract(ev, null, &#34;guild&#34;) || lazurite.exception(&#34;event guild block was found, but was not attached to a valid event&#34;)`</span>, <span style="color:#a6e22e">Blockly</span>.<span style="color:#a6e22e">JavaScript</span>.<span style="color:#a6e22e">ORDER_NONE</span> ]
+        }
+    }
+}
+});
+</code></pre></div><h2 id="special-properties">Special properties</h2>
+<p>Piecewise extends the default Blockly block schema with a few extra properties.</p>
+<h3 id="blockonlyvalidinside"><code>block.onlyValidInside</code></h3>
+<p>Specify a list of blocks that this block is only valid inside. This extends all the way to the root (i.e. top) block. You may want to use this when writing your own event blocks, where the value a block returns is only valid within the event blocks.</p>
+<p>Users will receive a warning if the block&rsquo;s placement does not fulfill this condition.</p>
+<h3 id="blockonlyvalidevent"><code>block.onlyValidEvent</code></h3>
+<p>If one of the <code>onlyValidInside</code> blocks ends in <code>_when</code>, Piecewise will also check the <code>event</code> field and make sure the value matches this one.</p>
+<p>Users will receive a warning if the block&rsquo;s placement does not fulfill this condition.</p>
+<h3 id="blockweight"><code>block.weight</code></h3>
+<p>Determines how the block is weighted when determining position. If a <code>weight</code> isn&rsquo;t specified, the default is zero.</p>
+<h3 id="blockrestrictedwords"><code>block.restrictedWords</code></h3>
+<p>If a user-defined variable name or function matches this term, it will automatically be renamed in-code. This is useful for private variables you might declare, that you don&rsquo;t want the user to be able to overwrite.</p>
+<h3 id="blockmaxblockcount"><code>block.maxBlockCount</code></h3>
+<p>Defines how many of the block the user can use in the entire project. This makes sense for things like configuration blocks, where there should only be one.</p>
+<h3 id="blockonchangeblock-event-projectisloading"><code>block.onchange(block, event, projectIsLoading)</code></h3>
+<p>Defines a callback function to run when &ldquo;something&rdquo; happens to a block of this type. Use the <code>projectIsLoading</code> parameter to determine whether this is an event that occurs when the project is finished loading to filter out the creates/moves/etc that happen before then.</p>
+<h2 id="special-notes">Special notes</h2>
+<ul>
+<li>If users plan on distributing projects created with addons, they will need to distribute the addon files as well or the file will fail to load.</li>
+<li>Piecewise looks in the <code>addons</code> folder aside <code>Piecewise.exe</code> or <code>Piecewise</code> on Windows and Linux, or in <code>~/Library/Application Support/Piecewise/.lazurite</code> on macOS.</li>
+</ul>
+<div class="edit-meta">
+
+<br></div><nav class="pagination"><a class="nav nav-prev" href="https://doc.piecewise.im/tutorials/backpacks/" title="Backpacks"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Backpacks</a>
+<a class="nav nav-next" href="https://doc.piecewise.im/tutorials/adding-custom-styles/" title="Creating Custom Themes">Next - Creating Custom Themes <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="slide-menu">
+<ul>
+<li class=""><a href="https://doc.piecewise.im">Home</a></li>
+
+<li class="parent has-sub-menu"><a href="https://doc.piecewise.im/tutorials/">Tutorials<span class="mark opened">-</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://doc.piecewise.im/tutorials/backpacks/">Backpacks</a></li>
+<li class="active"><a href="https://doc.piecewise.im/tutorials/adding-custom-blocks/">Creating Custom Blocks (Legacy)</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/adding-custom-styles/">Creating Custom Themes</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/faq/">Frequently Asked Questions</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/paginators/">Paginators</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/persistent-data/">Persistent data</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/piecewise-together/">Piecewise Together</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/plugins/">Plugins</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/sharing-blocks/">Sharing Blocks</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/steam-deck/">Steam Deck</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/workshop/">Steam Workshop</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/matrix_encryption/">Using Matrix Encryption</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/aimer/">Using the aimer branch</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/your-first-bot/">Your First Bot</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="https://doc.piecewise.im/errors/">Errors<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://doc.piecewise.im/errors/d000/">D000: Permission denied when querying for a resource (e.g. channel, user, slash commands...).</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d001/">D001: Invalid snowflake. Check any provided snowflakes and/or improve input validation.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d002/">D002: You are requesting a privileged intent you have not also requested for in the console. Check that you have requested the intents in the Developer Console.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d003/">D003: Invalid token. Check that you have entered your bot token correctly.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d100/">D100: Duplicate interactible ID rejected. Make sure all of your interactibles have unique IDs.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/l000/">L000: Required value missing. Check all of your blocks to make sure you have values at all required connections.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/l001/">L001: Tried to query invalid URL. Check to make sure that any URLs queried are valid.</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

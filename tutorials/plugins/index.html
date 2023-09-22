@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Plugins - Piecewise</title>
+<meta name="description" content="Build chat bots with blocks">
+<meta name="generator" content="Hugo 0.86.0" />
+<link href="https://doc.piecewise.im/index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://doc.piecewise.im/tutorials/plugins/">
+<link rel="stylesheet" href="https://doc.piecewise.im/css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="https://doc.piecewise.im/css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script src="https://doc.piecewise.im/js/bundle.js"></script><style>
+:root {}
+</style>
+<meta property="og:title" content="Plugins" />
+<meta property="og:description" content="Part of Piecewise is a robust plugin system that allows you to extend the editor and add custom blocks.
+Note: the plugins system is implemented as part of Piecewise 22.03.0 or later. To add custom blocks in previous versions, see the legacy &ldquo;adding custom blocks&rdquo; documentation.
+Creating a barebones plugin Start out by creating a JavaScript file (.js) in the addons folder next to Piecewise.app, Piecewise.exe, or Piecewise. It can be named whatever you like, as long as it doesn&rsquo;t conflict with an existing plugin." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://doc.piecewise.im/tutorials/plugins/" /><meta property="article:section" content="tutorials" />
+
+<meta property="og:site_name" content="Piecewise" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Plugins"/>
+<meta name="twitter:description" content="Part of Piecewise is a robust plugin system that allows you to extend the editor and add custom blocks.
+Note: the plugins system is implemented as part of Piecewise 22.03.0 or later. To add custom blocks in previous versions, see the legacy &ldquo;adding custom blocks&rdquo; documentation.
+Creating a barebones plugin Start out by creating a JavaScript file (.js) in the addons folder next to Piecewise.app, Piecewise.exe, or Piecewise. It can be named whatever you like, as long as it doesn&rsquo;t conflict with an existing plugin."/>
+<meta itemprop="name" content="Plugins">
+<meta itemprop="description" content="Part of Piecewise is a robust plugin system that allows you to extend the editor and add custom blocks.
+Note: the plugins system is implemented as part of Piecewise 22.03.0 or later. To add custom blocks in previous versions, see the legacy &ldquo;adding custom blocks&rdquo; documentation.
+Creating a barebones plugin Start out by creating a JavaScript file (.js) in the addons folder next to Piecewise.app, Piecewise.exe, or Piecewise. It can be named whatever you like, as long as it doesn&rsquo;t conflict with an existing plugin.">
+
+<meta itemprop="wordCount" content="995">
+<meta itemprop="keywords" content="" /></head>
+<body><div class="container"><header>
+<h1>Piecewise</h1>
+<p class="description">Build chat bots with blocks</p>
+
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="/">Home</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main><h1>Plugins</h1>
+<p>Part of Piecewise is a robust plugin system that allows you to extend the editor and add custom blocks.</p>
+<p>Note: the plugins system is implemented as part of Piecewise 22.03.0 or later. To add custom blocks in previous versions, see the legacy <a href="../adding-custom-blocks">&ldquo;adding custom blocks&rdquo; documentation</a>.</p>
+<h2 id="creating-a-barebones-plugin">Creating a barebones plugin</h2>
+<p>Start out by creating a JavaScript file (.js) in the <code>addons</code> folder next to <code>Piecewise.app</code>, <code>Piecewise.exe</code>, or <code>Piecewise</code>. It can be named whatever you like, as long as it doesn&rsquo;t conflict with an existing plugin. Starting in Piecewise 22.05.0, plugins will have domain-namespaced names, such as <code>im.piecewise.rss.js</code> - and it&rsquo;s recommended that you follow this scheme for all new plugins.</p>
+<p>Plugins must export a class that extends LazuritePlugin. This is done by declaring a bare function that will in turn return the class. Therefore, at the bare minimum, your plugin should look like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">(() =&gt; {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyPlugin</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">LazuritePlugin</span> {
+        <span style="color:#a6e22e">constructor</span>(){
+            <span style="color:#66d9ef">super</span>();
+
+            <span style="color:#75715e">// Your code here...
+</span><span style="color:#75715e"></span>        }
+    };
+});
+</code></pre></div><h2 id="enabling-developer-mode">Enabling developer mode</h2>
+<p>&ldquo;Developer mode&rdquo; will grant you access to the Chrome Dev Tools, the ability to see how blocks in Piecewise are generated into code, and the ability to reload the page (and by extension, your plugin).</p>
+<p>To enable developer mode, focus on the Piecewise, window, then <strong>press the UP arrow key 7 times</strong>. You&rsquo;ll be prompted for a &ldquo;cheat code&rdquo;; just type <code>youaremyangel</code> and you&rsquo;ll see the Debug menu at the top appear. Within the Debug menu&hellip;</p>
+<ul>
+<li><strong>Build</strong> (Ctrl-B or Cmd-B) will generate all of the code for all of the blocks that are in the workspace, beautify it, and then show it within a text box.</li>
+<li><strong>Toggle Developer Tools</strong> (Alt-Shift-I or Opt-Shift-I) will open or close the Chrome DevTools.</li>
+<li><strong>Reload</strong> (Ctrl-R or Cmd-R) will reload the page.</li>
+</ul>
+<h2 id="adding-blocks">Adding blocks</h2>
+<p>Piecewise accepts block schemas that match Blockly&rsquo;s JSON. To form schemas, you can use the <a href="https://blockly-demo.appspot.com/static/demos/blockfactory/index.html">Block Factory</a> to quickly develop blocks using Blockly itself, or the &ldquo;View source&hellip;&rdquo; context menu option on any custom block within Piecewise to view examples.</p>
+<p>You can access Blockly via <code>LazuritePlugin.getBlockly</code>, and once you&rsquo;ve finished your schema and generator, you can use <code>LazuritePlugin.addBlock</code> to add it to Piecewise. <strong>Do not add it directly using Blockly functions</strong> as Piecewise does some processing on blocks that are added.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">(() =&gt; {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RSSPlugin</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">LazuritePlugin</span> {
+        <span style="color:#a6e22e">constructor</span>(){
+            <span style="color:#66d9ef">super</span>();
+
+            <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">Blockly</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">getBlockly</span>();
+
+            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">addBlock</span>({
+                <span style="color:#a6e22e">block</span><span style="color:#f92672">:</span> {
+                    <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;lazurite_rss_feed_items&#34;</span>,
+                    <span style="color:#e6db74">&#34;message0&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;%1 items of RSS feed %2&#34;</span>,
+                    <span style="color:#e6db74">&#34;args0&#34;</span><span style="color:#f92672">:</span> [{
+                            <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;field_image&#34;</span>,
+                            <span style="color:#e6db74">&#34;src&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;https://piecewise.im/favicon.png&#34;</span>,
+                            <span style="color:#e6db74">&#34;width&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">15</span>,
+                            <span style="color:#e6db74">&#34;height&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">15</span>,
+                            <span style="color:#e6db74">&#34;alt&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;RSS&#34;</span>,
+                            <span style="color:#e6db74">&#34;flipRtl&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>
+                        },
+                        {
+                            <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;input_value&#34;</span>,
+                            <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;feed&#34;</span>,
+                            <span style="color:#e6db74">&#34;required&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+                            <span style="color:#e6db74">&#34;check&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;lazurite_rss_feed&#34;</span>,
+                            <span style="color:#e6db74">&#34;doc_description&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;The RSS feed.&#34;</span>
+                        }
+                    ],
+                    <span style="color:#e6db74">&#34;output&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Array&#34;</span>,
+                    <span style="color:#e6db74">&#34;doc_output&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;The items in the RSS feed.&#34;</span>,
+                    <span style="color:#e6db74">&#34;colour&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;#8c8c8c&#34;</span>,
+                    <span style="color:#e6db74">&#34;tooltip&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Get the items in an RSS feed.&#34;</span>,
+                    <span style="color:#e6db74">&#34;category&#34;</span><span style="color:#f92672">:</span> [
+                        <span style="color:#e6db74">&#34;RSS&#34;</span>
+                    ]
+                },
+                <span style="color:#a6e22e">generator</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">block</span> =&gt; {
+                    <span style="color:#66d9ef">return</span> [<span style="color:#e6db74">`(</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">Blockly</span>.<span style="color:#a6e22e">JavaScript</span>.<span style="color:#a6e22e">valueToCode</span>(<span style="color:#a6e22e">block</span>, <span style="color:#e6db74">&#34;feed&#34;</span>, <span style="color:#a6e22e">Blockly</span>.<span style="color:#a6e22e">JavaScript</span>.<span style="color:#a6e22e">ORDER_ATOMIC</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">).items`</span>, <span style="color:#a6e22e">Blockly</span>.<span style="color:#a6e22e">JavaScript</span>.<span style="color:#a6e22e">ORDER_NONE</span>];
+                }
+            });
+        }
+    };
+});
+</code></pre></div><h2 id="adding-dependencies">Adding dependencies</h2>
+<p>Piecewise can internally use <code>npm</code>&rsquo;s <code>arborist</code> library to obtain and install third-party packages from <code>npm</code>, GitHub repositories, source tarballs, etc. To add a dependency, use <code>LazuritePlugin.addBotDependency</code>. When the bot runs for the first time, the user will have the option to install requested dependencies. It is not recommended to add or overwrite dependencies for packages that ship with Piecewise, as this could create &ldquo;interesting&rdquo; side effects.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">(() =&gt; {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyPlugin</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">LazuritePlugin</span> {
+        <span style="color:#a6e22e">constructor</span>(){
+            <span style="color:#66d9ef">super</span>();
+
+            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">addBotDependency</span>(<span style="color:#e6db74">&#34;express&#34;</span>); <span style="color:#75715e">// This will install express@latest
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">addBotDependency</span>(<span style="color:#e6db74">&#34;express@^4&#34;</span>); <span style="color:#75715e">// This will install the latest v4 semantic version of express
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">addBotDependency</span>(<span style="color:#e6db74">&#34;expressjs/express&#34;</span>); <span style="color:#75715e">// This will install the latest master version of express directly from GitHub
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">addBotDependency</span>(<span style="color:#e6db74">&#34;https://registry.npmjs.org/express/-/express-4.17.3.tgz&#34;</span>); <span style="color:#75715e">// This will install whatever&#39;s in the tarball
+</span><span style="color:#75715e"></span>        }
+    };
+});
+</code></pre></div><p>Note: dependencies will be installed <em>once</em> per open Piecewise process. If you change the dependencies you install, simply reloading Piecewise will not work - you&rsquo;ll need to restart the whole program.</p>
+<h2 id="full-api-documentation-for-lazuriteplugin">Full API documentation for LazuritePlugin</h2>
+<p>I don&rsquo;t currently have a way to export this as a dedicated page, so for now, I will just lay the class definition for <code>LazuritePlugin</code> here. Please note that anything outside of <code>LazuritePlugin</code> is not API-stable and subject to change at any time.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LazuritePlugin</span> {
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * Import a block into Blockly. If the block has the same `type` as another block, it will be overwritten.
+</span><span style="color:#75715e">     * 
+</span><span style="color:#75715e">     * **Never** import blocks through Blockly directly, always use this method.
+</span><span style="color:#75715e">     * 
+</span><span style="color:#75715e">     * @param {object} blockDef The definition of the block, as an object.
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#a6e22e">addBlock</span>(<span style="color:#a6e22e">blockDef</span>);
+
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * Get the main Blockly instance.
+</span><span style="color:#75715e">     * 
+</span><span style="color:#75715e">     * @returns {Blockly} The main Blockly instance.
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#a6e22e">getBlockly</span>();
+
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * Get all of the main Blockly workspaces in this project.
+</span><span style="color:#75715e">     * 
+</span><span style="color:#75715e">     * @returns {Array&lt;Blockly.WorkspaceSvg&gt;} All of the main Blockly workspaces.
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#a6e22e">getWorkspaces</span>();
+
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * Add a new dependency to bots. New dependencies will be installed when the bot is run. Packages should be available on `npm`, unless a URL is provided.
+</span><span style="color:#75715e">     * 
+</span><span style="color:#75715e">     * @param {string} identifier A package spec, i.e. discord.js@13 or https://packages.matrix.org/npm/olm/olm-3.2.1.tgz.
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#a6e22e">addBotDependency</span>(<span style="color:#a6e22e">identifier</span>);
+
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * Get all of the declared depdenencies for this plugin.
+</span><span style="color:#75715e">     * 
+</span><span style="color:#75715e">     * @returns {Array&lt;string&gt;} All of the dependencies for this plugin.
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#a6e22e">getBotDependencies</span>();
+
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * Get whether we are exporting this bot.
+</span><span style="color:#75715e">     * 
+</span><span style="color:#75715e">     * @returns {boolean} Whether we are currently exporting this bot.
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#a6e22e">isExporting</span>();
+
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * Show a modal.
+</span><span style="color:#75715e">     * 
+</span><span style="color:#75715e">     * @param {string} html The HTML of the modal.
+</span><span style="color:#75715e">     * @param {boolean?} showClose Whether to show a close button with this modal.
+</span><span style="color:#75715e">     * @param {number?} width The width of this modal.
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#a6e22e">showModal</span>(<span style="color:#a6e22e">html</span>, <span style="color:#a6e22e">showClose</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>, <span style="color:#a6e22e">width</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;50vw&#34;</span>);
+}
+</code></pre></div><h2 id="using-webpack">Using Webpack</h2>
+<p>Starting with Piecewise <code>d69e51</code>, plugins can be built and distributed using Webpack. In general, your entrypoint must have a single default export - a class that extends <code>LazuritePlugin</code> - and bind as a library to <code>plugin</code>. Here&rsquo;s an example of a plugin that does this properly:</p>
+<p><strong>webpack.config.js</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+    <span style="color:#a6e22e">output</span><span style="color:#f92672">:</span> {
+        <span style="color:#a6e22e">globalObject</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;plugin&#39;</span>,
+        <span style="color:#a6e22e">library</span><span style="color:#f92672">:</span> {
+            <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;plugin&#39;</span>,
+            <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;umd&#39;</span>,
+        }
+    }
+};
+</code></pre></div><p><strong>src/index.js</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ExamplePlugin</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">LazuritePlugin</span> {
+    <span style="color:#a6e22e">constructor</span>(){
+        <span style="color:#66d9ef">super</span>();
+
+        <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Plugin loaded!&#34;</span>);
+    }
+}
+</code></pre></div><p>More detailed instructions, and a sample plugin, are available in the <code>templates</code> directory within your Piecewise installation directory.</p>
+<div class="edit-meta">
+
+<br></div><nav class="pagination"><a class="nav nav-prev" href="https://doc.piecewise.im/tutorials/piecewise-together/" title="Piecewise Together"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Piecewise Together</a>
+<a class="nav nav-next" href="https://doc.piecewise.im/tutorials/sharing-blocks/" title="Sharing Blocks">Next - Sharing Blocks <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="slide-menu">
+<ul>
+<li class=""><a href="https://doc.piecewise.im">Home</a></li>
+
+<li class="parent has-sub-menu"><a href="https://doc.piecewise.im/tutorials/">Tutorials<span class="mark opened">-</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://doc.piecewise.im/tutorials/backpacks/">Backpacks</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/adding-custom-blocks/">Creating Custom Blocks (Legacy)</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/adding-custom-styles/">Creating Custom Themes</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/faq/">Frequently Asked Questions</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/paginators/">Paginators</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/persistent-data/">Persistent data</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/piecewise-together/">Piecewise Together</a></li>
+<li class="active"><a href="https://doc.piecewise.im/tutorials/plugins/">Plugins</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/sharing-blocks/">Sharing Blocks</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/steam-deck/">Steam Deck</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/workshop/">Steam Workshop</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/matrix_encryption/">Using Matrix Encryption</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/aimer/">Using the aimer branch</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/your-first-bot/">Your First Bot</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="https://doc.piecewise.im/errors/">Errors<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://doc.piecewise.im/errors/d000/">D000: Permission denied when querying for a resource (e.g. channel, user, slash commands...).</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d001/">D001: Invalid snowflake. Check any provided snowflakes and/or improve input validation.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d002/">D002: You are requesting a privileged intent you have not also requested for in the console. Check that you have requested the intents in the Developer Console.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d003/">D003: Invalid token. Check that you have entered your bot token correctly.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d100/">D100: Duplicate interactible ID rejected. Make sure all of your interactibles have unique IDs.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/l000/">L000: Required value missing. Check all of your blocks to make sure you have values at all required connections.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/l001/">L001: Tried to query invalid URL. Check to make sure that any URLs queried are valid.</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

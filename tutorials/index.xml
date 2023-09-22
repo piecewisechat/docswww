@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutorials on Piecewise</title>
+    <link>https://doc.piecewise.im/tutorials/</link>
+    <description>Recent content in Tutorials on Piecewise</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://doc.piecewise.im/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Backpacks</title>
+      <link>https://doc.piecewise.im/tutorials/backpacks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/tutorials/backpacks/</guid>
+      <description>Backpacks can be used to store frequently-accessed block snippets. They are not workspace- or project-dependent, and save across restarts: add an unlimited number of block snippets to your backpack and use them within any number of workspaces and any number of projects.
+To add a block to your backpack, right-click the block or block set you wish to add, then click &amp;ldquo;Copy to Backpack&amp;rdquo;, or, drag the desired block set to the Backpack icon.</description>
+    </item>
+    
+    <item>
+      <title>Creating Custom Blocks (Legacy)</title>
+      <link>https://doc.piecewise.im/tutorials/adding-custom-blocks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/tutorials/adding-custom-blocks/</guid>
+      <description>This method of adding blocks is deprecated and will be removed in Piecewise 22.07.0. To add custom blocks to Piecewise, use a plugin. Those wishing to extend Piecewise can do so via custom blocks. To start, you&amp;rsquo;ll just need a block definition for the block you want to add. You can build a block using Blockly&amp;rsquo;s Block Factory here. Then, create a .js file in the addons folder containing a callback that returns a block property with your block definition, and a generator function that will generate the JavaScript code.</description>
+    </item>
+    
+    <item>
+      <title>Creating Custom Themes</title>
+      <link>https://doc.piecewise.im/tutorials/adding-custom-styles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/tutorials/adding-custom-styles/</guid>
+      <description>Piecewise can be restyled by using standard cascading style sheets (.css files). Style sheets in the addons folder are included on the main page of Piecewise when they are selected in the options menu.
+You may find it useful to enable developer mode (which, in turn, enables Chrome DevTools) by pressing the up arrow key 7 times and then typing youaremyangel when prompted for a &amp;ldquo;cheat code.&amp;rdquo; You can find the Chrome DevTools under the new &amp;ldquo;Build&amp;rdquo; tab that appears when developer mode is enabled.</description>
+    </item>
+    
+    <item>
+      <title>Frequently Asked Questions</title>
+      <link>https://doc.piecewise.im/tutorials/faq/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/tutorials/faq/</guid>
+      <description>This document answers frequently-asked questions about Piecewise.
+Editor Why aren&amp;rsquo;t blocks connecting? In order to connect, connecting blocks must output the type the incoming block is expecting. For example - send message to (to) with content (content) with components (interaction) expects that the option &amp;ldquo;to&amp;rdquo; be a user, channel, or message. Trying to connect blocks of any other type will not work.
+Additionally, trying to compare two different outputs using the (obj1) = (obj2) block will result in the newest block being disconnected.</description>
+    </item>
+    
+    <item>
+      <title>Paginators</title>
+      <link>https://doc.piecewise.im/tutorials/paginators/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/tutorials/paginators/</guid>
+      <description>Paginators allow you to consume potentially-long streams of data - like lists of posts for Mastodon, or messages in a channel for Discord - in a sustainable and transparent manner. Essentially, Piecewise allows you to loop through the structure easily, while obtaining more data (pages) behind-the-scenes. Paginators are marked by the paper 📄 emoji in Piecewise.
+There are a few things to keep in mind when using paginators:
+ Paginators are designed to loop through long streams of data.</description>
+    </item>
+    
+    <item>
+      <title>Persistent data</title>
+      <link>https://doc.piecewise.im/tutorials/persistent-data/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/tutorials/persistent-data/</guid>
+      <description>By default, Piecewise will not save any data when your bot stops, leaving it up to you to manage data you want to keep. There are a few ways to save and load data into Piecewise:
+ Using the save list to file and load list from file blocks Using the save table to file and load table from file blocks Using the [append to|write] file with text and contents of file as text blocks.</description>
+    </item>
+    
+    <item>
+      <title>Piecewise Together</title>
+      <link>https://doc.piecewise.im/tutorials/piecewise-together/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/tutorials/piecewise-together/</guid>
+      <description>Piecewise Together allows you to work on Piecewise projects together with multiple people (there is currently no limit to the number of people that can be invited to a Piecewise Together session, but this may change soon).
+Note: Piecewise Together is currently in a very early alpha phase and will probably have bugs (and lots of them). Take backups of your projects before you share them over Piecewise Together.
+Prerequisites  A Piecewise installation running on the aimer branch, at least version 00448.</description>
+    </item>
+    
+    <item>
+      <title>Plugins</title>
+      <link>https://doc.piecewise.im/tutorials/plugins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/tutorials/plugins/</guid>
+      <description>Part of Piecewise is a robust plugin system that allows you to extend the editor and add custom blocks.
+Note: the plugins system is implemented as part of Piecewise 22.03.0 or later. To add custom blocks in previous versions, see the legacy &amp;ldquo;adding custom blocks&amp;rdquo; documentation.
+Creating a barebones plugin Start out by creating a JavaScript file (.js) in the addons folder next to Piecewise.app, Piecewise.exe, or Piecewise. It can be named whatever you like, as long as it doesn&amp;rsquo;t conflict with an existing plugin.</description>
+    </item>
+    
+    <item>
+      <title>Sharing Blocks</title>
+      <link>https://doc.piecewise.im/tutorials/sharing-blocks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/tutorials/sharing-blocks/</guid>
+      <description>You can share or import a set of blocks to be used with other Piecewise programs. Piecewise exports a PNG file containing a high-quality screenshot of the blocks you&amp;rsquo;re exporting, along with some additional embedded metadata.
+Most screenshots of Piecewise blocks on this Web site are importable into Piecewise itself.
+Sharing blocks To share blocks, right-click the blocks you&amp;rsquo;d like to export, then click &amp;ldquo;Share Blocks&amp;rdquo;. You&amp;rsquo;ll then be prompted for a place to save a PNG file, which is pretty much a screenshot of the blocks with some extra data so Piecewise knows how to import them.</description>
+    </item>
+    
+    <item>
+      <title>Steam Deck</title>
+      <link>https://doc.piecewise.im/tutorials/steam-deck/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/tutorials/steam-deck/</guid>
+      <description>Game Mode Piecewise functions great in Game Mode with some tweaks. Once you&amp;rsquo;ve downloaded Piecewise, open it in your Library, and then tap or navigate to the gear icon on the right side. Next, click Properties, and set the &amp;ldquo;LAUNCH OPTIONS&amp;rdquo; text box to LD_PRELOAD=&amp;quot;&amp;quot; %command%.
+Now you&amp;rsquo;re all set! Hit &amp;ldquo;Play&amp;rdquo; and the splash screen should soon show.
+Desktop Mode Piecewise runs natively on Steam Deck in Desktop Mode with no tweaks required.</description>
+    </item>
+    
+    <item>
+      <title>Steam Workshop</title>
+      <link>https://doc.piecewise.im/tutorials/workshop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/tutorials/workshop/</guid>
+      <description>If you own a copy of Piecewise on Steam (21.12.0+), you have access to the Steam Workshop, a community-oriented area of the Steam Community where users can create, share, and use extension blocks, templates, and styles.
+Please note: Piecewise Labs is not responsible or liable for any third-party content posted on the Steam Workshop. To report content, click the flag on the Workshop page.
+Using Workshop Content To find new Workshop content, navigate to Piecewise&amp;rsquo;s Steam Community, then click &amp;ldquo;Workshop&amp;rdquo; in the top bar (or click &amp;ldquo;Steam -&amp;gt; Browse the Steam Workshop&amp;hellip;&amp;quot;).</description>
+    </item>
+    
+    <item>
+      <title>Using Matrix Encryption</title>
+      <link>https://doc.piecewise.im/tutorials/matrix_encryption/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/tutorials/matrix_encryption/</guid>
+      <description>End-to-end encrypted rooms utilize the Olm algorithm to encrypt messages. Piecewise is able to read these messages, but some setup is involved in making things work.
+Important note: Piecewise can handle unencrypted message retrieval from Matrix without any special setup. This guide need only be followed if you wish for your bot to receive encrypted messages.
+Create an account You will want a dedicated Matrix account for your bot. If you do not have a dedicated bot account on a homeserver, create one.</description>
+    </item>
+    
+    <item>
+      <title>Using the aimer branch</title>
+      <link>https://doc.piecewise.im/tutorials/aimer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/tutorials/aimer/</guid>
+      <description>The aimer branch of Piecewise is the bleeding-edge branch. Every time I write code and push it into my source control system, a robot will build a new copy of Piecewise with the changes I&amp;rsquo;ve just pushed and then release it via Steam and itch.io. aimer builds are currently only available for Windows and Linux.
+While the bleeding-edge branch is exciting has the most up-to-date features, it may be buggier than stable versions.</description>
+    </item>
+    
+    <item>
+      <title>Your First Bot</title>
+      <link>https://doc.piecewise.im/tutorials/your-first-bot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://doc.piecewise.im/tutorials/your-first-bot/</guid>
+      <description>This tutorial aims to give you a short overview of creating bots in Piecewise and how the system works.
+1. Get Piecewise If you don&amp;rsquo;t have Piecewise already, you&amp;rsquo;ll need it for this tutorial. You can purchase Piecewise or download Piecewise&amp;rsquo;s demo on Steam (and itch.io, soon). Once you have a copy, download it and open it.
+For the sake of brevity, this tutorial will focus on the Discord platform, so if you want to follow along, you&amp;rsquo;ll need an account.</description>
+    </item>
+    
+  </channel>
+</rss>

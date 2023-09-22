@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Using the aimer branch - Piecewise</title>
+<meta name="description" content="Build chat bots with blocks">
+<meta name="generator" content="Hugo 0.86.0" />
+<link href="https://doc.piecewise.im/index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://doc.piecewise.im/tutorials/aimer/">
+<link rel="stylesheet" href="https://doc.piecewise.im/css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="https://doc.piecewise.im/css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script src="https://doc.piecewise.im/js/bundle.js"></script><style>
+:root {}
+</style>
+<meta property="og:title" content="Using the aimer branch" />
+<meta property="og:description" content="The aimer branch of Piecewise is the bleeding-edge branch. Every time I write code and push it into my source control system, a robot will build a new copy of Piecewise with the changes I&rsquo;ve just pushed and then release it via Steam and itch.io. aimer builds are currently only available for Windows and Linux.
+While the bleeding-edge branch is exciting has the most up-to-date features, it may be buggier than stable versions." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://doc.piecewise.im/tutorials/aimer/" /><meta property="article:section" content="tutorials" />
+
+<meta property="og:site_name" content="Piecewise" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Using the aimer branch"/>
+<meta name="twitter:description" content="The aimer branch of Piecewise is the bleeding-edge branch. Every time I write code and push it into my source control system, a robot will build a new copy of Piecewise with the changes I&rsquo;ve just pushed and then release it via Steam and itch.io. aimer builds are currently only available for Windows and Linux.
+While the bleeding-edge branch is exciting has the most up-to-date features, it may be buggier than stable versions."/>
+<meta itemprop="name" content="Using the aimer branch">
+<meta itemprop="description" content="The aimer branch of Piecewise is the bleeding-edge branch. Every time I write code and push it into my source control system, a robot will build a new copy of Piecewise with the changes I&rsquo;ve just pushed and then release it via Steam and itch.io. aimer builds are currently only available for Windows and Linux.
+While the bleeding-edge branch is exciting has the most up-to-date features, it may be buggier than stable versions.">
+
+<meta itemprop="wordCount" content="316">
+<meta itemprop="keywords" content="" /></head>
+<body><div class="container"><header>
+<h1>Piecewise</h1>
+<p class="description">Build chat bots with blocks</p>
+
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li><a href="/">Home</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main><h1>Using the aimer branch</h1>
+<p>The <code>aimer</code> branch of Piecewise is the <em>bleeding-edge</em> branch. Every time I write code and push it into my source control system, a robot will build a new copy of Piecewise with the changes I&rsquo;ve just pushed and then release it via Steam and itch.io. <code>aimer</code> builds are currently only available for Windows and Linux.</p>
+<p>While the bleeding-edge branch is exciting has the most up-to-date features, it may be buggier than stable versions. It receives little or no testing other than for basic functionality. Additionally, projects that contain blocks or features added in bleeding-edge versions of Piecewise cannot be opened in older versions. Use it when you feel like, feel like, feel like, leaving<a href="https://www.youtube.com/watch?v=Z2Z9V-4DMGw"> </a>it<a href="https://www.youtube.com/watch?v=Z2Z9V-4DMGw"> </a>to<a href="https://www.youtube.com/watch?v=Z2Z9V-4DMGw"> </a>the<a href="https://www.youtube.com/watch?v=Z2Z9V-4DMGw"> </a>flow.</p>
+<h2 id="enrolling-in-the-aimer-branch-on-steam">Enrolling in the <code>aimer</code> branch on Steam</h2>
+<p>Enrolling in the <code>aimer</code> branch on Steam is done in five steps:</p>
+<ol>
+<li>Right-click Piecewise in your Steam library, and then click Properties.</li>
+</ol>
+<p><img src="/static/img_20220428_002.png" alt="right-click"></p>
+<ol start="2">
+<li>On the left, click the entry for &ldquo;Betas&rdquo;.</li>
+</ol>
+<p><img src="/static/img_20220428_003.png" alt="betas"></p>
+<ol start="4">
+<li>Enter the secret code <code>dreamoflazurite</code> in the text box.</li>
+<li>Select the <code>aimer - Piecewise high-volume bleeding-edge updates</code> branch and wait for the new version of Piecewise to download.</li>
+</ol>
+<p><img src="/static/img_20220428_004.png" alt="password"></p>
+<h2 id="enrolling-in-the-aimer-branch-on-itchio">Enrolling in the <code>aimer</code> branch on itch.io</h2>
+<p>The <code>aimer</code> branch is labeled as &ldquo;Piecewise Bleeding-Edge&rdquo; on itch.io. Select this item when downloading Piecewise to use the latest bleeding-edge version.</p>
+<h2 id="aimer-version-strings"><code>aimer</code> version strings</h2>
+<p><code>aimer</code> branch builds will show an alphanumeric <em>commit hash</em> as the version (e.g. 1e22bca, instead of a number like 22.02.3) - the commit hash references the version of Piecewise&rsquo;s code that is running. Make sure that you include the commit hash whenever you report a bug with Piecewise so I know which version of Piecewise you&rsquo;re reporting a bug about.</p>
+<p><img src="/static/img_20220428_001.png" alt="commit hash"></p>
+<h2 id="staying-up-to-date">Staying up to date</h2>
+<p>Every time a new build is about to be pushed to the <code>aimer</code> branch, a new post is sent in the Piecewise <a href="https://discord.gg/vvRr5fJcGm">Discord server</a>&rsquo;s #updates-bleeding channel. Builds take a few minutes to reach Steam after they are posted to that channel.</p>
+<div class="edit-meta">
+
+<br></div><nav class="pagination"><a class="nav nav-prev" href="https://doc.piecewise.im/tutorials/matrix_encryption/" title="Using Matrix Encryption"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Using Matrix Encryption</a>
+<a class="nav nav-next" href="https://doc.piecewise.im/tutorials/your-first-bot/" title="Your First Bot">Next - Your First Bot <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="slide-menu">
+<ul>
+<li class=""><a href="https://doc.piecewise.im">Home</a></li>
+
+<li class="parent has-sub-menu"><a href="https://doc.piecewise.im/tutorials/">Tutorials<span class="mark opened">-</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://doc.piecewise.im/tutorials/backpacks/">Backpacks</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/adding-custom-blocks/">Creating Custom Blocks (Legacy)</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/adding-custom-styles/">Creating Custom Themes</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/faq/">Frequently Asked Questions</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/paginators/">Paginators</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/persistent-data/">Persistent data</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/piecewise-together/">Piecewise Together</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/plugins/">Plugins</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/sharing-blocks/">Sharing Blocks</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/steam-deck/">Steam Deck</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/workshop/">Steam Workshop</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/matrix_encryption/">Using Matrix Encryption</a></li>
+<li class="active"><a href="https://doc.piecewise.im/tutorials/aimer/">Using the aimer branch</a></li>
+<li class=""><a href="https://doc.piecewise.im/tutorials/your-first-bot/">Your First Bot</a></li>
+</ul>
+  
+</li>
+
+<li class=" has-sub-menu"><a href="https://doc.piecewise.im/errors/">Errors<span class="mark closed">+</span></a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://doc.piecewise.im/errors/d000/">D000: Permission denied when querying for a resource (e.g. channel, user, slash commands...).</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d001/">D001: Invalid snowflake. Check any provided snowflakes and/or improve input validation.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d002/">D002: You are requesting a privileged intent you have not also requested for in the console. Check that you have requested the intents in the Developer Console.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d003/">D003: Invalid token. Check that you have entered your bot token correctly.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/d100/">D100: Duplicate interactible ID rejected. Make sure all of your interactibles have unique IDs.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/l000/">L000: Required value missing. Check all of your blocks to make sure you have values at all required connections.</a></li>
+<li class=""><a href="https://doc.piecewise.im/errors/l001/">L001: Tried to query invalid URL. Check to make sure that any URLs queried are valid.</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>
